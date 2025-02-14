@@ -13,6 +13,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import GraficoGEISistema from "../components/GraficoGEISistema.jsx";
 
 // Registrar los componentes de Chart.js
 ChartJS.register(
@@ -189,74 +190,22 @@ const ResultsGenericCase = () => {
     const { data } = location.state || {};
 
     // Validar que los datos estén presentes y tengan el formato correcto
-    if (!data || !data.cicloVidaAVEAcumulado || !data.cicloVidaAereoAcumulado || !data.cicloVidaTodoAereoAcumulado) {
+    if (!data || !data.cicloVidaAVEAcumulado || !data.cicloVidaAereoAcumulado || !data.cicloVidaTodoAereoAcumulado || !data.sumaFerroviarioAereoAcumulado) {
         return <div>No hay datos válidos para mostrar.</div>;
     }
 
-    // Preparar los datos para la primera gráfica (Chart.js)
-    const chartData1 = {
-        labels: Array.from({ length: 55 }, (_, i) => i + 1), // Eje X del 1 al 55
-        datasets: [
-            {
-                label: 'Acumulado ciclo de vida AVE',
-                data: data.cicloVidaAVEAcumulado,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                fill: false,
-            },
-            {
-                label: 'Acumulado ciclo de vida transporte aéreo',
-                data: data.cicloVidaAereoAcumulado,
-                borderColor: 'rgba(153, 102, 255, 1)',
-                fill: false,
-            },
-            {
-                label: 'Suma ferroviario + aéreo',
-                data: data.sumaFerroviarioAereoAcumulado,
-                borderColor: 'rgba(159, 102, 255, 1)',
-                fill: false,
-            },
-            {
-                label: 'Solo avión',
-                data: data.cicloVidaTodoAereoAcumulado,
-                borderColor: 'rgba(255, 159, 64, 1)',
-                fill: false,
-            },
-        ],
-    };
-
-    const options1 = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'bottom',
-            },
-            title: {
-                display: true,
-                text: 'Acumulado de emisiones por modo y acumulado de emisiones por modo y viajero (ciclo de vida completo)',
-            },
-        },
-        scales: {
-            x: {
-                grid: {
-                    display: false,  // Desactiva el grid en el eje X
-                },
-            },
-        },
-    };
-
     return (
-        <div className="globalContainer">
-            <header>
-                <h1>Resultados caso genérico</h1>
-            </header>
+        <div className="globalContainer resultsGenericCase-container">
             <section>
-                <p>
-                    Aun por definir, pero la idea es que haya un texto que se complete con números de los resultados, y que aparezcan varios gráficos de resultados.
+                <h1>Resultados caso genérico</h1>
+                <p className="mt-5 mb-5">
+                    Aun por definir, pero la idea es que haya un texto que se complete con números de los resultados, y
+                    que aparezcan varios gráficos de resultados.
                 </p>
             </section>
             <section>
-                <div className="chart-container">
-                    <Line data={chartData1} options={options1} />
+            <div className="chart-container">
+                    <GraficoGEISistema data={data} />
                 </div>
                 <div className="chart-container">
                     <LineChartD3 data={data} />

@@ -1,5 +1,5 @@
 .chart-container {
-    padding: 20px;
+
     width: 80%; /* Ajusta el ancho según sea necesario */
     margin: 0 auto 50px; /* Centra horizontalmente */
     display: block; /* Asegura que el contenedor se comporta como un bloque */
@@ -7,5 +7,5 @@
 }
 
 .resultsGenericCase-container{
-    margin-top: 50px;
+    margin-top: 55px;
 }
