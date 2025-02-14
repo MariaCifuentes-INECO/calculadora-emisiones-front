@@ -18,7 +18,7 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
 );
 
 const GraficoGEISistema = ({ data }) => {
@@ -50,28 +50,24 @@ const GraficoGEISistema = ({ data }) => {
             data: cicloVidaAVEAcumulado,
             borderColor: colors.ave,
             backgroundColor: colors.ave,
-            fill: true,
         },
         {
             label: 'Acumulado ciclo de vida transporte aéreo',
             data: cicloVidaAereoAcumulado,
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
-            fill: true,
         },
         {
             label: 'Suma ferroviario + aéreo',
             data: sumaFerroviarioAereoAcumulado,
             borderColor: colors.suma,
             backgroundColor: colors.suma,
-            fill: true,
         },
         {
             label: 'Solo avión',
             data: cicloVidaTodoAereoAcumulado,
             borderColor: colors.soloAvion,
             backgroundColor: colors.soloAvion,
-            fill: true,
         },
     ];
 
