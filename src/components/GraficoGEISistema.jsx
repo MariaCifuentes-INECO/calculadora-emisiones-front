@@ -22,39 +22,63 @@ ChartJS.register(
 );
 
 const GraficoGEISistema = ({ data }) => {
-    // Preparar los datos para la primera gráfica (Chart.js)
+    // Desestructuración de data
+    const {
+        cicloVidaAVEAcumulado,
+        cicloVidaAereoAcumulado,
+        sumaFerroviarioAereoAcumulado,
+        cicloVidaTodoAereoAcumulado,
+    } = data || {};
+
+    // Validación de datos
+    if (!data || !cicloVidaAVEAcumulado || !cicloVidaAereoAcumulado || !sumaFerroviarioAereoAcumulado || !cicloVidaTodoAereoAcumulado) {
+        return <div>No hay datos válidos para mostrar.</div>;
+    }
+
+    // Colores
+    const colors = {
+        ave: 'rgb(209, 117, 14)',
+        aereo: 'rgb(32, 112, 216)',
+        suma: 'rgb(255, 87, 51)',
+        soloAvion: 'rgb(196, 191, 188)',
+    };
+
+    // Datasets
+    const datasets = [
+        {
+            label: 'Acumulado ciclo de vida AVE',
+            data: cicloVidaAVEAcumulado,
+            borderColor: colors.ave,
+            backgroundColor: colors.ave,
+            fill: true,
+        },
+        {
+            label: 'Acumulado ciclo de vida transporte aéreo',
+            data: cicloVidaAereoAcumulado,
+            borderColor: colors.aereo,
+            backgroundColor: colors.aereo,
+            fill: true,
+        },
+        {
+            label: 'Suma ferroviario + aéreo',
+            data: sumaFerroviarioAereoAcumulado,
+            borderColor: colors.suma,
+            backgroundColor: colors.suma,
+            fill: true,
+        },
+        {
+            label: 'Solo avión',
+            data: cicloVidaTodoAereoAcumulado,
+            borderColor: colors.soloAvion,
+            backgroundColor: colors.soloAvion,
+            fill: true,
+        },
+    ];
+
+    // Configuración de la gráfica
     const chartData1 = {
         labels: Array.from({ length: 55 }, (_, i) => i + 1), // Eje X del 1 al 55
-        datasets: [
-            {
-                label: 'Acumulado ciclo de vida AVE',
-                data: data.cicloVidaAVEAcumulado,
-                borderColor: 'rgb(209, 117, 14)',
-                backgroundColor: 'rgb(209, 117, 14)',
-                fill: true,
-            },
-            {
-                label: 'Acumulado ciclo de vida transporte aéreo',
-                data: data.cicloVidaAereoAcumulado,
-                borderColor: 'rgb(32, 112, 216)',
-                backgroundColor: 'rgb(32, 112, 216)',
-                fill: true,
-            },
-            {
-                label: 'Suma ferroviario + aéreo',
-                data: data.sumaFerroviarioAereoAcumulado,
-                borderColor: 'rgb(255, 87, 51)',
-                backgroundColor: 'rgb(255, 87, 51)',
-                fill: true,
-            },
-            {
-                label: 'Solo avión',
-                data: data.cicloVidaTodoAereoAcumulado,
-                borderColor: 'rgb(196, 191, 188)',
-                backgroundColor: 'rgb(196, 191, 188)',
-                fill: true,
-            },
-        ],
+        datasets,
     };
 
     const options1 = {
@@ -71,13 +95,13 @@ const GraficoGEISistema = ({ data }) => {
         scales: {
             x: {
                 grid: {
-                    display: false,  // Desactiva el grid en el eje X
+                    display: false, // Desactiva el grid en el eje X
                 },
             },
             y: {
                 title: {
-                    display: true,  // Muestra el título del eje Y
-                    text: 't CO\u2082 eq acumulados',  // Título del eje Y
+                    display: true, // Muestra el título del eje Y
+                    text: 't CO\u2082 eq acumulados', // Título del eje Y
                 },
             },
         },
