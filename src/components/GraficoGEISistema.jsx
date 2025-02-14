@@ -97,7 +97,13 @@ const GraficoGEISistema = ({ data }) => {
             y: {
                 title: {
                     display: true, // Muestra el título del eje Y
-                    text: 't CO\u2082 eq acumulados', // Título del eje Y
+                    text: 'Millones de t CO\u2082 eq acumulados', // Título del eje Y
+                },
+                ticks: {
+                    callback: function(value) {
+                        // Redondear a millones solo en el eje Y, sin modificar los datos reales
+                        return Math.round(value / 1000000); // Dividir por 1 millón para mostrarlo en millones
+                    },
                 },
             },
         },
