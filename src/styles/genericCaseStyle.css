@@ -1,0 +1,42 @@
+.form-group {
+    margin-bottom: 50px;
+}
+
+.form-group label {
+    margin-bottom: 10px; /* Añade un margen inferior al label */
+}
+
+input.form-control, select.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Sombra en los inputs cuando están en foco */
+input.form-control:focus, select.form-control:focus {
+    border-color: #1A4488;
+    box-shadow: 0 0 5px rgba(26, 68, 136, 0.5);
+}
+
+h4 {
+    color: rgb(52, 99, 172) !important;
+}
+
+.subtitle-genericCase{
+    margin-bottom: 20px;
+}
+
+.col-2, .col-3{
+    margin-right: 20px;
+}
+
+.btn-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background-color: rgb(26,68,136) !important;
+    border-color: rgb(26,68,136) !important;
+}
+
+

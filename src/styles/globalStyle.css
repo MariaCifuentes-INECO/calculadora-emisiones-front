@@ -1,0 +1,22 @@
+.globalContainer {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 80vh; /* 90% de la altura de la ventana gráfica */
+    width: 85vw; /* 90% del ancho de la ventana gráfica */
+}
+
+html, body {
+    background-color: #f0f0f0 !important; /* Fondo gris clarito */
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: rgb(26, 68, 136) !important;
+}
+
+.btn-primary{
+    background-color: rgb(26, 68, 136) !important;
+}
