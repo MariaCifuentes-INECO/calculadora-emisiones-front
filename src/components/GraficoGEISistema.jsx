@@ -37,8 +37,8 @@ const GraficoGEISistema = ({ data }) => {
 
     // Colores
     const colors = {
-        ave: 'rgb(209, 117, 14)',
-        aereo: 'rgb(32, 112, 216)',
+        ave: 'rgb(87, 137, 122)',
+        aereo: 'rgb(112, 48, 160)',
         suma: 'rgb(255, 87, 51)',
         soloAvion: 'rgb(196, 191, 188)',
     };
