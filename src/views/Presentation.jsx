@@ -9,7 +9,7 @@ const Presentation = () => {
     };
 
     const handleRealExample = () => {
-        // Lógica para ir a la Pantalla 4
+        navigate('/realCase'); // Navega a la vista RealCase
     };
 
     return (
