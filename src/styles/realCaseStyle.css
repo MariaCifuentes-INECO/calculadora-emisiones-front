@@ -1,0 +1,19 @@
+.options-list {
+    list-style-type: disc; /* Asegura que los puntos se muestren */
+    padding-left: 20px; /* Añade un poco de padding para que no esté pegado al borde */
+    font-size: 18px;
+}
+
+.custom-link {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color del texto normal (no azul) */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que es clickeable */
+}
+
+.custom-link:hover {
+    color: rgb(26, 68, 136);
+}
+
+li {
+    margin-bottom: 15px; /* Espacio entre elementos de la lista */
+}
