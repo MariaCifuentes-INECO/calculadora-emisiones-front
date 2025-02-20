@@ -1,28 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import '../styles/resultsGenericCaseStyle.css';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
 import GraficoGEISistema from "../components/GraficoGEISistema.jsx";
 import GraficoGEIvsViajeros from "../components/GraficoGEIvsViajeros.jsx";
 
-// Registrar los componentes de Chart.js
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
 
 // Componente principal
 const ResultsGenericCase = () => {
