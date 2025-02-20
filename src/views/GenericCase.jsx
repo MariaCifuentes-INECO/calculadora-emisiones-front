@@ -187,55 +187,6 @@ const GenericCase = () => {
                         </div>
                     </div>
                     <div className="form-group">
-                        <h4 className="subtitle-genericCase">Infraestructura ferroviaria</h4>
-                        <div className="row">
-                            <div className="col-2">
-                                <label htmlFor="ferro1">Longitud del trayecto:</label>
-                                <div className="input-group">
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="ferro1"
-                                        value={longitudTrayectoFerroviario}
-                                        onChange={(e) => setLongitudTrayectoFerroviario(parseFloat(e.target.value))}
-                                        required
-                                    />
-                                    <span className="input-group-text">km</span>
-                                </div>
-                            </div>
-                            <div className="col-2">
-                                <label htmlFor="ferro2">Tipo de terreno:</label>
-                                <select
-                                    className="form-control"
-                                    id="ferro2"
-                                    value={tipoTerreno}
-                                    onChange={(e) => setTipoTerreno(e.target.value)}
-                                >
-                                    <option value="Llano">Llano</option>
-                                    <option value="Medio">Medio</option>
-                                    <option value="Accidentado">Accidentado</option>
-                                </select>
-                            </div>
-                            <div className="col-2">
-                                <label htmlFor="ferro3">% imputación:</label>
-                                <div className="input-group">
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="ferro3"
-                                        value={imputacionFerroviaria}
-                                        onChange={(e) => handlePercentageChange(parseFloat(e.target.value), setImputacionFerroviaria)}
-                                        min="0"
-                                        max="100"
-                                        step="1"
-                                        required
-                                    />
-                                    <span className="input-group-text">%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-group">
                         <h4 className="subtitle-genericCase">Infraestructura aeropuertos</h4>
                         <div className="row">
                             <div className="col-2">
@@ -304,6 +255,55 @@ const GenericCase = () => {
                                         id="aero5"
                                         value={imputacionAeropuertoB}
                                         onChange={(e) => handlePercentageChange(parseFloat(e.target.value), setImputacionAeropuertoB)}
+                                        min="0"
+                                        max="100"
+                                        step="1"
+                                        required
+                                    />
+                                    <span className="input-group-text">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <h4 className="subtitle-genericCase">Infraestructura ferroviaria</h4>
+                        <div className="row">
+                            <div className="col-2">
+                                <label htmlFor="ferro1">Longitud del trayecto:</label>
+                                <div className="input-group">
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="ferro1"
+                                        value={longitudTrayectoFerroviario}
+                                        onChange={(e) => setLongitudTrayectoFerroviario(parseFloat(e.target.value))}
+                                        required
+                                    />
+                                    <span className="input-group-text">km</span>
+                                </div>
+                            </div>
+                            <div className="col-2">
+                                <label htmlFor="ferro2">Tipo de terreno:</label>
+                                <select
+                                    className="form-control"
+                                    id="ferro2"
+                                    value={tipoTerreno}
+                                    onChange={(e) => setTipoTerreno(e.target.value)}
+                                >
+                                    <option value="Llano">Llano</option>
+                                    <option value="Medio">Medio</option>
+                                    <option value="Accidentado">Accidentado</option>
+                                </select>
+                            </div>
+                            <div className="col-2">
+                                <label htmlFor="ferro3">% imputación:</label>
+                                <div className="input-group">
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="ferro3"
+                                        value={imputacionFerroviaria}
+                                        onChange={(e) => handlePercentageChange(parseFloat(e.target.value), setImputacionFerroviaria)}
                                         min="0"
                                         max="100"
                                         step="1"
