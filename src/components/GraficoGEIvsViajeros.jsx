@@ -31,8 +31,8 @@ const GraficoGEIvsViajeros = ({ data }) => {
                     x: parseFloat(d), // Asegurarse de que x sea un valor numérico
                     y: parseFloat(data.cicloVidaAVEAcumulado[i + 5]), // Asegurarse de que y sea un valor numérico
                 })),
-                borderColor: 'rgb(75, 192, 192)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Para que el color de fondo sea visible si `fill` está activado
+                borderColor: 'rgb(87, 137, 122)',
+                backgroundColor: 'rgb(87, 137, 122)', // Para que el color de fondo sea visible si `fill` está activado
                 showLine: true, // Mostrar la línea de la gráfica
             },
             {
@@ -41,8 +41,8 @@ const GraficoGEIvsViajeros = ({ data }) => {
                     x: parseFloat(d), // Asegurarse de que x sea un valor numérico
                     y: parseFloat(data.cicloVidaAereoAcumulado[i + 5]), // Asegurarse de que y sea un valor numérico
                 })),
-                borderColor: 'rgb(153, 102, 255)',
-                backgroundColor: 'rgba(153, 102, 255, 0.2)', // Para que el color de fondo sea visible si `fill` está activado
+                borderColor: 'rgb(112, 48, 160)',
+                backgroundColor: 'rgb(112, 48, 160)', // Para que el color de fondo sea visible si `fill` está activado
                 showLine: true, // Mostrar la línea de la gráfica
             },
         ],
