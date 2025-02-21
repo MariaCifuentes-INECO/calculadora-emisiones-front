@@ -3,6 +3,8 @@ import Presentation from "../views/Presentation.jsx";
 import GenericCase from "../views/GenericCase.jsx";
 import ResultsGenericCase from "../views/ResultsGenericCase.jsx";
 import RealCase from "../views/RealCase.jsx";
+import ResultsCompleteNetwork from "../views/ResultsCompleteNetwork.jsx";
+import {ExcelUploader} from "../views/ExcelUploader.jsx";
 
 
 function GlobalRouter() {
@@ -13,6 +15,8 @@ function GlobalRouter() {
                 <Route path="/genericCase" element={<GenericCase />} />
                 <Route path="/resultsGenericCase" element={<ResultsGenericCase />} />
                 <Route path="/realCase" element={<RealCase />} />
+                <Route path="/completeNetwork" element={<ResultsCompleteNetwork />} />
+                <Route path="/excelUploader" element={<ExcelUploader />} />
             </Routes>
         </BrowserRouter>
     );
