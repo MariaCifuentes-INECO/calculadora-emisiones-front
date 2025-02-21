@@ -23,7 +23,8 @@ const useExcelReaderCompleteNetwork = () => {
             }
 
             worksheet.eachRow((row, rowNumber) => {
-                if (rowNumber > 8 ) { // Ignorar las primeras filas, son cabeceras
+                // Limitar la lectura entre las filas 9 y 28
+                if (rowNumber >= 9 && rowNumber <= 28) {
                     const anio = parseInt(row.getCell(1).value) || 0; // Primera columna
 
                     // Extraer y redondear valores de las celdas
