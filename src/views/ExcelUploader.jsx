@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
 import useExcelReaderCompleteNetwork from "../hooks/useExcelReaderCompleteNetwork.jsx";
+import {CalculatorContext} from "../context/CalculatorContext.js";
 
 export const ExcelUploader = () => {
+    const { setCompleteNetwork} = useContext(CalculatorContext);
     const { extractedData, readExcelCompleteNetwork } = useExcelReaderCompleteNetwork();
     const [fileName, setFileName] = useState("");
     const [isLoading, setIsLoading] = useState(false); // Estado para manejar la carga
@@ -47,6 +49,7 @@ export const ExcelUploader = () => {
                 })
                 .then((data) => {
                     console.log(data); // Respuesta de la API después del POST
+                    setCompleteNetwork(data);
                     alert("Datos añadidos correctamente");
                 })
                 .catch((error) => {
