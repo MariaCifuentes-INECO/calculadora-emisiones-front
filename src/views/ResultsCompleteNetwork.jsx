@@ -8,6 +8,8 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import {useContext} from "react";
+import {CalculatorContext} from "../context/CalculatorContext.js";
 
 
 // Registrar los componentes de Chart.js
@@ -23,6 +25,8 @@ ChartJS.register(
 
 // Componente principal
 const ResultsCompleteNetwork = () => {
+
+    const { completeNetwork} = useContext(CalculatorContext);
 
     return (
         <div className="globalContainer resultsCompleteNetwork-container">
