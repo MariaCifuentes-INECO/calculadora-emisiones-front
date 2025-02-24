@@ -1,0 +1,157 @@
+import { Chart } from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import PropTypes from 'prop-types'; // Importar PropTypes para validar los props
+
+// Registrar los componentes de Chart.js
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+const GraficoAnalisisReal = ({ backendData }) => {
+    // Validar que backendData esté definido y no esté vacío
+    if (!backendData || backendData.length === 0) {
+        return <div>No hay datos disponibles para mostrar el gráfico.</div>;
+    }
+
+    // Preparar los datos para el gráfico
+    const labels = backendData.map((item) => item.anio.toString()); // Eje X: años
+    const data = {
+        labels,
+        datasets: [
+            // Grupo 1 de barras apiladas: Emisiones Aéreo
+            {
+                type: 'bar',
+                label: 'Emisiones Construcción Aéreo',
+                data: backendData.map((item) => item.emisionesConstruccionAereo),
+                backgroundColor: 'rgb(112,48,160)', // Color para Construcción Aéreo
+                yAxisID: 'y',
+                stack: 'stack2', // Apilar en otro grupo
+            },
+            {
+                type: 'bar',
+                label: 'Emisiones Operación Aéreo',
+                data: backendData.map((item) => item.emisionesOperacionAereo),
+                backgroundColor: 'rgb(140, 93, 179)', // Color para Operación Aéreo
+                yAxisID: 'y',
+                stack: 'stack2', // Apilar en otro grupo
+            },
+            {
+                type: 'bar',
+                label: 'Emisiones Mantenimiento Aéreo',
+                data: backendData.map((item) => item.emisionesMantenimientoAereo),
+                backgroundColor: 'rgb(199, 136,224)', // Color para Mantenimiento Aéreo
+                yAxisID: 'y',
+                stack: 'stack2', // Apilar en otro grupo
+            },
+            // Grupo 2 de barras apiladas: Emisiones AVE
+            {
+                type: 'bar',
+                label: 'Emisiones Construcción AVE',
+                data: backendData.map((item) => item.emisionesConstruccionAVE),
+                backgroundColor: 'rgb(87,137,122)', // Color para Construcción AVE
+                yAxisID: 'y',
+                stack: 'stack1', // Apilar en el mismo grupo
+            },
+            {
+                type: 'bar',
+                label: 'Emisiones Mantenimiento AVE',
+                data: backendData.map((item) => item.emisionesMantenimientoAVE),
+                backgroundColor: 'rgb(128, 174, 156) ', // Color para Mantenimiento AVE
+                yAxisID: 'y',
+                stack: 'stack1', // Apilar en el mismo grupo
+            },
+            // Líneas: Demanda
+            {
+                type: 'line',
+                label: 'Demanda AVLD Acumulada',
+                data: backendData.map((item) => item.demandaAVLDAcumulada),
+                borderColor: 'rgba(255, 99, 132, 1)', // Color para Demanda AVLD
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                yAxisID: 'y',
+            },
+            {
+                type: 'line',
+                label: 'Demanda Aérea Acumulada',
+                data: backendData.map((item) => item.demandaAereaAcumulada),
+                borderColor: 'rgba(54, 162, 235, 1)', // Color para Demanda Aérea
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                yAxisID: 'y',
+            },
+        ],
+    };
+
+    // Opciones del gráfico
+    const options = {
+        responsive: true,
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+            },
+            title: {
+                display: true,
+                text: 'Emisiones (construcción + mantenimiento + operación) y viajes acumulados en el periodo por cada modo',
+            },
+        },
+        scales: {
+            y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                title: {
+                    display: true,
+                    text: 'Valores',
+                },
+                stacked: true, // Apilar las barras en el eje Y
+            },
+            x: {
+                stacked: true, // Apilar las barras en el eje X
+            },
+        },
+    };
+
+    return (
+        <div style={{ width: '80%', margin: 'auto' }}>
+            <Chart type='bar' data={data} options={options} />
+        </div>
+    );
+};
+
+// Definir PropTypes para validar los props
+GraficoAnalisisReal.propTypes = {
+    backendData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            anio: PropTypes.number.isRequired,
+            emisionesConstruccionAVE: PropTypes.number.isRequired,
+            emisionesMantenimientoAVE: PropTypes.number.isRequired,
+            emisionesConstruccionAereo: PropTypes.number.isRequired,
+            emisionesOperacionAereo: PropTypes.number.isRequired,
+            emisionesMantenimientoAereo: PropTypes.number.isRequired,
+            demandaAVLDAcumulada: PropTypes.number.isRequired,
+            demandaAereaAcumulada: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+};
+
+export default GraficoAnalisisReal;

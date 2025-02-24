@@ -1,29 +1,8 @@
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
 import {useContext} from "react";
 import {CalculatorContext} from "../context/CalculatorContext.js";
+import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 
 
-// Registrar los componentes de Chart.js
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
-
-// Componente principal
 const ResultsCompleteNetwork = () => {
 
     const { completeNetwork} = useContext(CalculatorContext);
@@ -35,6 +14,12 @@ const ResultsCompleteNetwork = () => {
                 <p className="mt-5 mb-5">
                     Aún por definir, pero la idea es que haya un texto que explique lo que se ha tenido en cuenta.
                 </p>
+            </section>
+            <section>
+
+
+                    <GraficoAnalisisReal backendData={completeNetwork}/>
+
             </section>
         </div>
     );

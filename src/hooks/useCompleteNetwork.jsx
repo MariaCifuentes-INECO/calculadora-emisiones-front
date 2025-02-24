@@ -21,5 +21,5 @@ export const useCompleteNetwork = () => {
             });
     }, []);
 
-    return completeNetwork;
+    return [completeNetwork, setCompleteNetwork];
 }
