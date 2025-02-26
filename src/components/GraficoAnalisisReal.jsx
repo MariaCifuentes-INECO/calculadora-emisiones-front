@@ -41,7 +41,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 label: 'Emisiones Construcción Aéreo',
                 data: backendData.map((item) => item.emisionesConstruccionAereo),
                 backgroundColor: 'rgb(112,48,160)', // Color para Construcción Aéreo
-                yAxisID: 'y',
+                yAxisID: 'y1', // Asignar al primer eje Y
                 stack: 'stack2', // Apilar en otro grupo
             },
             {
@@ -49,7 +49,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 label: 'Emisiones Operación Aéreo',
                 data: backendData.map((item) => item.emisionesOperacionAereo),
                 backgroundColor: 'rgb(140, 93, 179)', // Color para Operación Aéreo
-                yAxisID: 'y',
+                yAxisID: 'y1', // Asignar al primer eje Y
                 stack: 'stack2', // Apilar en otro grupo
             },
             {
@@ -57,7 +57,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 label: 'Emisiones Mantenimiento Aéreo',
                 data: backendData.map((item) => item.emisionesMantenimientoAereo),
                 backgroundColor: 'rgb(199, 136,224)', // Color para Mantenimiento Aéreo
-                yAxisID: 'y',
+                yAxisID: 'y1', // Asignar al primer eje Y
                 stack: 'stack2', // Apilar en otro grupo
             },
             // Grupo 2 de barras apiladas: Emisiones AVE
@@ -66,25 +66,25 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 label: 'Emisiones Construcción AVE',
                 data: backendData.map((item) => item.emisionesConstruccionAVE),
                 backgroundColor: 'rgb(87,137,122)', // Color para Construcción AVE
-                yAxisID: 'y',
+                yAxisID: 'y1', // Asignar al primer eje Y
                 stack: 'stack1', // Apilar en el mismo grupo
             },
             {
                 type: 'bar',
                 label: 'Emisiones Mantenimiento AVE',
                 data: backendData.map((item) => item.emisionesMantenimientoAVE),
-                backgroundColor: 'rgb(128, 174, 156) ', // Color para Mantenimiento AVE
-                yAxisID: 'y',
+                backgroundColor: 'rgb(128, 174, 156)', // Color para Mantenimiento AVE
+                yAxisID: 'y1', // Asignar al primer eje Y
                 stack: 'stack1', // Apilar en el mismo grupo
             },
-            // Líneas: Demanda
+            // Líneas: Demanda (definidas después de las barras para que se superpongan)
             {
                 type: 'line',
                 label: 'Demanda AVLD Acumulada',
                 data: backendData.map((item) => item.demandaAVLDAcumulada),
                 borderColor: 'rgba(255, 99, 132, 1)', // Color para Demanda AVLD
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                yAxisID: 'y',
+                yAxisID: 'y2', // Asignar al segundo eje Y
             },
             {
                 type: 'line',
@@ -92,12 +92,11 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 data: backendData.map((item) => item.demandaAereaAcumulada),
                 borderColor: 'rgba(54, 162, 235, 1)', // Color para Demanda Aérea
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                yAxisID: 'y',
+                yAxisID: 'y2', // Asignar al segundo eje Y
             },
         ],
     };
 
-    // Opciones del gráfico
     const options = {
         responsive: true,
         interaction: {
@@ -114,15 +113,33 @@ const GraficoAnalisisReal = ({ backendData }) => {
             },
         },
         scales: {
-            y: {
+            y1: {
                 type: 'linear',
                 display: true,
-                position: 'left',
+                position: 'left', // Eje Y izquierdo para las barras
                 title: {
                     display: true,
-                    text: 'Valores',
+                    text: 'Millones de t CO\u2082 eq acumulados', // Título del primer eje Y
+                },
+                ticks: {
+                    callback: function(value) {
+                        // Redondear a millones solo en el eje Y, sin modificar los datos reales
+                        return Math.round(value / 1000000); // Dividir por 1 millón para mostrarlo en millones
+                    },
                 },
                 stacked: true, // Apilar las barras en el eje Y
+            },
+            y2: {
+                type: 'linear',
+                display: true,
+                position: 'right', // Eje Y derecho para las líneas
+                title: {
+                    display: true,
+                    text: 'Miles de viajes acumulados', // Título del segundo eje Y
+                },
+                grid: {
+                    drawOnChartArea: false, // Evitar que la cuadrícula del segundo eje Y se superponga con el primero
+                },
             },
             x: {
                 stacked: true, // Apilar las barras en el eje X
