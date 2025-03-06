@@ -85,7 +85,7 @@ const GraficoGEISistema = ({ data }) => {
             },
             title: {
                 display: true,
-                text: 'Acumulado de emisiones por modo y acumulado de emisiones por modo y viajero (ciclo de vida completo)',
+                text: 'Emisiones acumuladas por modo de transporte (ciclo de vida completo)',
             },
         },
         scales: {

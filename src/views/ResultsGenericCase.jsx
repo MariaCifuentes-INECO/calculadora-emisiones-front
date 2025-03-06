@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import '../styles/resultsGenericCaseStyle.css';
 import GraficoGEISistema from "../components/GraficoGEISistema.jsx";
 import GraficoGEIvsViajeros from "../components/GraficoGEIvsViajeros.jsx";
@@ -7,7 +7,7 @@ import GraficoGEIvsViajeros from "../components/GraficoGEIvsViajeros.jsx";
 // Componente principal
 const ResultsGenericCase = () => {
     const location = useLocation();
-    const { data } = location.state || {};
+    const {data} = location.state || {};
 
     // Validar que los datos estén presentes y tengan el formato correcto
     if (!data || !data.cicloVidaAVEAcumulado || !data.cicloVidaAereoAcumulado || !data.cicloVidaTodoAereoAcumulado || !data.sumaFerroviarioAereoAcumulado) {
@@ -18,17 +18,43 @@ const ResultsGenericCase = () => {
         <div className="globalContainer resultsGenericCase-container">
             <section>
                 <h1>Resultados caso genérico</h1>
-                <p className="mt-5 mb-5">
-                    Aun por definir, pero la idea es que haya un texto que se complete con números de los resultados, y
-                    que aparezcan varios gráficos de resultados.
+                <p className="mt-5 mb-4">
+                    Se presenta a continuación el resultado del análisis realizado para este caso genérico, en el que se
+                    conectan dos puntos situados a <strong>{data.distancia} km</strong> de distancia.
                 </p>
+                <p className="mb-4">
+                    <p className="mb-2">
+                        Las hipótesis que se han tomado son:
+                        </p >
+                            <li>
+                                <strong>{data.demandaInicial}</strong> viajeros anuales en el año de inicio, con un crecimiento
+                                del <strong>{data.crecimientoAnual} %</strong>.
+                            </li>
+                            <li>
+                                <strong>{data.modoAereo} %</strong> de la demanda emplearía el modo aéreo.
+                            </li>
+                            <li>
+                                Un aeropuerto <strong>{data.aeropuertoA}</strong> y otro aeropuerto <strong>{data.aeropuertoA}</strong>.
+                            </li>
+                            <li>
+                                Un terreno <strong>{data.tipoTerreno}</strong> entre ambos puntos.
+                            </li>
+                        </p>
+            </section>
+            <section>
+            <p className="mb-5 text-justify">
+                    En el siguiente gráfico se puede apreciar las emisiones acumuladas por el sistema en el escenario
+                    planteado (naranja), las emisiones de cada modo en ese escenario (morado para el aéreo y verde para
+                    la alta velocidad) y para una situación hipotética en que sólo se utilizara el transporte aéreo
+                    (gris)
+                </p>
+                <div className="chart-container">
+                    <GraficoGEISistema data={data}/>
+                </div>
             </section>
             <section>
                 <div className="chart-container">
-                    <GraficoGEISistema data={data} />
-                </div>
-                <div className="chart-container">
-                    <GraficoGEIvsViajeros data={data} />
+                    <GraficoGEIvsViajeros data={data}/>
                 </div>
             </section>
         </div>

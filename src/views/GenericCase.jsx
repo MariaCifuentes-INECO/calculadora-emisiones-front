@@ -105,8 +105,25 @@ const GenericCase = () => {
             // Obtener los datos de la respuesta
             const result = await response.json();
 
+            // Crear un objeto con todos los datos que deseas pasar a la página de resultados
+            const dataToPass = {
+                ...result, // Datos de la respuesta del servidor
+                aeropuertoA, // Estado de aeropuertoA
+                aeropuertoB, // Estado de aeropuertoB
+                imputacionAeropuertoA, // Estado de imputacionAeropuertoA
+                imputacionAeropuertoB, // Estado de imputacionAeropuertoB
+                crecimientoAnual, // Estado de crecimientoAnual
+                modoAereo, // Estado de modoAereo
+                imputacionFerroviaria, // Estado de imputacionFerroviaria
+                distancia, // Estado de distancia
+                demandaInicial, // Estado de demandaInicial
+                longitudTrayectoFerroviario, // Estado de longitudTrayectoFerroviario
+                tipoTerreno, // Estado de tipoTerreno
+                distanciaTrayectoAereo // Estado de distanciaTrayectoAereo
+            };
+
             // Navegar a la página de resultados y pasar los datos
-            navigate("/resultsGenericCase", {state: {data: result}});
+            navigate("/resultsGenericCase", { state: { data: dataToPass } });
         } catch (error) {
             console.error("Error:", error);
         }
@@ -116,8 +133,29 @@ const GenericCase = () => {
         <div className="globalContainer">
             <section>
                 <h1 className="title-genericCase">Caso genérico</h1>
-                <p className="mt-5 mb-5">
-                    Aquí se explica lo que se va a hacer y las limitaciones que tiene el ejercicio.
+                <p className="mt-4 mb-3 text-justify">
+                    Para atender las necesidades de conexión entre dos puntos de generación y atracción de viajes, puede
+                    optarse por proveer infraestructuras y servicios de varios modos de transporte. La decisión sobre el
+                    empleo de uno u otro debe estar motivada por criterios de eficiencia económica y rentabilidad
+                    social, teniendo en cuenta todas las etapas en la vida de la infraestructura, también en la emisión
+                    de gases de efecto invernadero.
+                </p>
+                <p className="mb-3 text-justify">
+                    En el modo aéreo, la mayor parte de las emisiones se producirán en la fase de operación, en función
+                    de la demanda que se atienda, mientras que en la fase de construcción las emisiones serán
+                    proporcionalmente menores.
+                    Para simplificar el ejemplo, permitiendo adaptarlo a las necesidades del usuario, se seleccionará un
+                    tipo de aeropuerto para el punto A y para el punto B.
+                </p>
+                <p className="mb-3 text-justify">
+                    En la alta velocidad ferroviaria, por el contrario, las emisiones en la construcción son elevadas,
+                    siendo aún mayores cuanto más accidentado sea el terreno. A cambio, el empleo de tracción eléctrica
+                    (y contratos de energía verde), no supone emisiones adicionales en la fase de operación.
+                </p>
+                <p className="mb-4 text-justify">
+                    Las distancias sugeridas para uno y otro modo, así como el porcentaje de dedicación de un aeropuerto
+                    a una relación en concreto responden a ratios medias observadas en relaciones peninsulares, pero se
+                    deja abierta la posibilidad de adaptación al usuario.
                 </p>
             </section>
             <section>
@@ -126,7 +164,7 @@ const GenericCase = () => {
                         <h4 className="subtitle-genericCase">Planteamiento del caso</h4>
                         <div className="row">
                             <div className="col-3">
-                                <label htmlFor="dato1">Distancia entre origen y destino (D):</label>
+                                <label htmlFor="dato1">Distancia entre origen y destino:</label>
                                 <div className="input-group">
                                     <input
                                         type="number"
