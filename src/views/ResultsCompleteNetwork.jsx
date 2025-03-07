@@ -5,7 +5,7 @@ import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 
 const ResultsCompleteNetwork = () => {
 
-    const { completeNetwork} = useContext(CalculatorContext);
+    const {completeNetwork} = useContext(CalculatorContext);
 
     return (
         <div className="globalContainer resultsCompleteNetwork-container">
@@ -16,10 +16,7 @@ const ResultsCompleteNetwork = () => {
                 </p>
             </section>
             <section>
-
-
-                    <GraficoAnalisisReal backendData={completeNetwork}/>
-
+                <GraficoAnalisisReal backendData={completeNetwork}/>
             </section>
         </div>
     );

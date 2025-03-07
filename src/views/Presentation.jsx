@@ -15,7 +15,7 @@ const Presentation = () => {
     return (
         <div className="container globalContainer">
             <header className="text-center mb-5">
-                <h1 className="display-4">Calculadora de emisiones en el ciclo de vida de la infraestrctura</h1>
+                <h1 className="display-4">Calculadora de emisiones en el ciclo de vida de la infraestructura</h1>
             </header>
 
             <section className="mb-5">
