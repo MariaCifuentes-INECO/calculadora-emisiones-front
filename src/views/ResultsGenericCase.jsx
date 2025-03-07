@@ -35,7 +35,7 @@ const ResultsGenericCase = () => {
                     </li>
                     <li>
                         Un aeropuerto <strong>{data.aeropuertoA}</strong> y otro
-                        aeropuerto <strong>{data.aeropuertoA}</strong>.
+                        aeropuerto <strong>{data.aeropuerto}</strong>.
                     </li>
                     <li>
                         Un terreno <strong>{data.tipoTerreno}</strong> entre ambos puntos.
