@@ -80,18 +80,18 @@ const GraficoAnalisisReal = ({ backendData }) => {
             // Líneas: Demanda (definidas después de las barras para que se superpongan)
             {
                 type: 'line',
-                label: 'Demanda AVLD Acumulada',
-                data: backendData.map((item) => item.demandaAVLDAcumulada),
+                label: 'Demanda AV LD',
+                data: backendData.map((item) => item.demandaAVLD),
                 borderColor: 'rgba(255, 99, 132, 1)', // Color para Demanda AVLD
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'rgba(255, 99, 132)',
                 yAxisID: 'y2', // Asignar al segundo eje Y
             },
             {
                 type: 'line',
                 label: 'Demanda Aérea Acumulada',
-                data: backendData.map((item) => item.demandaAereaAcumulada),
+                data: backendData.map((item) => item.demandaAerea),
                 borderColor: 'rgba(54, 162, 235, 1)', // Color para Demanda Aérea
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                backgroundColor: 'rgba(54, 162, 235)',
                 yAxisID: 'y2', // Asignar al segundo eje Y
             },
         ],
@@ -109,7 +109,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
             },
             title: {
                 display: true,
-                text: 'Emisiones (construcción + mantenimiento + operación) y viajes acumulados en el periodo por cada modo',
+                text: 'Emisiones acumuladas en el periodo (construcción + mantenimiento + operación) y viajes anuales en cada modo',
             },
         },
         scales: {
@@ -136,6 +136,12 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 title: {
                     display: true,
                     text: 'Miles de viajes acumulados', // Título del segundo eje Y
+                },
+                ticks: {
+                    callback: function(value) {
+                        // Redondear a miles solo en el eje Y, sin modificar los datos reales
+                        return Math.round(value / 1000); //
+                    },
                 },
                 grid: {
                     drawOnChartArea: false, // Evitar que la cuadrícula del segundo eje Y se superponga con el primero
@@ -165,8 +171,8 @@ GraficoAnalisisReal.propTypes = {
             emisionesConstruccionAereo: PropTypes.number.isRequired,
             emisionesOperacionAereo: PropTypes.number.isRequired,
             emisionesMantenimientoAereo: PropTypes.number.isRequired,
-            demandaAVLDAcumulada: PropTypes.number.isRequired,
-            demandaAereaAcumulada: PropTypes.number.isRequired,
+            demandaAVLD: PropTypes.number.isRequired,
+            demandaAerea: PropTypes.number.isRequired,
         })
     ).isRequired,
 };

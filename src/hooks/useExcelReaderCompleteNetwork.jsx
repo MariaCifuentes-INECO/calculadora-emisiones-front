@@ -35,8 +35,8 @@ const useExcelReaderCompleteNetwork = () => {
                     const emisionesOperacionAereo = getRoundedCellValue(row, 49);
                     const emisionesMantenimientoAereo = getRoundedCellValue(row, 50);
                     const cicloVidaAereoAcumulado = getRoundedCellValue(row, 10); // Décima columna
-                    const demandaAVLDAcumulada = getRoundedCellValue(row, 30);
-                    const demandaAereaAcumulada = getRoundedCellValue(row, 31);
+                    const demandaAVLD = getRoundedCellValue(row, 26);
+                    const demandaAerea = getRoundedCellValue(row, 27);
 
                     // Filtrar por año (2004 a 2023)
                     if (anio >= 2004 && anio <= 2024) {
@@ -49,8 +49,8 @@ const useExcelReaderCompleteNetwork = () => {
                             emisionesOperacionAereo,
                             emisionesMantenimientoAereo,
                             cicloVidaAereoAcumulado,
-                            demandaAVLDAcumulada,
-                            demandaAereaAcumulada
+                            demandaAVLD,
+                            demandaAerea
                         });
                     }
                 }
