@@ -1,24 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.genericCaseCont {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 40px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+    font-family: "Poppins", sans-serif;
+}
+
+.title-genericCase{
+    font-size: 36px;
+    font-weight: 600;
+    color: #3463AC;
+}
+
+.genericCaseExplanation{
+    font-size: 18px;
+    font-weight: 400;
+    color: #303555;
+    text-align: justify;
+}
+
+.form-group h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #3463AC;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
 
 .form-group label {
-    margin-bottom: 10px; /* Añade un margen inferior al label */
+    font-size: 14px;
+    font-weight: 400;
+    color: #303555;
 }
 
-input.form-control, select.form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
+input.form-control,
+select.form-control{
+    border-radius: 10px;
+    border: 1px solid #717384;
+    padding: 16px;
 }
 
-/* Sombra en los inputs cuando están en foco */
-input.form-control:focus, select.form-control:focus {
-    border-color: #1A4488;
-    box-shadow: 0 0 5px rgba(26, 68, 136, 0.5);
-}
-
-h4 {
-    color: rgb(52, 99, 172) !important;
+.input-group-text {
+    background-color: #F6F6F6 !important;
+    border: 1px solid #717384 !important;
+    border-radius: 0 10px 10px 0 !important; /* Redondeado solo en la derecha */
+    padding: 0 16px !important; /* Padding a los lados */
 }
 
 .subtitle-genericCase{
@@ -38,5 +67,21 @@ h4 {
     background-color: rgb(26,68,136) !important;
     border-color: rgb(26,68,136) !important;
 }
+
+
+
+
+html, body {
+    background-color: #f0f0f0 !important; /* Fondo gris clarito */
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.btn-primary{
+    background-color: rgb(26, 68, 136) !important;
+}
+
 
 

@@ -130,10 +130,10 @@ const GenericCase = () => {
     };
 
     return (
-        <div className="globalContainer">
-            <section className="mb-4 text-justify">
-                <h1 className="title-genericCase">Caso genérico</h1>
-                <p className="mt-4">
+        <div className="container genericCaseCont">
+            <h1 className="title-genericCase">Caso genérico</h1>
+            <section className="mt-5 mb-5 genericCaseExplanation">
+                <p>
                     Para atender las necesidades de conexión entre dos puntos de generación y atracción de viajes, puede
                     optarse por proveer infraestructuras y servicios de varios modos de transporte. La decisión sobre el
                     empleo de uno u otro debe estar motivada por criterios de eficiencia económica y rentabilidad
@@ -162,8 +162,8 @@ const GenericCase = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <h4 className="subtitle-genericCase">Planteamiento del caso</h4>
-                        <div className="row">
-                            <div className="col-3">
+                        <div className="row gx-3"> {/* gx-3 agrega espacio horizontal entre columnas */}
+                            <div className="col-lg-3 col-md-6">
                                 <label htmlFor="dato1">Distancia entre origen y destino:</label>
                                 <div className="input-group">
                                     <input
@@ -171,13 +171,18 @@ const GenericCase = () => {
                                         className="form-control"
                                         id="dato1"
                                         value={distancia}
-                                        onChange={handleDistanciaChange} // Actualiza la distancia y la longitud ferroviaria
+                                        onChange={handleDistanciaChange}
+                                        min="0"
                                         required
                                     />
                                     <span className="input-group-text">km</span>
                                 </div>
+                                <small className="form-text text-muted">
+                                    Introduzca valor numérico
+                                </small>
                             </div>
-                            <div className="col-2">
+
+                            <div className="col-lg-3 col-md-6">
                                 <label htmlFor="dato2">Demanda año inicio:</label>
                                 <input
                                     type="number"
@@ -185,10 +190,12 @@ const GenericCase = () => {
                                     id="dato2"
                                     value={demandaInicial}
                                     onChange={(e) => setDemandaInicial(parseFloat(e.target.value))}
+                                    min="0"
                                     required
                                 />
                             </div>
-                            <div className="col-2">
+
+                            <div className="col-lg-3 col-md-6">
                                 <label htmlFor="dato3">Crecimiento anual esperado:</label>
                                 <div className="input-group">
                                     <input
@@ -205,7 +212,8 @@ const GenericCase = () => {
                                     <span className="input-group-text">%</span>
                                 </div>
                             </div>
-                            <div className="col-2">
+
+                            <div className="col-lg-3 col-md-6">
                                 <label htmlFor="dato4">% modo aéreo:</label>
                                 <div className="input-group">
                                     <input
@@ -223,6 +231,7 @@ const GenericCase = () => {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div className="form-group">
                         <h4 className="subtitle-genericCase">Infraestructura aeropuertos</h4>
