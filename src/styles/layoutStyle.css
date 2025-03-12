@@ -1,0 +1,14 @@
+/* layoutStyle.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el layout ocupe al menos toda la altura de la ventana */
+    width: 100%;
+}
+
+.main-content {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
