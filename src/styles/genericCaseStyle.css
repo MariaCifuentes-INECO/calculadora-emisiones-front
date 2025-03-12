@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+html, body {
+    background-color: #f0f0f0 !important; /* Fondo gris clarito */
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
 .genericCaseCont {
     background-color: #ffffff; /* Fondo blanco para el contenedor */
     padding: 40px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
     font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-genericCase{
@@ -54,34 +63,21 @@ select.form-control{
     margin-bottom: 20px;
 }
 
-.col-2, .col-3{
-    margin-right: 20px;
+.input-explanation{
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #303555 !important;
 }
 
-.btn-right{
+.btn-genericCase {
+    background-color: #303555 !important;
+    border-color: #303555 !important;
+    padding: 12px 54px !important;
+    color: #FFFFFF !important;
+}
+
+.btn-center{
     display: flex;
-    justify-content: flex-end;
-}
-
-.btn-primary {
-    background-color: rgb(26,68,136) !important;
-    border-color: rgb(26,68,136) !important;
-}
-
-
-
-
-html, body {
-    background-color: #f0f0f0 !important; /* Fondo gris clarito */
     justify-content: center;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
 }
-
-
-.btn-primary{
-    background-color: rgb(26, 68, 136) !important;
-}
-
-
 
