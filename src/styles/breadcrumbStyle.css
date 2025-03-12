@@ -1,22 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-html, body {
-    font-family: "Poppins", sans-serif;
-}
-
 .breadcrumb-item.home a {
     color: #303555;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
 }
 
 .breadcrumb-item.current {
     color: #303555;
     font-size: 14px;
     font-weight: 400;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Elimina el separador predeterminado de Bootstrap (barra "/") */
