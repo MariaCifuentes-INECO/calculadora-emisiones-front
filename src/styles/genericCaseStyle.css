@@ -78,3 +78,9 @@ select.form-control{
     justify-content: center;
 }
 
+.toggle-btn{
+    font-size: 18px !important;
+    font-weight: 400;
+    color: #3463AC !important;
+}
+

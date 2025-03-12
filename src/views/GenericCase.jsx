@@ -135,6 +135,12 @@ const GenericCase = () => {
         { label: "CASO GENÉRICO", active: true, className: "current" },
     ];
 
+    const [showFullText, setShowFullText] = useState(false);
+
+    const toggleText = () => {
+        setShowFullText((prev) => !prev);
+    };
+
     return (
         <div className="container genericCaseWrapper">
             {/* Miga de pan */}
@@ -142,39 +148,53 @@ const GenericCase = () => {
             <div className="container genericCaseCont">
                 <h1 className="title-genericCase">Caso genérico</h1>
                 <section className="mt-5 mb-5 genericCaseExplanation">
-                    <p>
-                        Para atender las necesidades de conexión entre dos puntos de generación y atracción de viajes,
-                        puede
-                        optarse por proveer infraestructuras y servicios de varios modos de transporte. La decisión
-                        sobre el
-                        empleo de uno u otro debe estar motivada por criterios de eficiencia económica y rentabilidad
-                        social, teniendo en cuenta todas las etapas en la vida de la infraestructura, también en la
-                        emisión
-                        de gases de efecto invernadero.
-                    </p>
-                    <p>
-                        En el modo aéreo, la mayor parte de las emisiones se producirán en la fase de operación, en
-                        función
-                        de la demanda que se atienda, mientras que en la fase de construcción las emisiones serán
-                        proporcionalmente menores.
-                        Para simplificar el ejemplo, permitiendo adaptarlo a las necesidades del usuario, se
-                        seleccionará un
-                        tipo de aeropuerto para el punto A y para el punto B.
-                    </p>
-                    <p>
-                        En la alta velocidad ferroviaria, por el contrario, las emisiones en la construcción son
-                        elevadas,
-                        siendo aún mayores cuanto más accidentado sea el terreno. A cambio, el empleo de tracción
-                        eléctrica
-                        (y contratos de energía verde), no supone emisiones adicionales en la fase de operación.
-                    </p>
-                    <p>
-                        Las distancias sugeridas para uno y otro modo, así como el porcentaje de dedicación de un
-                        aeropuerto
-                        a una relación en concreto responden a ratios medias observadas en relaciones peninsulares, pero
-                        se
-                        deja abierta la posibilidad de adaptación al usuario.
-                    </p>
+                    <div>
+                        {!showFullText ? (
+                            <>
+                                <p>
+                                    Para atender las necesidades de conexión entre dos puntos de generación y atracción
+                                    de viajes, puede optarse por proveer infraestructuras y servicios de varios modos de
+                                    transporte. La decisión sobre el empleo de uno u otro debe estar motiva...
+                                    <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
+                                        (ver más)
+                                    </button>
+                                </p>
+                            </>
+                        ) : (
+                            <>
+                                <p>
+                                    Para atender las necesidades de conexión entre dos puntos de generación y atracción
+                                    de viajes, puede optarse por proveer infraestructuras y servicios de varios modos de
+                                    transporte. La decisión sobre el empleo de uno u otro debe estar motivada por
+                                    criterios de eficiencia económica y rentabilidad social, teniendo en cuenta todas
+                                    las etapas en la vida de la infraestructura, también en la emisión de gases de
+                                    efecto invernadero.
+                                </p>
+                                <p>
+                                    En el modo aéreo, la mayor parte de las emisiones se producirán en la fase de
+                                    operación, en función de la demanda que se atienda, mientras que en la fase de
+                                    construcción las emisiones serán proporcionalmente menores. Para simplificar el
+                                    ejemplo, permitiendo adaptarlo a las necesidades del usuario, se seleccionará un
+                                    tipo de aeropuerto para el punto A y para el punto B.
+                                </p>
+                                <p>
+                                    En la alta velocidad ferroviaria, por el contrario, las emisiones en la construcción
+                                    son elevadas, siendo aún mayores cuanto más accidentado sea el terreno. A cambio, el
+                                    empleo de tracción eléctrica (y contratos de energía verde), no supone emisiones
+                                    adicionales en la fase de operación.
+                                </p>
+                                <p>
+                                    Las distancias sugeridas para uno y otro modo, así como el porcentaje de dedicación
+                                    de un aeropuerto a una relación en concreto responden a ratios medias observadas en
+                                    relaciones peninsulares, pero se deja abierta la posibilidad de adaptación al
+                                    usuario.
+                                </p>
+                                <button className="btn btn-link p-0" onClick={toggleText}>
+                                    (ver menos)
+                                </button>
+                            </>
+                        )}
+                    </div>
                 </section>
                 <section>
                     <form onSubmit={handleSubmit}>
