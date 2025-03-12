@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+html, body {
+    font-family: "Poppins", sans-serif;
+}
+
+.breadcrumb-item.home a {
+    color: #303555;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+.breadcrumb-item.current {
+    color: #303555;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+/* Elimina el separador predeterminado de Bootstrap (barra "/") */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: none !important;
+}
+
+/* Agrega el guion como separador */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "-" !important; /* Guion como separador */
+    margin: 0 4px !important; /* Espaciado */
+    color: #303555 !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+
+/* Estilo de hover para los enlaces del breadcrumb */
+.breadcrumb-item a:hover,
+.breadcrumb-item.current:hover{
+    text-decoration: underline !important; /* Subrayado al hacer hover */
+    text-decoration-color: #303555 !important; /* Color del subrayado*/
+    text-decoration-thickness: 1.5px !important; /* Grosor del subrayado*/
+    transition: border 0.2s ease; /* Transición suave para el hover */
+}
+
+/* En breadcrumbStyle.css */
+.breadcrumb {
+    margin-bottom: 0 !important; /* Ajusta este valor según sea necesario */
+}
