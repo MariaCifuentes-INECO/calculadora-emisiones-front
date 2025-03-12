@@ -43,12 +43,12 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/genericCase" className="nav-link custom-navbar-color">
+                                <Link to="/genericCase" className="nav-link fw-medium custom-navbar-color">
                                     CASO GENÉRICO
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/realCase" className="nav-link custom-navbar-color">
+                                <Link to="/realCase" className="nav-link fw-medium custom-navbar-color">
                                     CASOS REALES
                                 </Link>
                             </li>
