@@ -189,7 +189,7 @@ const GenericCase = () => {
                                     relaciones peninsulares, pero se deja abierta la posibilidad de adaptación al
                                     usuario.
                                 </p>
-                                <button className="btn btn-link p-0" onClick={toggleText}>
+                                <button className="btn btn-link p-0 toggle-btn" onClick={toggleText}>
                                     (ver menos)
                                 </button>
                             </>
