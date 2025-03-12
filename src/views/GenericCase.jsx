@@ -1,6 +1,6 @@
 import {useState} from "react";
 import "../styles/genericCaseStyle.css";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb.jsx";
 
 const GenericCase = () => {

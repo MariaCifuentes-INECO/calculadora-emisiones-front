@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-html, body {
-    background-color: #f0f0f0 !important; /* Fondo gris clarito */
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-}
-
 .genericCaseCont {
     background-color: #ffffff; /* Fondo blanco para el contenedor */
     padding: 40px !important;
