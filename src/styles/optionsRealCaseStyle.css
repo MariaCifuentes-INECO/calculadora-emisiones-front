@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.optionsCont {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+    padding: 24px 20px;
+    max-width: 296px; /* Ajusta este valor según el espacio disponible */
+    height: 108px;
+    background-color: #FFFFFF;
+}
+
+.flex {
+    display: flex;
+    align-items: center; /* Alinea la imagen y el texto en la parte superior */
+}
+
+.optionsText {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #303555;
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
+    white-space: normal; /* Permite que el texto fluya en varias líneas */
+    flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
+}
+
+.custom-link {
+    text-decoration: none; /* Quitar subrayado */
+    color: inherit; /* Mantener el color del texto del componente */
+    cursor: pointer !important; /* Mostrar la mano al pasar */
+}
+
+.custom-link:hover {
+    text-decoration: none; /* Asegurar que no aparezca subrayado */
+    color: inherit; /* Mantener el color original */
+}
