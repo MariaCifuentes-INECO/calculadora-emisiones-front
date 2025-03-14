@@ -1,5 +1,4 @@
-import logoIneco from "../assets/Logo-Ineco.png"
-import logo from "../assets/logo_degradado.png"
+import logoIneco from "../assets/logoIneco.svg"
 import "../styles/footerStyle.css"
 
 export default function Footer() {

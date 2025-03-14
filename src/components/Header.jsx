@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logoIneco from "../assets/Logo-Ineco.png"
+import logoIneco from "../assets/logoIneco.svg"
 import logo from "../assets/logo_degradado.png"
 import "../styles/headerStyle.css"
 
@@ -12,7 +12,7 @@ export default function Header() {
                         <div className="col-md-4">
                             <Link to="/" className="d-inline-block">
                                 <img
-                                    src={logoIneco || "/placeholder.svg"}
+                                    src={logoIneco}
                                     alt="INECO Logo"
                                     className="img-fluid"
                                     style={{height: "41.69px", width: "191.36px"}}
