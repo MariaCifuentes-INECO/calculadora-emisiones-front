@@ -4,7 +4,7 @@ import "../styles/breadcrumbStyle.css";
 const Breadcrumb = ({ items }) => {
     return (
         <nav aria-label="breadcrumb">
-            <ol className="breadcrumb" style={{ listStyle: "none", padding: 0, display: "flex" }}>
+            <ol className="breadcrumb">
                 {items.map((item, index) => (
                     <li
                         key={index}

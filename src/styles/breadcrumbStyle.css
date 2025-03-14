@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-.breadcrumb-item.home a {
+.breadcrumb-item.home a,
+.breadcrumb-item.intermediate a {
     color: #303555;
     font-size: 14px;
     font-weight: 500;
@@ -40,7 +41,10 @@
     transition: border 0.2s ease; /* Transición suave para el hover */
 }
 
-/* En breadcrumbStyle.css */
+
 .breadcrumb {
     margin-bottom: 0 !important; /* Ajusta este valor según sea necesario */
+    list-style: none !important;
+    display: flex;
+    padding: 0;
 }
