@@ -28,12 +28,13 @@ const useExcelReaderCompleteNetwork = () => {
                     const anio = parseInt(row.getCell(1).value) || 0; // Primera columna
 
                     // Extraer y redondear valores de las celdas
-                    const emisionesConstruccionAVE = getRoundedCellValue(row, 44);
-                    const emisionesMantenimientoAVE = getRoundedCellValue(row, 46); // Novena columna
+                    const emisionesConstruccionAVE = getRoundedCellValue(row, 45);
+                    const emisionesOperacionAVE = getRoundedCellValue(row, 46);
+                    const emisionesMantenimientoAVE = getRoundedCellValue(row, 47); // Novena columna
                     const cicloVidaAVEAcumulado = getRoundedCellValue(row, 9); // Novena columna
-                    const emisionesConstruccionAereo = getRoundedCellValue(row, 48);
-                    const emisionesOperacionAereo = getRoundedCellValue(row, 49);
-                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 50);
+                    const emisionesConstruccionAereo = getRoundedCellValue(row, 49);
+                    const emisionesOperacionAereo = getRoundedCellValue(row, 50);
+                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 51);
                     const cicloVidaAereoAcumulado = getRoundedCellValue(row, 10); // Décima columna
                     const demandaAVLD = getRoundedCellValue(row, 26);
                     const demandaAerea = getRoundedCellValue(row, 27);
@@ -43,6 +44,7 @@ const useExcelReaderCompleteNetwork = () => {
                         extractedDataArray.push({
                             anio,
                             emisionesConstruccionAVE,
+                            emisionesOperacionAVE,
                             emisionesMantenimientoAVE,
                             cicloVidaAVEAcumulado,
                             emisionesConstruccionAereo,
