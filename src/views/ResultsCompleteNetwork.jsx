@@ -48,7 +48,7 @@ const ResultsCompleteNetwork = () => {
                 <section>
                     <GraficoAnalisisReal backendData={completeNetwork}/>
                 </section>
-                <section className="mt-5 mb-5 completeNetworkExplanation">
+                <section className="mt-5 mb-3 completeNetworkExplanation">
                     <p>
                         Por tanto, durante los últimos 20 años, las emisiones generadas por el modo aéreo peninsular han
                         sido un <strong>10% inferiores</strong> a las de la alta velocidad, habiendo transportado
