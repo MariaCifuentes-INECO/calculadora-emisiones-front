@@ -24,8 +24,7 @@ export default function Header() {
                                 <img
                                     src={logoHeader}
                                     alt="Icono calculadora"
-                                    className="me-4"
-                                    style={{height: "62.01px", width: "342.33px"}}
+                                    style={{height: "63px", width: "268px"}}
                                 />
                             </div>
                         </div>
@@ -43,7 +42,7 @@ export default function Header() {
                             </li>
                             <li className="nav-item">
                                 <Link to="/genericCase" className="nav-link fw-medium custom-navbar-color">
-                                    CASO GENÉRICO
+                                    SIMULADOR
                                 </Link>
                             </li>
                             <li className="nav-item">

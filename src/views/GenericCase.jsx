@@ -132,7 +132,7 @@ const GenericCase = () => {
 
     const breadcrumbItems = [
         {label: "INICIO", link: "/", className: "home"},
-        {label: "CASO GENÉRICO", active: true, className: "current"},
+        {label: "SIMULADOR", active: true, className: "current"},
     ];
 
     const [showFullText, setShowFullText] = useState(false);
@@ -146,7 +146,7 @@ const GenericCase = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container genericCaseCont">
-                <h1 className="title-genericCase">Caso genérico</h1>
+                <h1 className="title-genericCase">Simulador</h1>
                 <section className="mt-5 mb-5 genericCaseExplanation">
                     <div>
                         {!showFullText ? (
