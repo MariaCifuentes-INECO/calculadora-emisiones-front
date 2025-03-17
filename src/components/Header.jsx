@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 import logoIneco from "../assets/logoIneco.svg"
-import logo from "../assets/logo_degradado.png"
+import logoHeader from "../assets/logo_header.svg"
 import "../styles/headerStyle.css"
 
 export default function Header() {
@@ -22,12 +22,11 @@ export default function Header() {
                         <div className="col-md-8 mt-md-0 text-md-end">
                             <div className="d-flex align-items-center justify-content-md-end">
                                 <img
-                                    src={logo || "/placeholder.svg"}
+                                    src={logoHeader}
                                     alt="Icono calculadora"
                                     className="me-4"
-                                    style={{height: "42px", width: "91px"}}
+                                    style={{height: "62.01px", width: "342.33px"}}
                                 />
-                                <span className="custom-text-color">Calculadora de Emisiones</span>
                             </div>
                         </div>
                     </div>
@@ -60,4 +59,3 @@ export default function Header() {
         </header>
     )
 }
-
