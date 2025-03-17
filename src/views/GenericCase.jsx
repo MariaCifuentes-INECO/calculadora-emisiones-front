@@ -124,15 +124,15 @@ const GenericCase = () => {
             };
 
             // Navegar a la página de resultados y pasar los datos
-            navigate("/resultsGenericCase", { state: { data: dataToPass } });
+            navigate("/resultsGenericCase", {state: {data: dataToPass}});
         } catch (error) {
             console.error("Error:", error);
         }
     };
 
     const breadcrumbItems = [
-        { label: "INICIO", link: "/", className: "home" },
-        { label: "CASO GENÉRICO", active: true, className: "current" },
+        {label: "INICIO", link: "/", className: "home"},
+        {label: "CASO GENÉRICO", active: true, className: "current"},
     ];
 
     const [showFullText, setShowFullText] = useState(false);
@@ -144,7 +144,7 @@ const GenericCase = () => {
     return (
         <div className="container genericCaseWrapper">
             {/* Miga de pan */}
-            <Breadcrumb items={breadcrumbItems} />
+            <Breadcrumb items={breadcrumbItems}/>
             <div className="container genericCaseCont">
                 <h1 className="title-genericCase">Caso genérico</h1>
                 <section className="mt-5 mb-5 genericCaseExplanation">
@@ -152,9 +152,9 @@ const GenericCase = () => {
                         {!showFullText ? (
                             <>
                                 <p>
-                                    Para atender las necesidades de conexión entre dos puntos de generación y atracción
-                                    de viajes, puede optarse por proveer infraestructuras y servicios de varios modos de
-                                    transporte. La decisión sobre el empleo de uno u otro debe estar motiva...
+                                    <strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>
+                                    Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar
+                                    infraestructuras de distintos modos de transp...
                                     <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
                                         (ver más)
                                     </button>
@@ -163,41 +163,35 @@ const GenericCase = () => {
                         ) : (
                             <>
                                 <p>
-                                    Para atender las necesidades de conexión entre dos puntos de generación y atracción
-                                    de viajes, puede optarse por proveer infraestructuras y servicios de varios modos de
-                                    transporte. La decisión sobre el empleo de uno u otro debe estar motivada por
-                                    criterios de eficiencia económica y rentabilidad social, teniendo en cuenta todas
-                                    las etapas en la vida de la infraestructura, también en la emisión de gases de
-                                    efecto invernadero.
+                                    <strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>
+                                    Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar
+                                    infraestructuras de distintos modos de transporte. La clave está en la eficiencia
+                                    económica, la rentabilidad social y las emisiones de gases de efecto invernadero a
+                                    lo largo de su ciclo de vida.
                                 </p>
                                 <p>
-                                    En el modo aéreo, la mayor parte de las emisiones se producirán en la fase de
-                                    operación, en función de la demanda que se atienda, mientras que en la fase de
-                                    construcción las emisiones serán proporcionalmente menores. Para simplificar el
-                                    ejemplo, permitiendo adaptarlo a las necesidades del usuario, se seleccionará un
-                                    tipo de aeropuerto para el punto A y para el punto B.
+                                    <strong>Aéreo:</strong> La mayor parte de las emisiones proviene de la operación, mientras que la
+                                    construcción tiene un impacto menor. La elección del tipo de aeropuerto en los
+                                    puntos A y B influye en los resultados.
                                 </p>
                                 <p>
-                                    En la alta velocidad ferroviaria, por el contrario, las emisiones en la construcción
-                                    son elevadas, siendo aún mayores cuanto más accidentado sea el terreno. A cambio, el
-                                    empleo de tracción eléctrica (y contratos de energía verde), no supone emisiones
-                                    adicionales en la fase de operación.
+                                    <strong>Alta Velocidad:</strong> La construcción genera emisiones elevadas, especialmente en terrenos
+                                    difíciles. Sin embargo, la tracción eléctrica con energía renovable permite una
+                                    operación sin emisiones.
                                 </p>
                                 <p>
-                                    Las distancias sugeridas para uno y otro modo, así como el porcentaje de dedicación
-                                    de un aeropuerto a una relación en concreto responden a ratios medias observadas en
-                                    relaciones peninsulares, pero se deja abierta la posibilidad de adaptación al
-                                    usuario.
+                                    Los valores de distancia y uso de infraestructuras se basan en promedios de rutas
+                                    peninsulares, pero puedes personalizarlos según tus necesidades.
+                                    <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
+                                        (ver menos)
+                                    </button>
                                 </p>
-                                <button className="btn btn-link p-0 toggle-btn" onClick={toggleText}>
-                                    (ver menos)
-                                </button>
                             </>
                         )}
                     </div>
                 </section>
                 <section>
-                    <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <h4 className="subtitle-genericCase">Planteamiento del caso</h4>
                             <div className="row gx-3"> {/* gx-3 agrega espacio horizontal entre columnas */}
