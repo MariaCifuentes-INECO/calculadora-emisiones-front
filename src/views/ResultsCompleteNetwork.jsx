@@ -3,6 +3,7 @@ import {CalculatorContext} from "../context/CalculatorContext.js";
 import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCompleteNetworkStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
+import {Link} from "react-router-dom";
 
 
 const ResultsCompleteNetwork = () => {
@@ -59,6 +60,9 @@ const ResultsCompleteNetwork = () => {
                         reflejando el trasvase que, de manera natural, se está produciendo para estas conexiones
                         hacia
                         la alta velocidad.
+                    </p>
+                    <p>
+                        <Link to="/hypothesis" className="hypothesis-link">Ver hipótesis y fuentes</Link>
                     </p>
                 </section>
             </div>
