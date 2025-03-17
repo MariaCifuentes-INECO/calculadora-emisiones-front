@@ -1,0 +1,35 @@
+.grafico-container {
+    width: 90%;
+    margin: auto;
+}
+
+.legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 13px; /* Tamaño de la fuente más pequeño */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 5px 0;
+}
+
+.legend-bar {
+    width: 35px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.legend-line {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 2px solid white;
+}
+
+.circle {
+    border-radius: 50%;
+}

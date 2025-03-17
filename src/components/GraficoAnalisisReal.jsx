@@ -11,110 +11,146 @@ import {
     Legend,
 } from "chart.js"
 import PropTypes from "prop-types"
+import "../styles/graficoAnalisisRealStyle.css"
 
-// Registrar los componentes de Chart.js
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend)
 
 const GraficoAnalisisReal = ({ backendData }) => {
-    // Validar que backendData esté definido y no esté vacío
     if (!backendData || backendData.length === 0) {
         return <div>No hay datos disponibles para mostrar el gráfico.</div>
     }
 
-    // Preparar los datos para el gráfico
-    const labels = backendData.map((item) => item.anio.toString()) // Eje X: años
+    const labels = backendData.map((item) => item.anio.toString())
 
-    // CAMBIO CLAVE: Separar los datasets en barras y líneas
     const barDatasets = [
-        // Grupo 1 de barras apiladas: Emisiones Aéreo
         {
             type: "bar",
             label: "Emisiones Construcción Aéreo",
             data: backendData.map((item) => item.emisionesConstruccionAereo),
-            backgroundColor: "rgb(112,48,160)", // Color para Construcción Aéreo
-            yAxisID: "y1", // Asignar al primer eje Y
-            stack: "stack2", // Apilar en otro grupo
-            order: 2, // Orden de renderizado (mayor número = más atrás)
+            backgroundColor: "#184487",
+            borderColor: "#FFFFFF",
+            borderWidth: { top: 0.5 },
+            borderSkipped: false,
+            yAxisID: "y1",
+            stack: "stack2",
+            order: 2,
         },
         {
             type: "bar",
             label: "Emisiones Operación Aéreo",
             data: backendData.map((item) => item.emisionesOperacionAereo),
-            backgroundColor: "rgb(140, 93, 179)", // Color para Operación Aéreo
-            yAxisID: "y1", // Asignar al primer eje Y
-            stack: "stack2", // Apilar en otro grupo
-            order: 2, // Orden de renderizado (mayor número = más atrás)
+            backgroundColor: "#3463AC",
+            yAxisID: "y1",
+            stack: "stack2",
+            order: 2,
+            borderColor: "#FFFFFF",
+            borderWidth: { top: 0.5 },
+            borderSkipped: false,
         },
         {
             type: "bar",
             label: "Emisiones Mantenimiento Aéreo",
             data: backendData.map((item) => item.emisionesMantenimientoAereo),
-            backgroundColor: "rgb(199, 136,224)", // Color para Mantenimiento Aéreo
-            yAxisID: "y1", // Asignar al primer eje Y
-            stack: "stack2", // Apilar en otro grupo
-            order: 2, // Orden de renderizado (mayor número = más atrás)
+            backgroundColor: "#2F92D0",
+            yAxisID: "y1",
+            stack: "stack2",
+            order: 2,
         },
-        // Grupo 2 de barras apiladas: Emisiones AVE
         {
             type: "bar",
             label: "Emisiones Construcción AVE",
             data: backendData.map((item) => item.emisionesConstruccionAVE),
-            backgroundColor: "rgb(87,137,122)", // Color para Construcción AVE
-            yAxisID: "y1", // Asignar al primer eje Y
-            stack: "stack1", // Apilar en el mismo grupo
-            order: 2, // Orden de renderizado (mayor número = más atrás)
+            backgroundColor: "#720515",
+            yAxisID: "y1",
+            stack: "stack1",
+            order: 2,
+            borderColor: "#FFFFFF",
+            borderWidth: { top: 0.5 },
+            borderSkipped: false,
+        },
+        {
+            type: "bar",
+            label: "Emisiones Operación AVE",
+            data: backendData.map((item) => item.emisionesOperacionAVE),
+            backgroundColor: "#CB1823",
+            yAxisID: "y1",
+            stack: "stack1",
+            order: 2,
+            borderColor: "#FFFFFF",
+            borderWidth: { top: 0.5 },
+            borderSkipped: false,
         },
         {
             type: "bar",
             label: "Emisiones Mantenimiento AVE",
             data: backendData.map((item) => item.emisionesMantenimientoAVE),
-            backgroundColor: "rgb(128, 174, 156)", // Color para Mantenimiento AVE
-            yAxisID: "y1", // Asignar al primer eje Y
-            stack: "stack1", // Apilar en el mismo grupo
-            order: 2, // Orden de renderizado (mayor número = más atrás)
+            backgroundColor: "#E9465C",
+            yAxisID: "y1",
+            stack: "stack1",
+            order: 2,
         },
     ]
 
     const lineDatasets = [
-        // Líneas: Demanda
         {
             type: "line",
             label: "Demanda AV LD",
             data: backendData.map((item) => item.demandaAVLD),
-            borderColor: "rgba(255, 99, 132, 1)", // Color para Demanda AVLD
-            backgroundColor: "rgba(255, 99, 132)",
-            yAxisID: "y2", // Asignar al segundo eje Y
-            order: 1, // Orden de renderizado (menor número = más adelante)
-            pointRadius: 0, // Quitar los puntos
+            borderColor: "#717070",
+            backgroundColor: "#717070",
+            yAxisID: "y2",
+            order: 1,
+            pointRadius: 5,
+            pointBackgroundColor: "#717070",
+            pointBorderColor: "#FFFFFF",
+            pointBorderWidth: 2,
+            pointStyle: "circle",
         },
         {
             type: "line",
             label: "Demanda Aérea Acumulada",
             data: backendData.map((item) => item.demandaAerea),
-            borderColor: "rgba(54, 162, 235, 1)", // Color para Demanda Aérea
-            backgroundColor: "rgba(54, 162, 235)",
-            yAxisID: "y2", // Asignar al segundo eje Y
-            order: 1, // Orden de renderizado (menor número = más adelante)
-            pointRadius: 0, // Quitar los puntos
+            borderColor: "#673A8E",
+            backgroundColor: "#673A8E",
+            yAxisID: "y2",
+            order: 1,
+            pointStyle: "rect",
+            pointRadius: 5,
+            pointBorderColor: "#FFFFFF",
+            pointBorderWidth: 2,
         },
     ]
 
-    // Combinar todos los datasets, poniendo las líneas al final
     const data = {
         labels,
         datasets: [...barDatasets, ...lineDatasets],
     }
 
+    const renderLegend = () => (
+        <div className="legend-container">
+            {lineDatasets.map((dataset, index) => (
+                <div key={`line-${index}`} className="legend-item">
+                    <div
+                        className={`legend-line ${dataset.pointStyle === "circle" ? "circle" : ""}`}
+                        style={{ backgroundColor: dataset.backgroundColor, borderColor: dataset.pointBorderColor }}
+                    ></div>
+                    <span>{dataset.label}</span>
+                </div>
+            ))}
+            {barDatasets.map((dataset, index) => (
+                <div key={`bar-${index}`} className="legend-item">
+                    <div className="legend-bar" style={{ backgroundColor: dataset.backgroundColor }}></div>
+                    <span>{dataset.label}</span>
+                </div>
+            ))}
+        </div>
+    )
+
     const options = {
         responsive: true,
-        interaction: {
-            mode: "index",
-            intersect: false,
-        },
+        interaction: { mode: "index", intersect: false },
         plugins: {
-            legend: {
-                position: "bottom",
-            },
+            legend: { display: false },
             title: {
                 display: true,
                 text: "Emisiones acumuladas en el periodo (construcción + mantenimiento + operación) y viajes anuales en cada modo",
@@ -124,51 +160,35 @@ const GraficoAnalisisReal = ({ backendData }) => {
             y1: {
                 type: "linear",
                 display: true,
-                position: "left", // Eje Y izquierdo para las barras
-                title: {
-                    display: true,
-                    text: "Millones de t CO\u2082 eq acumulados", // Título del primer eje Y
-                },
+                position: "left",
+                title: { display: true, text: "Millones de t CO₂ eq acumulados" },
                 ticks: {
-                    callback: (value) => {
-                        // Redondear a millones solo en el eje Y, sin modificar los datos reales
-                        return Math.round(value / 1000000) // Dividir por 1 millón para mostrarlo en millones
-                    },
+                    callback: (value) => Math.round(value / 1000000),
                 },
-                stacked: true, // Apilar las barras en el eje Y
+                stacked: true,
             },
             y2: {
                 type: "linear",
                 display: true,
-                position: "right", // Eje Y derecho para las líneas
-                title: {
-                    display: true,
-                    text: "Miles de viajes acumulados", // Título del segundo eje Y
-                },
+                position: "right",
+                title: { display: true, text: "Miles de viajes acumulados" },
                 ticks: {
-                    callback: (value) => {
-                        // Redondear a miles solo en el eje Y, sin modificar los datos reales
-                        return Math.round(value / 1000) //
-                    },
+                    callback: (value) => Math.round(value / 1000),
                 },
-                grid: {
-                    drawOnChartArea: false, // Evitar que la cuadrícula del segundo eje Y se superponga con el primero
-                },
+                grid: { drawOnChartArea: false },
             },
-            x: {
-                stacked: true, // Apilar las barras en el eje X
-            },
+            x: { stacked: true },
         },
     }
 
     return (
-        <div style={{ width: "80%", margin: "auto" }}>
+        <div className="grafico-container">
             <Chart type="bar" data={data} options={options} />
+            {renderLegend()}
         </div>
     )
 }
 
-// Definir PropTypes para validar los props
 GraficoAnalisisReal.propTypes = {
     backendData: PropTypes.arrayOf(
         PropTypes.shape({
@@ -186,4 +206,3 @@ GraficoAnalisisReal.propTypes = {
 }
 
 export default GraficoAnalisisReal
-
