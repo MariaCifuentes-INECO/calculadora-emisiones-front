@@ -135,7 +135,7 @@ const GenericCase = () => {
         {label: "SIMULADOR", active: true, className: "current"},
     ];
 
-    const [showFullText, setShowFullText] = useState(false);
+    const [showFullText, setShowFullText] = useState(true);
 
     const toggleText = () => {
         setShowFullText((prev) => !prev);
