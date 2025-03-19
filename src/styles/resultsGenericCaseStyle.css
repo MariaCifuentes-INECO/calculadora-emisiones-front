@@ -1,8 +1,115 @@
-.chart-container {
-    width: 80%; /* Ajusta el ancho según sea necesario */
-    margin: 0 auto 50px; /* Centra horizontalmente */
-    display: block; /* Asegura que el contenedor se comporta como un bloque */
-    text-align: center; /* Centra el contenido dentro del contenedor */
+.resultsenericCaseWrapper {
+    padding: 12px 0 !important;
 }
+
+.resultsGenericCaseCont {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 40px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-resultsGenericCase{
+    font-size: 36px;
+    font-weight: 600;
+    color: #3463AC;
+}
+
+.resultsGenericCaseExplanation{
+    font-size: 18px;
+    font-weight: 400;
+    color: #303555;
+    text-align: justify;
+}
+
+.hypothesisSummary,
+.bloque-demanda {
+    text-align: center;
+}
+
+.hypothesisTitle,
+.titulo-emisiones,
+.titulo-demanda {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #303555;
+}
+
+.hypothesisGrid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.hypothesisItem,
+.emision-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 208px;
+    text-align: center;
+    font-size: 18px;
+    color: #303555;
+}
+
+.hypothesisIcon,
+.icono-emision,
+.icono-demanda {
+    margin-bottom: 10px;
+}
+
+.texto-destacado{
+    font-size: 28px;
+    color: #184487;
+    font-weight: 700;
+}
+
+.bloque {
+    display: block;
+}
+
+.emisiones-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-emisiones {
+    display: flex;
+    gap: 28px; /* Espacio entre secciones */
+    justify-content: center;
+    align-items: flex-start; /* Alinea los títulos con los contenidos */
+    width: 100%;
+}
+
+.bloque-emisiones {
+    flex: 1; /* Ocupa el mismo espacio cada sección */
+    text-align: center;
+    min-width: 500px;
+}
+
+.fila-emisiones {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.demanda-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+    color: #303555;
+}
+
+
+
+
 
 
