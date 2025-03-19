@@ -21,17 +21,10 @@ ChartJS.register(
     Legend,
 );
 
-const GraficoGEISistema = ({ data }) => {
-    // Desestructuración de data
-    const {
-        cicloVidaAVEAcumulado,
-        cicloVidaAereoAcumulado,
-        sumaFerroviarioAereoAcumulado,
-        cicloVidaTodoAereoAcumulado,
-    } = data || {};
+const GraficoEmisionAcumPax = ({ data }) => {
 
     // Validación de datos
-    if (!data || !cicloVidaAVEAcumulado || !cicloVidaAereoAcumulado || !sumaFerroviarioAereoAcumulado || !cicloVidaTodoAereoAcumulado) {
+    if (!data) {
         return <div>No hay datos válidos para mostrar.</div>;
     }
 
@@ -39,49 +32,33 @@ const GraficoGEISistema = ({ data }) => {
     const colors = {
         ave: '#CB1823',
         aereo: '#673A8E',
-        suma: '#184487',
-        soloAvion: '#717070',
     };
 
-    // Datasets
+    const labels = data.map(item => item.anio.toString());
+
     const datasets = [
         {
-            label: 'Acumulado ciclo de vida AVE',
-            data: cicloVidaAVEAcumulado,
+            label: 'Ferroviario',
+            data: data.map(item => item.emisionesPaxAVE === 0 ? null : item.emisionesPaxAVE),
             borderColor: colors.ave,
             backgroundColor: colors.ave,
-            pointStyle: 'circle', // Círculo para AVE
+            pointStyle: 'circle',
             pointRadius: 4,
         },
         {
-            label: 'Acumulado ciclo de vida transporte aéreo',
-            data: cicloVidaAereoAcumulado,
+            label: 'Aéreo',
+            data: data.map(item => item.emisionesPaxAereo === 0 ? null : item.emisionesPaxAereo),
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
-            pointStyle: 'rect', // Cuadrado para Aéreo
-            pointRadius: 5,
-        },
-        {
-            label: 'Suma ferroviario + aéreo',
-            data: sumaFerroviarioAereoAcumulado,
-            borderColor: colors.suma,
-            backgroundColor: colors.suma,
-            pointStyle: 'circle', // Circulo para la suma
-            pointRadius: 4,
-        },
-        {
-            label: 'Solo avión',
-            data: cicloVidaTodoAereoAcumulado,
-            borderColor: colors.soloAvion,
-            backgroundColor: colors.soloAvion,
-            pointStyle: 'triangle', // Triángulo para solo avión
+            pointStyle: 'rect',
             pointRadius: 5,
         },
     ];
 
+
     // Configuración de la gráfica
-    const chartData1 = {
-        labels: Array.from({ length: 55 }, (_, i) => i + 1), // Eje X del 1 al 55
+    const chartData = {
+        labels,
         datasets,
     };
 
@@ -99,7 +76,7 @@ const GraficoGEISistema = ({ data }) => {
             },
             title: {
                 display: true, // Primero se activa el título
-                text: 'Emisiones acumuladas por modo de transporte (ciclo de vida completo)',
+                text: 'Emisiones acumuladas por pasajero',
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
@@ -113,7 +90,6 @@ const GraficoGEISistema = ({ data }) => {
                 ticks: {
                     font: {
                         family: 'Poppins',
-                        size: 10,
                     },
                 },
             },
@@ -123,13 +99,10 @@ const GraficoGEISistema = ({ data }) => {
                         family: 'Poppins',
                     },
                     display: true, // Muestra el título del eje Y
-                    text: 'Millones de t CO\u2082 eq acumulados', // Título del eje Y
+                    text: 'Kg CO\u2082 acumulados por viajero', // Título del eje Y
                 },
                 ticks: {
-                    callback: function(value) {
-                        // Redondear a millones solo en el eje Y, sin modificar los datos reales
-                        return Math.round(value / 1000000); // Dividir por 1 millón para mostrarlo en millones
-                    },
+                    callback: (value) => Math.round(value / 1000),
                     font: {
                         family: 'Poppins',
                     },
@@ -140,9 +113,9 @@ const GraficoGEISistema = ({ data }) => {
 
     return (
         <div className="grafico-container">
-            <Line data={chartData1} options={options1} />
+            <Line data={chartData} options={options1} />
         </div>
     )
 };
 
-export default GraficoGEISistema;
+export default GraficoEmisionAcumPax;

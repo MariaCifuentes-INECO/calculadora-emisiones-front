@@ -4,6 +4,7 @@ import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCompleteNetworkStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import {Link} from "react-router-dom";
+import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
 
 
 const ResultsCompleteNetwork = () => {
@@ -47,6 +48,10 @@ const ResultsCompleteNetwork = () => {
                 </section>
                 <section>
                     <GraficoAnalisisReal backendData={completeNetwork}/>
+                </section>
+
+                <section className="mt-5">
+                    <GraficoEmisionAcumPax data={completeNetwork}/>
                 </section>
                 <section className="mt-5 mb-3 completeNetworkExplanation">
                     <p>
