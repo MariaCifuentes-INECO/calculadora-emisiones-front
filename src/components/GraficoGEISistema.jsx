@@ -91,6 +91,7 @@ const GraficoGEISistema = ({ data }) => {
             legend: {
                 position: 'bottom',
                 labels: {
+                    usePointStyle: true, // Hace que la leyenda use los mismos estilos de los puntos
                     font: {
                         family: 'Poppins', // Fuente para la leyenda
                     },
