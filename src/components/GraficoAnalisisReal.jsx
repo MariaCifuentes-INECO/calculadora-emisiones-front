@@ -153,7 +153,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
             legend: { display: false },
             title: {
                 display: true,
-                text: "Emisiones acumuladas en el periodo (construcción + mantenimiento + operación) y viajes anuales en cada modo",
+                text: "Emisiones acumuladas y viajes anuales en cada modo",
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
