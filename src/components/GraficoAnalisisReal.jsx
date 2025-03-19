@@ -154,6 +154,9 @@ const GraficoAnalisisReal = ({ backendData }) => {
             title: {
                 display: true,
                 text: "Emisiones acumuladas en el periodo (construcción + mantenimiento + operación) y viajes anuales en cada modo",
+                font: { // Aquí es donde debe ir la fuente
+                    family: 'Poppins', // Fuente para el título
+                },
             },
         },
         scales: {
@@ -161,9 +164,18 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 type: "linear",
                 display: true,
                 position: "left",
-                title: { display: true, text: "Millones de t CO₂ eq acumulados" },
+                title: {
+                    display: true,
+                    text: "Millones de t CO₂ eq acumulados",
+                    font: {
+                        family: 'Poppins',
+                    },
+                },
                 ticks: {
                     callback: (value) => Math.round(value / 1000000),
+                    font: {
+                        family: 'Poppins',
+                    },
                 },
                 stacked: true,
             },
@@ -171,9 +183,18 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 type: "linear",
                 display: true,
                 position: "right",
-                title: { display: true, text: "Miles de viajes acumulados" },
+                title: {
+                    display: true,
+                    text: "Miles de viajes acumulados",
+                    font: {
+                        family: 'Poppins',
+                    },
+                },
                 ticks: {
                     callback: (value) => Math.round(value / 1000),
+                    font: {
+                        family: 'Poppins',
+                    },
                 },
                 grid: { drawOnChartArea: false },
             },
