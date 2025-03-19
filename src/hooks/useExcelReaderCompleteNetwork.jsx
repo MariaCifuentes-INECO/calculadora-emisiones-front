@@ -24,7 +24,7 @@ const useExcelReaderCompleteNetwork = () => {
 
             worksheet.eachRow((row, rowNumber) => {
                 // Limitar la lectura entre las filas 9 y 28
-                if (rowNumber >= 9 && rowNumber <= 29) {
+                if (rowNumber >= 9 && rowNumber <= 44) {
                     const anio = parseInt(row.getCell(1).value) || 0; // Primera columna
 
                     // Extraer y redondear valores de las celdas
@@ -40,7 +40,7 @@ const useExcelReaderCompleteNetwork = () => {
                     const demandaAerea = getRoundedCellValue(row, 27);
 
                     // Filtrar por año (2004 a 2023)
-                    if (anio >= 2004 && anio <= 2024) {
+                    if (anio >= 1989 && anio <= 2024) {
                         extractedDataArray.push({
                             anio,
                             emisionesConstruccionAVE,
