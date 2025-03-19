@@ -37,10 +37,10 @@ const GraficoGEISistema = ({ data }) => {
 
     // Colores
     const colors = {
-        ave: 'rgb(87, 137, 122)',
-        aereo: 'rgb(112, 48, 160)',
-        suma: 'rgb(255, 87, 51)',
-        soloAvion: 'rgb(196, 191, 188)',
+        ave: '#CB1823',
+        aereo: '#673A8E',
+        suma: '#184487',
+        soloAvion: '#717070',
     };
 
     // Datasets
@@ -50,24 +50,32 @@ const GraficoGEISistema = ({ data }) => {
             data: cicloVidaAVEAcumulado,
             borderColor: colors.ave,
             backgroundColor: colors.ave,
+            pointStyle: 'circle', // Círculo para AVE
+            pointRadius: 4,
         },
         {
             label: 'Acumulado ciclo de vida transporte aéreo',
             data: cicloVidaAereoAcumulado,
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
+            pointStyle: 'rect', // Cuadrado para Aéreo
+            pointRadius: 5,
         },
         {
             label: 'Suma ferroviario + aéreo',
             data: sumaFerroviarioAereoAcumulado,
             borderColor: colors.suma,
             backgroundColor: colors.suma,
+            pointStyle: 'circle', // Circulo para la suma
+            pointRadius: 4,
         },
         {
             label: 'Solo avión',
             data: cicloVidaTodoAereoAcumulado,
             borderColor: colors.soloAvion,
             backgroundColor: colors.soloAvion,
+            pointStyle: 'triangle', // Triángulo para solo avión
+            pointRadius: 5,
         },
     ];
 
@@ -82,10 +90,18 @@ const GraficoGEISistema = ({ data }) => {
         plugins: {
             legend: {
                 position: 'bottom',
+                labels: {
+                    font: {
+                        family: 'Poppins', // Fuente para la leyenda
+                    },
+                },
             },
             title: {
-                display: true,
+                display: true, // Primero se activa el título
                 text: 'Emisiones acumuladas por modo de transporte (ciclo de vida completo)',
+                font: { // Aquí es donde debe ir la fuente
+                    family: 'Poppins', // Fuente para el título
+                },
             },
         },
         scales: {
@@ -93,9 +109,18 @@ const GraficoGEISistema = ({ data }) => {
                 grid: {
                     display: false, // Desactiva el grid en el eje X
                 },
+                ticks: {
+                    font: {
+                        family: 'Poppins',
+                        size: 10,
+                    },
+                },
             },
             y: {
                 title: {
+                    font: {
+                        family: 'Poppins',
+                    },
                     display: true, // Muestra el título del eje Y
                     text: 'Millones de t CO\u2082 eq acumulados', // Título del eje Y
                 },
@@ -103,6 +128,9 @@ const GraficoGEISistema = ({ data }) => {
                     callback: function(value) {
                         // Redondear a millones solo en el eje Y, sin modificar los datos reales
                         return Math.round(value / 1000000); // Dividir por 1 millón para mostrarlo en millones
+                    },
+                    font: {
+                        family: 'Poppins',
                     },
                 },
             },

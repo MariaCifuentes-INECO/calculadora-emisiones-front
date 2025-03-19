@@ -215,7 +215,7 @@ const ResultsGenericCase = () => {
                         </div>
                     </div>
                 </div>
-                <section className="resultsGenericCaseExplanation">
+                <section className="resultsGenericCaseExplanation mb-3">
                     <p className="mb-4 text-justify">
                         En el siguiente gráfico se puede apreciar las emisiones acumuladas por el sistema en el
                         escenario
