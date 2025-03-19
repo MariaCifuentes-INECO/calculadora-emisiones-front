@@ -1,4 +1,4 @@
-import { Line } from 'react-chartjs-2';
+import {Chart, Line} from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -109,7 +109,11 @@ const GraficoGEISistema = ({ data }) => {
         },
     };
 
-    return <Line data={chartData1} options={options1} />;
+    return (
+        <div className="grafico-container">
+            <Line data={chartData1} options={options1} />
+        </div>
+    )
 };
 
 export default GraficoGEISistema;
