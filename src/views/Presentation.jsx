@@ -1,63 +1,65 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import logo from "../assets/logo_presentacion.svg"
+import  "../styles/presentationStyle.css"
 
 const Presentation = () => {
-
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleGenericCase = () => {
-        navigate('/genericCase'); // Navega a la vista GenericCase
-    };
+        navigate("/genericCase") // Navega a la vista GenericCase
+    }
 
     const handleRealExample = () => {
-        navigate('/realCase'); // Navega a la vista RealCase
-    };
+        navigate("/realCase") // Navega a la vista RealCase
+    }
 
     return (
-        <div className="container globalContainer">
-            <header className="text-center mb-5">
-                <h1 className="display-4">Calculadora de emisiones en el ciclo de vida de la infraestructura</h1>
-            </header>
+        <div className="flex-container presentationCont">
 
-            <section className="lead text-justify mb-5">
-                <p> {/* "lead" hace que el texto sea más grande y con estilo de párrafo introductorio */}
-                    El transporte aéreo tiene ante sí el reto de reducir sus emisiones de GEI, fuertemente ligadas a la
-                    operación. Esto le hace sufrir un cierto estigma como modo con mayor impacto climático. Sin embargo,
-                    para tener una visión más ajustada a la realidad, conviene tomar perspectiva, incluyendo en ese
-                    análisis no sólo la operación, sino las emisiones generadas en todo el ciclo de vida.
-                </p>
-                <p>
-                    Esta calculadora pretende ser una herramienta para la reflexión, que permita visualizar las
-                    distintas etapas de la infraestructura. Se comparan los modos aéreo y ferroviario (Alta Velocidad),
-                    que compiten en las relaciones peninsulares de larga distancia.
-                </p>
-                <p>
-                    Se ha dejado fuera del análisis la carretera, cuya “operación” supone un alto porcentaje (xx %) de
-                    las emisiones GEI en España, pero cuyas infraestructuras aportan otras utilidades que hacen
-                    improcedente la comparación.
-                </p>
-            </section>
+            {/* Sección superior con logo y fondo azul */}
+            <div className="container presentation-header mt-5">
+                <img src={logo} alt="CarbonTrack360 Logo" className="logo-img mt-4" />
+                <h1 className="presentation-title mt-5 mb-4">
+                    CALCULADORA DE EMISIONES EN EL CICLO DE VIDA DE LA INFRAESTRUCTURA
+                </h1>
+            </div>
+            <div className="container presentation-exp">
+                <section>
+                    <p>
+                        <strong>¿Cuál es el verdadero impacto ambiental del transporte?</strong><br/>
+                        El transporte aéreo enfrenta el reto de reducir sus emisiones de GEI, pero ¿es realmente el
+                        mayor responsable? Para verlo con perspectiva, esta calculadora analiza todo el ciclo de vida de
+                        las infraestructuras, comparando las emisiones del avión y la Alta Velocidad en rutas de larga
+                        distancia.
 
-            <section className="text-center">
-                <h2 className="mb-4">¿Desea analizar un caso genérico o un ejemplo real?</h2>
+                    </p>
+                    <p>
+                        <strong>Explora, compara y saca tus propias conclusiones.</strong>
+                    </p>
+                    <p>
+                        (<strong>Nota:</strong> El análisis excluye la carretera, ya que su operación supone un alto porcentaje (xx %) de las
+                        emisiones en España, pero su infraestructura tiene otros usos).
+                    </p>
+                    <p>
+                        Consulta aquí la <strong>metodología y fuentes</strong> utilizadas.
+                    </p>
+                </section>
+                <section className="text-center mt-5">
+                    <h2 className="presentation-subtitle mb-4">¿Desea analizar una simulación o un ejemplo real?</h2>
 
-                <div className="d-flex gap-5 justify-content-center">
-                    <button
-                        onClick={handleGenericCase}
-                        className="btn btn-primary btn-lg px-4">
-                        Caso Genérico
-                    </button>
-                    <button
-                        onClick={handleRealExample}
-                        className="btn btn-primary btn-lg px-4">
-                        Ejemplo Real
-                    </button>
-                </div>
-
-
-            </section>
+                        <div className="d-flex gap-5 justify-content-center">
+                            <button onClick={handleGenericCase} className="btn btn-presentation">
+                                SIMULACIÓN
+                            </button>
+                            <button onClick={handleRealExample} className="btn btn-presentation">
+                                CASO REAL
+                            </button>
+                        </div>
+                    </section>
+            </div>
         </div>
     )
-        ;
-};
+}
 
-export default Presentation;
+export default Presentation
+

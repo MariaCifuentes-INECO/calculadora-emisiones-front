@@ -1,0 +1,49 @@
+.presentationCont {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url("../assets/fondo.svg"); /* Ruta de la imagen */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.presentation-header {
+    background: rgba(10, 34, 64, 0.7); /* Azul oscuro semi-transparente */
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.presentation-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.presentation-exp{
+    background-color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    color: #303555;
+    padding: 32px 32px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+}
+
+.presentation-subtitle{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn-presentation{
+    background-color: #303555 !important;
+    color: #FFFFFF !important;
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    width: 202px !important;
+    border-radius: 12px !important;
+}
