@@ -12,7 +12,7 @@
 }
 
 .presentation-header {
-    background: rgba(10, 34, 64, 0.7); /* Azul oscuro semi-transparente */
+    background: rgba(28, 38, 54, 0.8); /* Azul oscuro semi-transparente */
     padding-top: 40px;
     text-align: center;
     color: white;
@@ -46,4 +46,16 @@
     font-weight: 400 !important;
     width: 202px !important;
     border-radius: 12px !important;
+}
+
+.presentation-custom-link {
+    color: #184487;
+    text-decoration: underline !important;
+    font-weight: 400 !important;
+}
+
+.presentation-custom-link {
+    color: #184487 !important;
+    text-decoration: underline;
+    font-weight: 400 !important;
 }

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import logo from "../assets/logo_presentacion.svg"
 import  "../styles/presentationStyle.css"
 
@@ -37,11 +37,13 @@ const Presentation = () => {
                         <strong>Explora, compara y saca tus propias conclusiones.</strong>
                     </p>
                     <p>
-                        (<strong>Nota:</strong> El análisis excluye la carretera, ya que su operación supone un alto porcentaje (xx %) de las
+                        (<strong>Nota:</strong> El análisis excluye la carretera, ya que su operación supone un alto
+                        porcentaje (xx %) de las
                         emisiones en España, pero su infraestructura tiene otros usos).
                     </p>
                     <p>
-                        Consulta aquí la <strong>metodología y fuentes</strong> utilizadas.
+                        Consulta <Link to="/hypothesis" className="presentation-custom-link">aquí</Link> la <strong>metodología y
+                        fuentes</strong> utilizadas.
                     </p>
                 </section>
                 <section className="text-center mt-5">
