@@ -7,7 +7,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
 
     const colors = {
         ave: '#CB1823',
-        aereo: '#673A8E',
+        aereo: '#1A4488',
     };
 
     // Filtrar datos para eliminar los años donde ambos valores sean 0 o null
