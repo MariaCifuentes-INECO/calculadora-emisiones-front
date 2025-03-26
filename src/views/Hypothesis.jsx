@@ -20,53 +20,55 @@ const Hypothesis = () => {
                     <p>
                         La consideración de las emisiones de GEI en el ciclo de vida completo de las infraestructuras de
                         transporte es algo necesario y cada vez más habitual, cuyo cálculo va mejorando y precisándose
-                        con la experiencia.<br/>
-
-                        Dentro de este ciclo de vida completo se pueden distinguir varias “capas”:
-                        <ul>
-                            <li><strong>A1, A2 y A3,</strong> que hacen referencia a los materiales</li>
-                            <li><strong>A4,</strong> en relación con el transporte de estos,</li>
-                            <li><strong>A5,</strong> que se refiere a la propia construcción de la infraestructura.</li>
-                        </ul>
+                        con la experiencia.
                     </p>
                     <p>
-                        En este ejercicio simplificado, en el que se pretende aportar una herramienta para la reflexión,
-                        se ha procurado mantener criterios de claridad y homogeneidad que permitieran la comparación.
+                        En este ejercicio se pretende aportar una herramienta para la reflexión, CarbonTrack360, y se ha
+                        procurado mantener criterios de claridad y homogeneidad que permitieran la comparación.
                     </p>
                     <p>
-                        Por ello, para las fases de construcción, se ha partido del “Informe CEDEX”, como metodología
-                        común a los dos modos comparados.
+                        Para las fases de construcción y mantenimiento de las infraestructuras, se ha partido de las
+                        <i>Recomendaciones para la estimación de las emisiones de GEI en la evaluación ambiental de
+                            planes
+                            y proyectos de transporte</i>, de la Dirección General de Calidad y Evaluación Ambiental y
+                        Medio
+                        Natural del Ministerio para la Transición Ecológica y el Reto Demográfico, como metodología
+                        común.
                     </p>
+                    <p>
+                        En el caso de la construcción de infraestructura aeroportuaria, se han tomado de las
+                        Recomendaciones dos ratios principales de emisiones:
+                    </p>
+                    <ul>
+                        <li><strong>1.125 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> de terminal,</li>
+                        <li><strong>160 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> de pista.</li>
+                    </ul>
                     <p>
                         En el caso de la construcción de la Alta Velocidad, este informe refiere a tres rangos de
                         emisiones:
-                        <ul>
-                            <li><strong>4.000 t CO2 eq/km</strong> de línea en terreno llano,</li>
-                            <li><strong>8.000 t CO2 eq/km</strong> de línea en terreno medio, y</li>
-                            <li><strong>24.000 t CO2 eq/km</strong> de línea en terreno accidentado.</li>
-                        </ul>
-
-                        Para determinar el grado de accidentalidad del terreno en cada caso, se ha aplicado un criterio
-                        de proporcionalidad con los costes de construcción medios de cada tramo, a partir de fuentes
-                        públicas disponibles.
                     </p>
+                    <ul>
+                        <li><strong>4.000 t CO<sub>2</sub>e/km</strong> de línea en terreno llano,</li>
+                        <li><strong>8.000 t CO<sub>2</sub>e/km</strong> de línea en terreno medio, y</li>
+                        <li><strong>24.000 t CO<sub>2</sub>e/km</strong> de línea en terreno accidentado.</li>
+                    </ul>
                     <p>
-                        Para las emisiones relacionadas con el mantenimiento, se ha partido igualmente de datos del
-                        “Informe CEDEX”.
+                        Para determinar el grado de accidentalidad del terreno en los casos reales, se ha aplicado un
+                        criterio de proporcionalidad con los costes de construcción medios de cada tramo.
                     </p>
                     <p>
                         Para las emisiones relacionadas con la operación:
-                        <ul>
-                            <li>en la alta velocidad ferroviaria, se han considerado nulas debido al contrato de
-                                garantía de
-                                energía verde de ADIF.
-                            </li>
-                            <li>en el modo aéreo, se ha calculado la media de emisiones por viajero-km para vuelos
-                                peninsulares,
-                                a partir de datos reales de Eurocontrol.
-                            </li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>en el modo aéreo, se ha calculado la media de emisiones por pasajero-km para vuelos
+                            peninsulares, a partir de la herramienta <strong>ICAO Carbon Emissions Calculator
+                                (ICEC)</strong>.
+                        </li>
+                        <li>en la alta velocidad ferroviaria, hasta 2019 se han tomado de las Recomendaciones, y
+                            desde entonces, y para el simulador, se han considerado nulas debido al contrato de
+                            energía con garantía de origen renovable de ADIF.
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>

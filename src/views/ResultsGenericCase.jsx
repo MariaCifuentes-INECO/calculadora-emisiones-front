@@ -222,7 +222,7 @@ const ResultsGenericCase = () => {
                         planteado (naranja), las emisiones de cada modo en ese escenario (morado para el aéreo y verde
                         para
                         la alta velocidad) y para una situación hipotética en que sólo se utilizara el transporte aéreo
-                        (gris)
+                        (gris).
                     </p>
                     <div>
                         <GraficoGEISistema data={data}/>
