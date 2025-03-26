@@ -1,8 +1,5 @@
-import {Link} from 'react-router-dom';
 import "../styles/realCaseStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
-import {useState} from "react";
-import ComponenteRealCase from "../components/OptionsRealCase.jsx";
 import OptionsRealCase from "../components/OptionsRealCase.jsx";
 
 
@@ -13,12 +10,6 @@ const RealCase = () => {
         {label: "CASO REAL", active: true, className: "current"},
     ];
 
-    const [showFullText, setShowFullText] = useState(false);
-
-    const toggleText = () => {
-        setShowFullText((prev) => !prev);
-    };
-
     return (
         <div className="container realCaseWrapper">
             {/* Miga de pan */}
@@ -26,52 +17,27 @@ const RealCase = () => {
             <div className="container realCaseCont">
                 <h1 className="title-realCase">Casos reales</h1>
                 <section className="mt-5 mb-5 realCaseExplanation">
+                    <p>
+                        <strong>Transformación del Transporte en España: Impacto y Emisiones</strong> <br/>
+                        En las últimas décadas, España ha revolucionado sus infraestructuras de transporte con modernas
+                        autopistas, trenes de alta velocidad y aeropuertos ampliados. Esto ha mejorado la movilidad y
+                        accesibilidad, ofreciendo múltiples opciones de transporte.
+                    </p>
+                    <p>
+                        Pero, ¿sabías que este desarrollo también ha aumentado las emisiones de gases de efecto
+                        invernadero (GEI)? CarbonTrack360 te permite analizar estas emisiones, considerando todo el
+                        ciclo de vida de las infraestructuras, desde su construcción hasta su operación.
+                    </p>
+                    <p>
+                        Te ofrecemos dos opciones de análisis:
+                    </p>
+                    <p>
+                        <strong>Red Completa:</strong> Compara las emisiones de las conexiones aéreas peninsulares y la red de alta velocidad.
+                    </p>
+                    <p>
+                        <strong>Corredores Específicos:</strong> Analiza las emisiones en los principales corredores de transporte, incluyendo las principales relaciones de cada uno.
 
-                    <p>
-                        Las infraestructuras de transporte en España han experimentado una transformación en
-                        las últimas décadas, con el desarrollo de la red de carreteras de alta capacidad, la
-                        red
-                        ferroviaria de Alta Velocidad, y la construcción y ampliación de terminales
-                        aeroportuarias.
                     </p>
-                    <p>
-                        Esto ha permitido una mejora sustancial en la accesibilidad y la movilidad,
-                        ofreciendo a los ciudadanos alternativas de transporte para la elección del modo más
-                        adecuado a cada
-                        momento y necesidad.
-                        Ese esfuerzo inversor, no obstante, acarrea otro esfuerzo, el de las emisiones de
-                        gases de efecto invernadero a la atmósfera, asociadas a la construcción de las
-                        infraestructuras.
-                    </p>
-                    <p>
-                        Si bien hasta fechas recientes no se contemplaban estas emisiones de la fase de
-                        construcción en las
-                        evaluaciones de impacto ambiental, esta herramienta recoge, de manera simplificada,
-                        el ciclo de vida completo, incluyendo a las emisiones GEI de la operación, el efecto
-                        de la
-                        construcción de la red de Alta Velocidad y las terminales aeroportuarias en las
-                        emisiones de GEI durante los
-                        últimos 20 años.
-                    </p>
-                    <p>
-                        Se proponen dos opciones de análisis, en las que se compara el modo aéreo y la alta
-                        velocidad:
-                    </p>
-                    <ul>
-                        <li>El análisis de la red completa, incluyendo las conexiones aéreas peninsulares y
-                            la red de
-                            alta
-                            velocidad.
-                        </li>
-                        <li>El análisis específico de algunos de los principales corredores de transporte
-                            peninsulares.
-                            En
-                            este caso, para hacer homogéneos ambos modos, se toman sólo las relaciones entre
-                            los
-                            extremos
-                            del corredor, no incluyendo la demanda ferroviaria entre puntos intermedios.
-                        </li>
-                    </ul>
                 </section>
 
                 <h2 className="mb-4 subtitleRealCase">¿Qué caso real quiere analizar?</h2>
@@ -92,14 +58,14 @@ const RealCase = () => {
                             <OptionsRealCase title="Corredor Madrid - Levante" linkTo="/completeNetwork"/>
                         </div>
 
-                        {/* Segunda fila: 2 elementos */}
-                        <div
-                            className="col-md-3 mb-3"> {/* col-md-6: 2 columnas por fila en pantallas medianas y grandes */}
-                            <OptionsRealCase title="Corredor Madrid - Galicia" linkTo="/completeNetwork"/>
-                        </div>
-                        <div className="col-md-3 mb-3">
-                            <OptionsRealCase title="Corredor Madrid - Lisboa" linkTo="/completeNetwork"/>
-                        </div>
+                        {/*/!* Segunda fila: 2 elementos *!/*/}
+                        {/*<div*/}
+                        {/*    className="col-md-3 mb-3"> /!* col-md-6: 2 columnas por fila en pantallas medianas y grandes *!/*/}
+                        {/*    <OptionsRealCase title="Corredor Madrid - Galicia" linkTo="/completeNetwork"/>*/}
+                        {/*</div>*/}
+                        {/*<div className="col-md-3 mb-3">*/}
+                        {/*    <OptionsRealCase title="Corredor Madrid - Lisboa" linkTo="/completeNetwork"/>*/}
+                        {/*</div>*/}
                     </div>
                 </section>
             </div>

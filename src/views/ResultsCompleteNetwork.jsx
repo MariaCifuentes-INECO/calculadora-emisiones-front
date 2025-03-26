@@ -3,7 +3,6 @@ import {CalculatorContext} from "../context/CalculatorContext.js";
 import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCompleteNetworkStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
-import {Link} from "react-router-dom";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
 
 
@@ -14,7 +13,11 @@ const ResultsCompleteNetwork = () => {
     const breadcrumbItems = [
         {label: "INICIO", link: "/", className: "home"},
         {label: "CASO REAL", link: "/realCase", className: "intermediate"},
-        {label: "RED COMPLETA - CASO REAL", active: true, className: "current"},
+        {
+            label: "EMISIONES DE TRANSPORTE EN ESPAÑA: AÉREO PENINSULAR VS. ALTA VELOCIDAD\n",
+            active: true,
+            className: "current"
+        },
     ];
 
 
@@ -23,51 +26,60 @@ const ResultsCompleteNetwork = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container completeNetworkCont">
-                <h1 className="title-completeNetwork">Red completa - caso real</h1>
+                <h1 className="title-completeNetwork">Emisiones de Transporte en España: Aéreo peninsular vs. Alta
+                    Velocidad</h1>
                 <section className="mt-5 mb-5 completeNetworkExplanation">
                     <p>
-                        Los resultados que se presentan para la red completa recogen una estimación de las emisiones de
-                        ciclo de vida de las infraestructuras aeroportuarias y de alta velocidad ferroviaria durante los
-                        últimos 20 años.
-                        <br/><br/>
-                        Para el modo aéreo, se estiman las emisiones generadas tanto por la operación aérea en
-                        relaciones peninsulares como por la construcción y ampliación de terminales aeroportuarias y
-                        pistas en la red de aeropuertos peninsulares, y su mantenimiento.
-                        <br/>
-                        En el conjunto del periodo, se estima que esto ha supuesto la emisión de casi <strong>29 Mt CO2
-                        eq</strong>.
-                        <br/><br/>
-                        Para el modo ferroviario, se estiman las emisiones generadas por la construcción de la red de
-                        alta velocidad, y su mantenimiento, y se consideran emisiones nulas para la operación, dado que
-                        ADIF tiene un contrato de garantía de energía verde.
-                        <br/>
-                        En este periodo, se estima que la alta velocidad ferroviaria ha generado la emisión de
-                        casi <strong>32
-                        Mt CO2 eq</strong>.
+                        Hemos analizado las emisiones de GEI de nuestras infraestructuras de transporte en los últimos
+                        30 años. El ejercicio no permite sacar conclusiones a nivel de comparación detallada entre
+                        modos, o a nivel del acierto o desacierto de las políticas y de las decisiones tomadas, pero sí
+                        poner en contexto órdenes de magnitud entre modos, y romper ideas preconcebidas.
+
                     </p>
+                    <p>
+                        Aquí te presentamos los resultados:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Modo Aéreo:</strong> Las operaciones de vuelos peninsulares, junto con la
+                            construcción y ampliación de aeropuertos imputable a estos, han generado
+                            casi <strong>37</strong> millones de t de CO<sub>2</sub>e
+                        </li>
+                        <li>
+                            <strong>Alta Velocidad:</strong> La red de alta velocidad ferroviaria (4.000 km) ha emitido
+                            casi <strong>50</strong> millones de t de CO<sub>2</sub>e, incluyendo su construcción y
+                            mantenimiento y, hasta 2019,
+                            también las emisiones por operación de servicios AV Larga Distancia.
+                        </li>
+                    </ul>
                 </section>
                 <section>
                     <GraficoAnalisisReal backendData={completeNetwork}/>
                 </section>
-
+                <section className="mt-5 mb-5 completeNetworkExplanation">
+                    <p>
+                        En resumen, las emisiones acumuladas del transporte aéreo peninsular han sido un <strong>26%
+                        menores que las de la alta velocidad</strong>, habiendo transportado 500 millones de pasajeros
+                        en el periodo, frente
+                        a 360 millones de la alta velocidad. En los últimos años, la demanda de vuelos peninsulares ha
+                        disminuido, mientras que la alta velocidad sigue ganando popularidad.
+                    </p>
+                </section>
                 <section className="mt-5">
                     <GraficoEmisionAcumPax data={completeNetwork}/>
                 </section>
                 <section className="mt-5 mb-3 completeNetworkExplanation">
                     <p>
-                        Por tanto, durante los últimos 20 años, las emisiones generadas por el modo aéreo peninsular han
-                        sido un <strong>10% inferiores</strong> a las de la alta velocidad, habiendo transportado
-                        prácticamente el mismo
-                        número de viajeros en el conjunto del periodo <strong>(330 M viajeros)</strong>.
+                        La construcción de la red de Alta Velocidad ha requerido grandes inversiones y ha generado
+                        emisiones significativas. Sin embargo, gracias al aumento de la demanda, las emisiones por
+                        viajero han disminuido notablemente. En <strong>2024</strong>, se estima que cada viajero de
+                        alta velocidad
+                        genera <strong>139 kg de CO<sub>2</sub>e</strong>, mientras que el modo aéreo se mantiene
+                        en <strong>73 kg de CO<sub>2</sub>e</strong> por viajero.
                     </p>
                     <p>
-                        Sin embargo, la evolución de la demanda aérea peninsular es decreciente en los últimos años,
-                        reflejando el trasvase que, de manera natural, se está produciendo para estas conexiones
-                        hacia
-                        la alta velocidad.
-                    </p>
-                    <p>
-                        <Link to="/hypothesis" className="hypothesis-link">Ver hipótesis y fuentes</Link>
+                        Este cálculo sencillo asigna al modo aéreo las mismas emisiones operativas durante el periodo,
+                        basadas en la calculadora <strong>OACI 2024</strong>, aunque estas emisiones han mejorado con el tiempo.
                     </p>
                 </section>
             </div>
