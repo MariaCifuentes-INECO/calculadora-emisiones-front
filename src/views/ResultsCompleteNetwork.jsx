@@ -14,7 +14,7 @@ const ResultsCompleteNetwork = () => {
         {label: "INICIO", link: "/", className: "home"},
         {label: "CASO REAL", link: "/realCase", className: "intermediate"},
         {
-            label: "EMISIONES DE TRANSPORTE EN ESPAÑA: AÉREO PENINSULAR VS. ALTA VELOCIDAD\n",
+            label: "EMISIONES DE TRANSPORTE EN ESPAÑA: AÉREO PENINSULAR VS. ALTA VELOCIDAD",
             active: true,
             className: "current"
         },
