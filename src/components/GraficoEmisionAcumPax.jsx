@@ -20,20 +20,20 @@ const GraficoEmisionAcumPax = ({ data }) => {
 
     const datasets = [
         {
-            label: 'Ferroviario',
-            data: filteredData.map(item => item.emisionesPaxAVE === 0 ? null : item.emisionesPaxAVE),
-            borderColor: colors.ave,
-            backgroundColor: colors.ave,
-            pointStyle: 'circle',
-            pointRadius: 4,
-        },
-        {
             label: 'Aéreo',
             data: filteredData.map(item => item.emisionesPaxAereo === 0 ? null : item.emisionesPaxAereo),
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
             pointStyle: 'rect',
             pointRadius: 5,
+        },
+        {
+            label: 'Ferroviario',
+            data: filteredData.map(item => item.emisionesPaxAVE === 0 ? null : item.emisionesPaxAVE),
+            borderColor: colors.ave,
+            backgroundColor: colors.ave,
+            pointStyle: 'circle',
+            pointRadius: 4,
         },
     ];
 
