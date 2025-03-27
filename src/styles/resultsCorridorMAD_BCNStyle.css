@@ -1,0 +1,25 @@
+.corridorMADBCNWrapper{
+    padding: 12px 0 !important;
+}
+
+.corridorMADBCNCont {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 40px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-corridorMADBCN{
+    font-size: 36px;
+    font-weight: 600;
+    color: #3463AC;
+}
+
+.corridorMADBCNExplanation{
+    font-size: 18px;
+    font-weight: 400;
+    color: #303555;
+    text-align: justify;
+}

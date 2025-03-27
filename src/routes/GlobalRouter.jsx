@@ -7,6 +7,7 @@ import RealCase from "../views/RealCase.jsx";
 import ResultsCompleteNetwork from "../views/ResultsCompleteNetwork.jsx";
 import { ExcelUploader } from "../views/ExcelUploader.jsx";
 import Hypothesis from "../views/Hypothesis.jsx";
+import ResultsCorridorMAD_BCN from "../views/ResultsCorridorMAD_BCN.jsx";
 
 function GlobalRouter() {
     return (
@@ -20,6 +21,7 @@ function GlobalRouter() {
                     <Route path="/resultsGenericCase" element={<ResultsGenericCase />} />
                     <Route path="/realCase" element={<RealCase />} />
                     <Route path="/completeNetwork" element={<ResultsCompleteNetwork />} />
+                    <Route path="/corridorMADBCN" element={<ResultsCorridorMAD_BCN />} />
                     <Route path="/excelUploader" element={<ExcelUploader />} />
                     <Route path="/hypothesis" element={<Hypothesis />} />
                 </Route>
