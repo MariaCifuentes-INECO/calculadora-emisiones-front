@@ -8,6 +8,8 @@ import ResultsCompleteNetwork from "../views/ResultsCompleteNetwork.jsx";
 import { ExcelUploader } from "../views/ExcelUploader.jsx";
 import Hypothesis from "../views/Hypothesis.jsx";
 import ResultsCorridorMAD_BCN from "../views/ResultsCorridorMAD_BCN.jsx";
+import ResultsCorridorMAD_SEV from "../views/ResultsCorridorMAD_SEV.jsx";
+import ResultsCorridorMAD_LEV from "../views/ResultsCorridorMAD_LEV.jsx";
 
 function GlobalRouter() {
     return (
@@ -22,6 +24,8 @@ function GlobalRouter() {
                     <Route path="/realCase" element={<RealCase />} />
                     <Route path="/completeNetwork" element={<ResultsCompleteNetwork />} />
                     <Route path="/corridorMADBCN" element={<ResultsCorridorMAD_BCN />} />
+                    <Route path="/corridorMADSEV" element={<ResultsCorridorMAD_SEV />} />
+                    <Route path="/corridorMADLEV" element={<ResultsCorridorMAD_LEV />} />
                     <Route path="/excelUploader" element={<ExcelUploader />} />
                     <Route path="/hypothesis" element={<Hypothesis />} />
                 </Route>

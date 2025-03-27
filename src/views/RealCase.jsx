@@ -52,10 +52,10 @@ const RealCase = () => {
                             <OptionsRealCase title="Corredor Madrid - Barcelona" linkTo="/corridorMADBCN"/>
                         </div>
                         <div className="col-md-3 mb-3">
-                            <OptionsRealCase title="Corredor Madrid - Andalucía" linkTo="/completeNetwork"/>
+                            <OptionsRealCase title="Corredor Madrid - Andalucía" linkTo="/corridorMADSEV"/>
                         </div>
                         <div className="col-md-3 mb-3">
-                            <OptionsRealCase title="Corredor Madrid - Levante" linkTo="/completeNetwork"/>
+                            <OptionsRealCase title="Corredor Madrid - Levante" linkTo="/corridorMADLEV"/>
                         </div>
 
                         {/*/!* Segunda fila: 2 elementos *!/*/}
