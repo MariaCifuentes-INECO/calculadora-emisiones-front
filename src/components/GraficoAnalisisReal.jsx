@@ -95,7 +95,9 @@ const GraficoAnalisisReal = ({ backendData }) => {
         {
             type: "line",
             label: "Demanda AV LD",
-            data: backendData.map((item) => item.demandaAVLD),
+            data: backendData.map((item) =>
+                item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAVLD
+            ),
             borderColor: "#717070",
             backgroundColor: "#717070",
             yAxisID: "y2",
@@ -109,7 +111,9 @@ const GraficoAnalisisReal = ({ backendData }) => {
         {
             type: "line",
             label: "Demanda Aérea Acumulada",
-            data: backendData.map((item) => item.demandaAerea),
+            data: backendData.map((item) =>
+                item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAerea
+            ),
             borderColor: "#673A8E",
             backgroundColor: "#673A8E",
             yAxisID: "y2",
