@@ -9,11 +9,25 @@ import {
     Title,
     Tooltip,
     Legend,
+    BarController, // Asegúrate de importar el controlador de barras
+    LineController, // Asegúrate de importar el controlador de líneas
 } from "chart.js"
 import PropTypes from "prop-types"
 import "../styles/graficoAnalisisRealStyle.css"
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend)
+// Registra los controladores
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarController, // Registra el controlador de barras
+    LineController // Registra el controlador de líneas
+);
 
 const GraficoAnalisisReal = ({ backendData }) => {
     if (!backendData || backendData.length === 0) {
