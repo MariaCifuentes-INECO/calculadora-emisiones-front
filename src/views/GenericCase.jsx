@@ -154,7 +154,7 @@ const GenericCase = () => {
                                 <p>
                                     <strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>
                                     Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar
-                                    infraestructuras de distintos modos de transp...
+                                    infraestructuras  y servicios de distintos mod...
                                     <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
                                         (ver más)
                                     </button>
@@ -165,23 +165,27 @@ const GenericCase = () => {
                                 <p>
                                     <strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>
                                     Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar
-                                    infraestructuras de distintos modos de transporte. La clave está en la eficiencia
+                                    infraestructuras y servicios de distintos modos de transporte. La clave está en la
+                                    eficiencia
                                     económica, la rentabilidad social y las emisiones de gases de efecto invernadero a
                                     lo largo de su ciclo de vida.
                                 </p>
                                 <p>
-                                    <strong>Aéreo:</strong> La mayor parte de las emisiones proviene de la operación, mientras que la
-                                    construcción tiene un impacto menor. La elección del tipo de aeropuerto en los
-                                    puntos A y B influye en los resultados.
+                                    <strong>Aéreo:</strong> La mayor parte de las emisiones proviene de la operación,
+                                    mientras que la
+                                    construcción tiene un impacto menor. Para facilitar la simulación, permitiendo
+                                    adaptarla a las necesidades del usuario, se seleccionará un tipo de aeropuerto para
+                                    el punto A y para el punto B.
                                 </p>
                                 <p>
-                                    <strong>Alta Velocidad:</strong> La construcción genera emisiones elevadas, especialmente en terrenos
-                                    difíciles. Sin embargo, la tracción eléctrica con energía renovable permite una
+                                    <strong>Alta Velocidad:</strong> La construcción genera emisiones elevadas,
+                                    especialmente en terrenos
+                                    accidentados. Sin embargo, la tracción eléctrica con energía renovable permite una
                                     operación sin emisiones.
                                 </p>
                                 <p>
-                                    Los valores de distancia y uso de infraestructuras se basan en promedios de rutas
-                                    peninsulares, pero puedes personalizarlos según tus necesidades.
+                                    Los valores que se proponen en algunos campos se basan en promedios de casos reales,
+                                    pero puedes personalizarlos según tus necesidades.
                                     <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
                                         (ver menos)
                                     </button>
@@ -191,7 +195,7 @@ const GenericCase = () => {
                     </div>
                 </section>
                 <section>
-                <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <h4 className="subtitle-genericCase">Planteamiento del caso</h4>
                             <div className="row gx-3"> {/* gx-3 agrega espacio horizontal entre columnas */}
@@ -252,7 +256,7 @@ const GenericCase = () => {
                                 </div>
 
                                 <div className="col-lg-3 col-md-6">
-                                    <label htmlFor="dato4">% modo aéreo:</label>
+                                    <label htmlFor="dato4">Cuota modo aéreo:</label>
                                     <div className="input-group">
                                         <input
                                             type="number"

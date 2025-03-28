@@ -119,7 +119,7 @@ const ResultsGenericCase = () => {
                                             {data.emisionesConstAereo.toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub> eq para el
+                                            CO<sub>2</sub>e para el
                                         </span>
                                         <span className="bloque">
                                             modo aéreo
@@ -134,7 +134,7 @@ const ResultsGenericCase = () => {
                                             {data.emisionesConstAve.toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub> eq para la
+                                            CO<sub>2</sub>e para la
                                         </span>
                                         <span className="bloque">
                                             alta velocidad
@@ -158,7 +158,7 @@ const ResultsGenericCase = () => {
                                             {data.cicloVidaAereoAcumulado.at(-1).toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub> eq para el
+                                            CO<sub>2</sub>e para el
                                         </span>
                                         <span className="bloque">
                                             modo aéreo
@@ -173,7 +173,7 @@ const ResultsGenericCase = () => {
                                             {data.cicloVidaAVEAcumulado.at(-1).toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub> eq para la
+                                            CO<sub>2</sub>e para la
                                         </span>
                                         <span className="bloque">
                                             alta velocidad
@@ -219,10 +219,7 @@ const ResultsGenericCase = () => {
                     <p className="mb-4 text-justify">
                         En el siguiente gráfico se puede apreciar las emisiones acumuladas por el sistema en el
                         escenario
-                        planteado (naranja), las emisiones de cada modo en ese escenario (morado para el aéreo y verde
-                        para
-                        la alta velocidad) y para una situación hipotética en que sólo se utilizara el transporte aéreo
-                        (gris).
+                        planteado, las emisiones de cada modo en ese escenario y para una situación hipotética en que sólo se utilizara el transporte aéreo.
                     </p>
                     <div>
                         <GraficoGEISistema data={data}/>

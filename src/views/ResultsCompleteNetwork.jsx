@@ -42,8 +42,8 @@ const ResultsCompleteNetwork = () => {
                     <ul>
                         <li>
                             <strong>Modo Aéreo:</strong> Las operaciones de vuelos peninsulares, junto con la
-                            construcción y ampliación de aeropuertos imputable a estos, han generado
-                            casi <strong>37</strong> millones de t de CO<sub>2</sub>e
+                            construcción y ampliación de aeropuertos imputable a estos, han
+                            generado <strong>45</strong> millones de t de CO<sub>2</sub>e
                         </li>
                         <li>
                             <strong>Alta Velocidad:</strong> La red de alta velocidad ferroviaria (4.000 km) ha emitido
@@ -58,8 +58,8 @@ const ResultsCompleteNetwork = () => {
                 </section>
                 <section className="mt-5 mb-5 completeNetworkExplanation">
                     <p>
-                        En resumen, las emisiones acumuladas del transporte aéreo peninsular han sido un <strong>26%
-                        menores que las de la alta velocidad</strong>, habiendo transportado 500 millones de pasajeros
+                        En resumen, las emisiones acumuladas del <strong>transporte aéreo peninsular han sido un 10%
+                        menores que las de la alta velocidad</strong>, habiendo transportado 480 millones de pasajeros
                         en el periodo, frente
                         a 360 millones de la alta velocidad. En los últimos años, la demanda de vuelos peninsulares ha
                         disminuido, mientras que la alta velocidad sigue ganando popularidad.
@@ -70,16 +70,14 @@ const ResultsCompleteNetwork = () => {
                 </section>
                 <section className="mt-5 mb-3 completeNetworkExplanation">
                     <p>
-                        La construcción de la red de Alta Velocidad ha requerido grandes inversiones y ha generado
-                        emisiones significativas. Sin embargo, gracias al aumento de la demanda, las emisiones por
-                        viajero han disminuido notablemente. En <strong>2024</strong>, se estima que cada viajero de
-                        alta velocidad
-                        genera <strong>139 kg de CO<sub>2</sub>e</strong>, mientras que el modo aéreo se mantiene
-                        en <strong>73 kg de CO<sub>2</sub>e</strong> por viajero.
+                        La construcción de la red de Alta Velocidad ha supuesto un importante esfuerzo en inversiones y
+                        en emisiones. Sin embargo, el éxito en demanda supone que las emisiones acumuladas por cada
+                        viajero de alta velocidad se hayan reducido drásticamente en los últimos años, hasta llegar en <strong>2024</strong>, a <strong>139 kg CO<sub>2</sub>e</strong> por viajero acumulado.
                     </p>
                     <p>
-                        Este cálculo sencillo asigna al modo aéreo las mismas emisiones operativas durante el periodo,
-                        basadas en la calculadora <strong>OACI 2024</strong>, aunque estas emisiones han mejorado con el tiempo.
+                        El modo aéreo, ya ha conseguido importantes reducciones en sus emisiones de GEI derivadas de las
+                        mejoras de aeronaves y motores, lo que supone alcanzar unas emisiones de 94 kg CO<sub>2</sub>e por pasajero
+                        acumulado.
                     </p>
                 </section>
             </div>

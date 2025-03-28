@@ -46,7 +46,7 @@ const GraficoGEISistema = ({ data }) => {
     // Datasets
     const datasets = [
         {
-            label: 'Acumulado ciclo de vida AVE',
+            label: 'Acumulado ciclo de vida AV',
             data: cicloVidaAVEAcumulado,
             borderColor: colors.ave,
             backgroundColor: colors.ave,
@@ -54,7 +54,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'Acumulado ciclo de vida aéreo',
+            label: 'Acumulado ciclo de vida transporte aéreo',
             data: cicloVidaAereoAcumulado,
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
@@ -62,7 +62,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 5,
         },
         {
-            label: 'Suma ferroviario + aéreo',
+            label: 'Acumulado ciclo de vida sistema completo',
             data: sumaFerroviarioAereoAcumulado,
             borderColor: colors.suma,
             backgroundColor: colors.suma,
@@ -70,7 +70,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'Solo aéreo',
+            label: 'Hipótesis todo aéreo',
             data: cicloVidaTodoAereoAcumulado,
             borderColor: colors.soloAvion,
             backgroundColor: colors.soloAvion,
@@ -99,7 +99,7 @@ const GraficoGEISistema = ({ data }) => {
             },
             title: {
                 display: true, // Primero se activa el título
-                text: 'Emisiones acumuladas por modo de transporte (ciclo de vida completo)',
+                text: 'Emisiones acumuladas en el ciclo de vida',
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
@@ -123,7 +123,7 @@ const GraficoGEISistema = ({ data }) => {
                         family: 'Poppins',
                     },
                     display: true, // Muestra el título del eje Y
-                    text: 'Millones de t CO\u2082 eq acumulados', // Título del eje Y
+                    text: 'Millones de t CO\u2082e acumulados', // Título del eje Y
                 },
                 ticks: {
                     callback: function(value) {
