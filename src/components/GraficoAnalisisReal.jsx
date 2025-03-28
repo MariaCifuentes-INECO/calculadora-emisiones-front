@@ -39,7 +39,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
     const barDatasets = [
         {
             type: "bar",
-            label: "Emisiones Construcción Aéreo",
+            label: "Aéreo Peninsular Construcción",
             data: backendData.map((item) => item.emisionesConstruccionAereo),
             backgroundColor: "#184487",
             borderColor: "#FFFFFF",
@@ -51,7 +51,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Emisiones Operación Aéreo",
+            label: "Aéreo Peninsular Operación",
             data: backendData.map((item) => item.emisionesOperacionAereo),
             backgroundColor: "#3463AC",
             yAxisID: "y1",
@@ -63,7 +63,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Emisiones Mantenimiento Aéreo",
+            label: "Aéreo Peninsular Mantenimiento",
             data: backendData.map((item) => item.emisionesMantenimientoAereo),
             backgroundColor: "#2F92D0",
             yAxisID: "y1",
@@ -72,7 +72,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Emisiones Construcción AVE",
+            label: "Red AV Construcción",
             data: backendData.map((item) => item.emisionesConstruccionAVE),
             backgroundColor: "#720515",
             yAxisID: "y1",
@@ -84,7 +84,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Emisiones Operación AVE",
+            label: "Red AV Operación",
             data: backendData.map((item) => item.emisionesOperacionAVE),
             backgroundColor: "#CB1823",
             yAxisID: "y1",
@@ -96,7 +96,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Emisiones Mantenimiento AVE",
+            label: "Red AV Mantenimiento",
             data: backendData.map((item) => item.emisionesMantenimientoAVE),
             backgroundColor: "#E9465C",
             yAxisID: "y1",
@@ -124,7 +124,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "line",
-            label: "Demanda Aérea Acumulada",
+            label: "Demanda Aérea Peninsular",
             data: backendData.map((item) =>
                 item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAerea
             ),
@@ -184,7 +184,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "left",
                 title: {
                     display: true,
-                    text: "Millones de t CO₂ eq acumulados",
+                    text: "Millones de t CO₂e acumulados",
                     font: {
                         family: 'Poppins',
                     },
@@ -203,7 +203,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "right",
                 title: {
                     display: true,
-                    text: "Miles de viajes acumulados",
+                    text: "Miles de viajeros anuales",
                     font: {
                         family: 'Poppins',
                     },

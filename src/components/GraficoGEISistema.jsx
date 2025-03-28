@@ -54,7 +54,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'Acumulado ciclo de vida transporte aéreo',
+            label: 'Acumulado ciclo de vida aéreo',
             data: cicloVidaAereoAcumulado,
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
@@ -70,7 +70,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'Solo avión',
+            label: 'Solo aéreo',
             data: cicloVidaTodoAereoAcumulado,
             borderColor: colors.soloAvion,
             backgroundColor: colors.soloAvion,
