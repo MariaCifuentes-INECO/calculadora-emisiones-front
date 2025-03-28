@@ -2,19 +2,26 @@
 .optionsCont {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
     padding: 24px 20px;
-    max-width: 296px; /* Ajusta este valor según el espacio disponible */
-    height: 108px;
     background-color: #FFFFFF;
+    display: flex;
+    height: 100%; /* Usa height: 100% en lugar de min-height */
 }
 
 .flex {
     display: flex;
     align-items: center; /* Alinea la imagen y el texto en la parte superior */
+    width: 100%;
+}
+
+.vias-casosReales{
+    flexShrink: 0;
+    height: auto;
+    width: 19%;
 }
 
 .optionsText {
-    margin-left: 15px;
-    font-size: 20px;
+    margin-left: 0.9rem; /* Usar rem en lugar de px */
+    font-size: clamp(18px, 1.25vw, 20px); /* Tamaño de fuente responsive */
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: #303555;
@@ -27,9 +34,28 @@
     text-decoration: none; /* Quitar subrayado */
     color: inherit; /* Mantener el color del texto del componente */
     cursor: pointer !important; /* Mostrar la mano al pasar */
+    display: block;
+    height: 100%;
 }
 
 .custom-link:hover {
     text-decoration: none; /* Asegurar que no aparezca subrayado */
     color: inherit; /* Mantener el color original */
+}
+
+/* Clase para el contenedor de cada opción en Bootstrap */
+.option-card-container {
+    height: 100%;
+    display: flex;
+}
+
+/* Media queries para ajustar según el tamaño de pantalla */
+@media (max-width: 768px) {
+    .optionsCont {
+        padding: 1rem 0.75rem;
+    }
+
+    .optionsText {
+        font-size: 16px; /* Tamaño más pequeño en móviles */
+    }
 }

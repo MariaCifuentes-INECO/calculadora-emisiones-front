@@ -42,19 +42,19 @@ const RealCase = () => {
 
                 <h2 className="mb-4 subtitleRealCase">¿Qué caso real quiere analizar?</h2>
                 <section className="container">
-                    <div className="row g-3"> {/* g-4 añade espacio entre las columnas */}
+                    <div className="row g-3 row-eq-height"> {/* g-4 añade espacio entre las columnas */}
                         {/* Primera fila: 4 elementos */}
                         <div
-                            className="col-md-3 mb-3"> {/* col-md-3: 4 columnas por fila en pantallas medianas y grandes */}
+                            className="col-md-3 mb-3 d-flex"> {/* col-md-3: 4 columnas por fila en pantallas medianas y grandes */}
                             <OptionsRealCase title="Red completa" linkTo="/completeNetwork"/>
                         </div>
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-3 mb-3 d-flex">
                             <OptionsRealCase title="Corredor Madrid - Barcelona" linkTo="/corridorMADBCN"/>
                         </div>
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-3 mb-3 d-flex">
                             <OptionsRealCase title="Corredor Madrid - Andalucía" linkTo="/corridorMADSEV"/>
                         </div>
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-3 mb-3 d-flex">
                             <OptionsRealCase title="Corredor Madrid - Levante" linkTo="/corridorMADLEV"/>
                         </div>
 
