@@ -43,13 +43,13 @@ const useExcelReaderCorridors = () => {
                     const emisionesConstruccionAVE = getRoundedCellValue(row, 45);
                     const emisionesOperacionAVE = getRoundedCellValue(row, 46);
                     const emisionesMantenimientoAVE = getRoundedCellValue(row, 47);
-                    const emisionesConstruccionAereo = getRoundedCellValue(row, 49);
-                    const emisionesOperacionAereo = getRoundedCellValue(row, 50);
-                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 51);
+                    const emisionesConstruccionAereo = getRoundedCellValue(row, 53);
+                    const emisionesOperacionAereo = getRoundedCellValue(row, 54);
+                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 55);
                     const demandaAVLD = getRoundedCellValue(row, 26);
                     const demandaAerea = getRoundedCellValue(row, 27);
                     const emisionesPaxAVE = getRoundedCellValue(row, 16);
-                    const emisionesPaxAereo = getRoundedCellValue(row, 17);
+                    const emisionesPaxAereo = getRoundedCellValue(row, 18);
 
                     if (anio >= 1989 && anio <= 2024) {
                         extractedDataArray.push({
