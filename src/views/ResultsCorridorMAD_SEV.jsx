@@ -4,6 +4,7 @@ import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCorridorMAD_SEVStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
+import {Link} from "react-router-dom";
 
 
 const ResultsCorridorMAD_SEV = () => {
@@ -43,7 +44,8 @@ const ResultsCorridorMAD_SEV = () => {
                     </p>
                     <p>
                         The accumulated volume of railway demand, increased by the growth of recent years, makes the
-                        accumulated <strong>emissions per railway passenger (48 kg CO<sub>2</sub>e)</strong> lower than those of each <strong>air passenger
+                        accumulated <strong>emissions per railway passenger (48 kg CO<sub>2</sub>e)</strong> lower than
+                        those of each <strong>air passenger
                         (90 kg CO<sub>2</sub>e).</strong>
                     </p>
                 </section>
@@ -53,6 +55,10 @@ const ResultsCorridorMAD_SEV = () => {
 
                 <section className="mt-5">
                     <GraficoEmisionAcumPax data={corridors.filter(c => c.nombre === "Madrid-Sevilla")}/>
+                </section>
+
+                <section className="corridorMADSEVExplanation mt-5">
+                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
                 </section>
             </div>
         </div>

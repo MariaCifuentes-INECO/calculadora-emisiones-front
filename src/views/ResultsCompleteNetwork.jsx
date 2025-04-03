@@ -4,6 +4,7 @@ import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCompleteNetworkStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
+import {Link} from "react-router-dom";
 
 
 const ResultsCompleteNetwork = () => {
@@ -68,10 +69,11 @@ const ResultsCompleteNetwork = () => {
                 <section className="mt-5">
                     <GraficoEmisionAcumPax data={completeNetwork}/>
                 </section>
-                <section className="mt-5 mb-3 completeNetworkExplanation">
+                <section className="mt-5 completeNetworkExplanation">
                     <p>
                         The air mode has already achieved significant reductions in its GHG emissions due to
-                        improvements in aircraft and engines, resulting in emissions of <strong>94 kg CO<sub>2</sub>e</strong> per
+                        improvements in aircraft and engines, resulting in emissions of <strong>94 kg
+                        CO<sub>2</sub>e</strong> per
                         cumulative passenger.
                     </p>
                     <p>
@@ -80,6 +82,9 @@ const ResultsCompleteNetwork = () => {
                         rail passenger have drastically reduced in recent years, reaching <strong>139 kg CO<sub>2</sub>e</strong> per
                         passenger by 2024.
                     </p>
+                </section>
+                <section className="completeNetworkExplanation">
+                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
                 </section>
             </div>
         </div>

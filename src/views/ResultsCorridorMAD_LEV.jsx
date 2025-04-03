@@ -4,6 +4,7 @@ import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
 import "../styles/resultsCorridorMAD_LEVStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
+import {Link} from "react-router-dom";
 
 
 const ResultsCorridorMAD_LEV = () => {
@@ -35,13 +36,17 @@ const ResultsCorridorMAD_LEV = () => {
                     </p>
                     <p>
                         With estimated construction emissions of 6.9 million tons of CO2e, the total emissions for the
-                        rail mode amount to <strong>7.1 million tons of CO<sub>2</sub>e</strong> over the analyzed period.
+                        rail mode amount to <strong>7.1 million tons of CO<sub>2</sub>e</strong> over the analyzed
+                        period.
                     </p>
                     <p>
-                        Air demand has drastically reduced since the high-speed connection was put into service, accumulating only <strong>0.8 million tons of CO<sub>2</sub>e</strong> over the period.
+                        Air demand has drastically reduced since the high-speed connection was put into service,
+                        accumulating only <strong>0.8 million tons of CO<sub>2</sub>e</strong> over the period.
                     </p>
                     <p>
-                        Currently, the cumulative emissions per air passenger (<strong>85 kg CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>112 kg CO<sub>2</sub>e/pax</strong>).
+                        Currently, the cumulative emissions per air passenger (<strong>85 kg
+                        CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>112 kg
+                        CO<sub>2</sub>e/pax</strong>).
                     </p>
                 </section>
                 <section>
@@ -49,6 +54,9 @@ const ResultsCorridorMAD_LEV = () => {
                 </section>
                 <section className="mt-5">
                     <GraficoEmisionAcumPax data={corridors.filter(c => c.nombre === "Madrid-Levante")}/>
+                </section>
+                <section className="corridorMADLEVExplanation mt-5">
+                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
                 </section>
             </div>
         </div>

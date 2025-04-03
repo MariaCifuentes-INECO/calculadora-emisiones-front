@@ -1,4 +1,4 @@
-import {useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import '../styles/resultsGenericCaseStyle.css';
 import GraficoGEISistema from "../components/GraficoGEISistema.jsx";
 import Breadcrumb from "../components/Breadcrumb.jsx";
@@ -252,6 +252,9 @@ const ResultsGenericCase = () => {
                         <GraficoGEISistema data={data}/>
                     </div>
                 </section>
+                <div  className="resultsGenericCaseExplanation mt-5">
+                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
+                </div>
             </div>
         </div>
     );
