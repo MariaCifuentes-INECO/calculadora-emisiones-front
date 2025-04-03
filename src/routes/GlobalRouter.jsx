@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { Layout } from "../components/Layout.jsx"; // Importa el Layout
 import Presentation from "../views/Presentation.jsx";
 import GenericCase from "../views/GenericCase.jsx";
@@ -10,10 +10,12 @@ import Hypothesis from "../views/Hypothesis.jsx";
 import ResultsCorridorMAD_BCN from "../views/ResultsCorridorMAD_BCN.jsx";
 import ResultsCorridorMAD_SEV from "../views/ResultsCorridorMAD_SEV.jsx";
 import ResultsCorridorMAD_LEV from "../views/ResultsCorridorMAD_LEV.jsx";
+import {ScrollToTop} from "../components/ScrollToTop.jsx";
 
 function GlobalRouter() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 {/* Ruta padre que usa el Layout */}
                 <Route element={<Layout />}>
