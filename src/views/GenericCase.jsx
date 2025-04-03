@@ -232,7 +232,7 @@ const GenericCase = () => {
                                             onChange={(e) => handlePercentageChange(parseFloat(e.target.value), setCrecimientoAnual)}
                                             min="0"
                                             max="100"
-                                            step="1"
+                                            step="any"
                                             required
                                         />
                                         <span className="input-group-text">%</span>
