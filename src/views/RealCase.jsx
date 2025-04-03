@@ -6,8 +6,8 @@ import OptionsRealCase from "../components/OptionsRealCase.jsx";
 const RealCase = () => {
 
     const breadcrumbItems = [
-        {label: "INICIO", link: "/", className: "home"},
-        {label: "CASO REAL", active: true, className: "current"},
+        {label: "HOME", link: "/", className: "home"},
+        {label: "REAL CASE", active: true, className: "current"},
     ];
 
     return (
@@ -15,47 +15,43 @@ const RealCase = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container realCaseCont">
-                <h1 className="title-realCase">Casos reales</h1>
+                <h1 className="title-realCase">Real Cases</h1>
                 <section className="mt-5 mb-5 realCaseExplanation">
                     <p>
-                        <strong>Transformación del Transporte en España: Impacto y Emisiones</strong> <br/>
-                        En las últimas décadas, España ha revolucionado sus infraestructuras de transporte con modernas
-                        autopistas, trenes de alta velocidad y aeropuertos ampliados. Esto ha mejorado la movilidad y
-                        accesibilidad, ofreciendo múltiples opciones de transporte.
+                        <strong>Transformation of Transportation in Spain: Impact and Emissions</strong> <br/>
+                        In recent decades, Spain has revolutionized its transportation infrastructure with modern highways, high-speed trains, and expanded airports. This has improved mobility and accessibility, offering multiple options.
                     </p>
                     <p>
-                        Pero, ¿sabías que este desarrollo también ha aumentado las emisiones de gases de efecto
-                        invernadero (GEI)? CarbonTrack360 te permite analizar estas emisiones, considerando todo el
-                        ciclo de vida de las infraestructuras, desde su construcción hasta su operación.
+                        But did you know that this development has also increased greenhouse gas (GHG) emissions?
+                        CarbonTrack360 allows you to analyse these emissions, considering the entire life cycle of the infrastructures, from construction to operation.
                     </p>
                     <p>
-                        Te ofrecemos dos opciones de análisis:
+                        Two analysis options are offered:
                     </p>
                     <p>
-                        <strong>Red Completa:</strong> Compara las emisiones de las conexiones aéreas peninsulares y la red de alta velocidad.
+                        <strong>Complete Spanish Network:</strong> Compare the emissions of peninsular air connections and the high-speed rail network.
                     </p>
                     <p>
-                        <strong>Corredores Específicos:</strong> Analiza las emisiones en los principales corredores de transporte, incluyendo las principales relaciones de cada uno.
-
+                        <strong>Specific Corridors:</strong> Analyze emissions in the main transportation corridors, including the key connections of each.
                     </p>
                 </section>
 
-                <h2 className="mb-4 subtitleRealCase">¿Qué caso real quiere analizar?</h2>
+                <h2 className="mb-4 subtitleRealCase">Which real case would you like to analyse?</h2>
                 <section className="container">
                     <div className="row g-3 row-eq-height"> {/* g-4 añade espacio entre las columnas */}
                         {/* Primera fila: 4 elementos */}
                         <div
                             className="col-md-3 mb-3 d-flex"> {/* col-md-3: 4 columnas por fila en pantallas medianas y grandes */}
-                            <OptionsRealCase title="Red completa" linkTo="/completeNetwork"/>
+                            <OptionsRealCase title="Complete Spanish Network" linkTo="/completeNetwork"/>
                         </div>
                         <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Corredor Madrid - Andalucía" linkTo="/corridorMADSEV"/>
+                            <OptionsRealCase title="Madrid – Andalusia Corridor" linkTo="/corridorMADSEV" className="small-text"/>
                         </div>
                         <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Corredor Madrid - Barcelona" linkTo="/corridorMADBCN"/>
+                            <OptionsRealCase title="Madrid – Barcelona Corridor" linkTo="/corridorMADBCN" className="small-text"/>
                         </div>
                         <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Corredor Madrid - Levante" linkTo="/corridorMADLEV"/>
+                            <OptionsRealCase title="Madrid – Levante Corridor" linkTo="/corridorMADLEV"/>
                         </div>
 
                         {/*/!* Segunda fila: 2 elementos *!/*/}

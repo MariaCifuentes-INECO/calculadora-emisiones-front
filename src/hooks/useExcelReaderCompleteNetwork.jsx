@@ -32,14 +32,14 @@ const useExcelReaderCompleteNetwork = () => {
                     const emisionesOperacionAVE = getRoundedCellValue(row, 46);
                     const emisionesMantenimientoAVE = getRoundedCellValue(row, 47); // Novena columna
                     const cicloVidaAVEAcumulado = getRoundedCellValue(row, 9); // Novena columna
-                    const emisionesConstruccionAereo = getRoundedCellValue(row, 49);
-                    const emisionesOperacionAereo = getRoundedCellValue(row, 50);
-                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 51);
+                    const emisionesConstruccionAereo = getRoundedCellValue(row, 53);
+                    const emisionesOperacionAereo = getRoundedCellValue(row, 54);
+                    const emisionesMantenimientoAereo = getRoundedCellValue(row, 55);
                     const cicloVidaAereoAcumulado = getRoundedCellValue(row, 10); // Décima columna
                     const demandaAVLD = getRoundedCellValue(row, 26);
                     const demandaAerea = getRoundedCellValue(row, 27);
                     const emisionesPaxAVE = getRoundedCellValue(row, 16);
-                    const emisionesPaxAereo = getRoundedCellValue(row, 17);
+                    const emisionesPaxAereo = getRoundedCellValue(row, 18);
 
                     // Filtrar por año (2004 a 2023)
                     if (anio >= 1989 && anio <= 2024) {

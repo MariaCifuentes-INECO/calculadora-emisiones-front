@@ -1,7 +1,6 @@
 import {useLocation} from 'react-router-dom';
 import '../styles/resultsGenericCaseStyle.css';
 import GraficoGEISistema from "../components/GraficoGEISistema.jsx";
-import GraficoGEIvsViajeros from "../components/GraficoGEIvsViajeros.jsx";
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import viajeros from "../assets/viajeros.svg"
 import avion from "../assets/avion.svg"
@@ -20,10 +19,30 @@ const ResultsGenericCase = () => {
         return <div>No hay datos válidos para mostrar.</div>;
     }
 
+    const traducirTerreno = (terreno) => {
+        const traducciones = {
+            "Llano": "Flat",
+            "Accidentado": "Rough",
+            "Medio": "Medium",
+        };
+
+        return traducciones[terreno] || terreno;
+    };
+
+    const traducirTamano = (tamano) => {
+        const traducciones = {
+            "Grande": "Large",
+            "Pequeño": "Small",
+            "Mediano": "Medium",
+        };
+
+        return traducciones[tamano] || tamano;
+    };
+
     const breadcrumbItems = [
-        {label: "INICIO", link: "/", className: "home"},
-        {label: "SIMULADOR", link: "/genericCase", className: "intermediate"},
-        {label: "SIMULACIÓN", active: true, className: "current"},
+        {label: "HOME", link: "/", className: "home"},
+        {label: "SIMULATOR", link: "/genericCase", className: "intermediate"},
+        {label: "SIMULATION", active: true, className: "current"},
     ];
 
     return (
@@ -31,17 +50,18 @@ const ResultsGenericCase = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container resultsGenericCaseCont">
-                <h1 className="title-resultsGenericCase">Resultado simulación</h1>
+                <h1 className="title-resultsGenericCase">Simulation results</h1>
                 <section className="mt-5 mb-5 resultsGenericCaseExplanation">
                     <p>
-                        Se presenta a continuación el resultado del análisis realizado para este caso genérico, en el
-                        que se conectan dos puntos situados a <strong>{data.distancia} km</strong> de distancia.
+                        The result of the analysis for this generic case, which connects two points
+                        located <strong>{data.distancia} km</strong> apart, is presented below.
                     </p>
                 </section>
                 <div className="hypothesisSummary mb-3">
-                    <h2 className="hypothesisTitle">Las hipótesis que se han tomado son:</h2>
+                    <h2 className="hypothesisTitle">The <span className="res-tex-dest">assumptions</span> made
+                        are</h2>
                     <div className="hypothesisGrid">
-                        <div className="hypothesisItem">
+                    <div className="hypothesisItem">
                             <img src={viajeros} alt="Viajeros" className="hypothesisIcon"
                                  style={{height: "50px", width: "50px"}}/>
                             <p>
@@ -49,7 +69,7 @@ const ResultsGenericCase = () => {
                                     {data.demandaInicial.toLocaleString("es-ES")}
                                 </span>
                                 <span className="bloque">
-                                     de viajeros anuales con un crecimiento del
+                                     annual travelers in the initial year, with a growth of
                                 </span>
                                 <span className="texto-destacado bloque">
                                     {data.crecimientoAnual} %
@@ -64,7 +84,7 @@ const ResultsGenericCase = () => {
                                     {data.modoAereo} %
                                 </span>
                                 <span className="bloque">
-                                    de la demanda emplearía el modo aéreo
+                                    of the demand would use air transport
                                 </span>
                             </p>
                         </div>
@@ -73,16 +93,19 @@ const ResultsGenericCase = () => {
                                  style={{height: "50px", width: "30px"}}/>
                             <p>
                                 <span className="bloque">
-                                    Un aeropuerto
+                                    One
                                 </span>
                                 <span className="texto-destacado bloque">
-                                     {data.aeropuertoA.toLowerCase()}
+                                     {traducirTamano(data.aeropuertoA).toLowerCase()}
                                 </span>
                                 <span className="bloque">
-                                    y otro
+                                   airport and another
                                 </span>
                                 <span className="texto-destacado bloque">
-                                     {data.aeropuertoB.toLowerCase()}
+                                    {traducirTamano(data.aeropuertoB).toLowerCase()}
+                                </span>
+                                <span className="bloque">
+                                   airport
                                 </span>
                             </p>
                         </div>
@@ -91,13 +114,13 @@ const ResultsGenericCase = () => {
                                  style={{height: "50px", width: "53px"}}/>
                             <p>
                                 <span className="bloque">
-                                    Un terreno
+                                    A
                                 </span>
                                 <span className="texto-destacado bloque">
-                                     {data.tipoTerreno.toLowerCase()}
+                                     {traducirTerreno(data.tipoTerreno).toLowerCase()}
                                 </span>
                                 <span className="bloque">
-                                    entre ambos puntos
+                                    terrain between both points.
                                 </span>
                             </p>
                         </div>
@@ -108,7 +131,7 @@ const ResultsGenericCase = () => {
                         {/* Primera sección */}
                         <div className="bloque-emisiones">
                             <h2 className="titulo-emisiones">
-                                La construcción de las infraestructuras generaría unas emisiones de:
+                                The <span className="res-tex-dest">construction</span> of the infrastructures would generate emissions of:
                             </h2>
                             <div className="fila-emisiones">
                                 <div className="emision-item">
@@ -119,10 +142,10 @@ const ResultsGenericCase = () => {
                                             {data.emisionesConstAereo.toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub>e para el
+                                            CO<sub>2</sub>e for
                                         </span>
                                         <span className="bloque">
-                                            modo aéreo
+                                            air transport.
                                         </span>
                                     </p>
                                 </div>
@@ -134,10 +157,10 @@ const ResultsGenericCase = () => {
                                             {data.emisionesConstAve.toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub>e para la
+                                            CO<sub>2</sub>e for
                                         </span>
                                         <span className="bloque">
-                                            alta velocidad
+                                            high-speed rail
                                         </span>
                                     </p>
                                 </div>
@@ -147,7 +170,7 @@ const ResultsGenericCase = () => {
                         {/* Segunda sección */}
                         <div className="bloque-emisiones">
                             <h2 className="titulo-emisiones">
-                                Las emisiones totales en el período de análisis (50 años de explotación) serían:
+                                The <span className="res-tex-dest">total emissions</span> over the analysis period (50 years of operation) would be:
                             </h2>
                             <div className="fila-emisiones">
                                 <div className="emision-item">
@@ -158,10 +181,10 @@ const ResultsGenericCase = () => {
                                             {data.cicloVidaAereoAcumulado.at(-1).toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub>e para el
+                                            CO<sub>2</sub>e for
                                         </span>
                                         <span className="bloque">
-                                            modo aéreo
+                                            air transport
                                         </span>
                                     </p>
                                 </div>
@@ -173,10 +196,10 @@ const ResultsGenericCase = () => {
                                             {data.cicloVidaAVEAcumulado.at(-1).toLocaleString("es-ES")} t
                                         </span>
                                         <span className="bloque">
-                                            CO<sub>2</sub>e para la
+                                            CO<sub>2</sub>e for
                                         </span>
                                         <span className="bloque">
-                                            alta velocidad
+                                            high-speed rail
                                         </span>
                                     </p>
                                 </div>
@@ -186,7 +209,7 @@ const ResultsGenericCase = () => {
                 </div>
                 <div className="bloque-demanda mb-3">
                     <h2 className="titulo-demanda">
-                        Y cada modo habría transportado:
+                        And each mode would have <span className="res-tex-dest">transported</span>:
                     </h2>
                     <div className="fila-emisiones">
                         <div className="demanda-item">
@@ -197,7 +220,7 @@ const ResultsGenericCase = () => {
                                     {data.demandaAvionAcumulado.at(-1).toLocaleString("es-ES")}
                                 </span>
                                 <span className="bloque">
-                                    viajeros el modo aéreo
+                                    passengers by air transport
                                 </span>
                             </p>
                         </div>
@@ -209,17 +232,21 @@ const ResultsGenericCase = () => {
                                     {data.demandaTrenAcumulado.at(-1).toLocaleString("es-ES")}
                                 </span>
                                 <span className="bloque">
-                                    viajeros la alta velocidad
+                                    passengers by high-speed rail
                                 </span>
                             </p>
                         </div>
                     </div>
                 </div>
                 <section className="resultsGenericCaseExplanation mb-3">
+                    <p>
+                        There is an efficiency threshold that determines the number of accumulated trips beyond which the GHG emissions from air transport, primarily derived from operation, would exceed those from rail transport, which mostly come from infrastructure construction. Until this threshold is reached, the accumulated emissions from air transport would be lower.
+                    </p>
+                    <p>
+                        <strong>In this case, the efficiency threshold is set at {data.umbralEficiencia.toLocaleString("es-ES")} trips.</strong>
+                    </p>
                     <p className="mb-4 text-justify">
-                        En el siguiente gráfico se puede apreciar las emisiones acumuladas por el sistema en el
-                        escenario
-                        planteado, las emisiones de cada modo en ese escenario y para una situación hipotética en que sólo se utilizara el transporte aéreo.
+                        In the following graph, you can see the accumulated emissions by the system in the proposed scenario, the emissions of each mode in that scenario, and for a hypothetical situation where only air transport is used.
                     </p>
                     <div>
                         <GraficoGEISistema data={data}/>

@@ -39,7 +39,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
     const barDatasets = [
         {
             type: "bar",
-            label: "Aéreo Peninsular Construcción",
+            label: "Mainland Air Construction",
             data: backendData.map((item) => item.emisionesConstruccionAereo),
             backgroundColor: "#184487",
             borderColor: "#FFFFFF",
@@ -51,7 +51,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Aéreo Peninsular Operación",
+            label: "Mainland Air Operation",
             data: backendData.map((item) => item.emisionesOperacionAereo),
             backgroundColor: "#3463AC",
             yAxisID: "y1",
@@ -63,7 +63,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Aéreo Peninsular Mantenimiento",
+            label: "Mainland Air Maintenance",
             data: backendData.map((item) => item.emisionesMantenimientoAereo),
             backgroundColor: "#2F92D0",
             yAxisID: "y1",
@@ -72,7 +72,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Red AV Construcción",
+            label: "High-Speed Rail Network Construction",
             data: backendData.map((item) => item.emisionesConstruccionAVE),
             backgroundColor: "#720515",
             yAxisID: "y1",
@@ -84,7 +84,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Red AV Operación",
+            label: "High-Speed Rail Network Operation",
             data: backendData.map((item) => item.emisionesOperacionAVE),
             backgroundColor: "#CB1823",
             yAxisID: "y1",
@@ -96,7 +96,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Red AV Mantenimiento",
+            label: "High-Speed Rail Network Maintenance",
             data: backendData.map((item) => item.emisionesMantenimientoAVE),
             backgroundColor: "#E9465C",
             yAxisID: "y1",
@@ -108,7 +108,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
     const lineDatasets = [
         {
             type: "line",
-            label: "Demanda AV LD",
+            label: "High-Speed Rail Demand",
             data: backendData.map((item) =>
                 item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAVLD
             ),
@@ -124,7 +124,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "line",
-            label: "Demanda Aérea Peninsular",
+            label: "Mainland Air Demand",
             data: backendData.map((item) =>
                 item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAerea
             ),
@@ -171,7 +171,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
             legend: { display: false },
             title: {
                 display: true,
-                text: "Emisiones acumuladas y viajes anuales en cada modo",
+                text: "Cumulative emissions and number of anual passengers in each mode",
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
@@ -184,7 +184,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "left",
                 title: {
                     display: true,
-                    text: "Millones de t CO₂e acumulados",
+                    text: "Millions of CO₂e tons",
                     font: {
                         family: 'Poppins',
                     },
@@ -203,7 +203,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "right",
                 title: {
                     display: true,
-                    text: "Miles de viajeros anuales",
+                    text: "Thousands of passengers",
                     font: {
                         family: 'Poppins',
                     },

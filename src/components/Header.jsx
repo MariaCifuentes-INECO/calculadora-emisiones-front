@@ -37,17 +37,17 @@ export default function Header() {
                         <ul className="nav">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link fw-medium custom-navbar-color">
-                                    INICIO
+                                    HOME
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/genericCase" className="nav-link fw-medium custom-navbar-color">
-                                    SIMULADOR
+                                    SIMULATOR
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/realCase" className="nav-link fw-medium custom-navbar-color">
-                                    CASOS REALES
+                                    REAL CASES
                                 </Link>
                             </li>
                         </ul>

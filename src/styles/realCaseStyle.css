@@ -42,4 +42,10 @@ li {
     color: #3463AC;
 }
 
+.small-text {
+    font-size: 10px !important;
+    line-height: 1.2; /* Ajusta el espacio entre líneas */
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
 

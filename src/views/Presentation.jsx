@@ -20,41 +20,38 @@ const Presentation = () => {
             <div className="container presentation-header mt-5">
                 <img src={logo} alt="CarbonTrack360 Logo" className="logo-img mt-4"/>
                 <h1 className="presentation-title mt-5 mb-4">
-                    CALCULADORA DE EMISIONES EN EL CICLO DE VIDA DE LA INFRAESTRUCTURA
+                    LIFECYCLE EMISSIONS CALCULATOR FOR TRANSPORT INFRASTRUCTURES
                 </h1>
             </div>
             <div className="container presentation-exp">
                 <section>
                     <p>
-                        <strong>¿Cuál es el verdadero impacto ambiental del transporte?</strong><br/>
-                        El transporte aéreo enfrenta el reto de reducir sus emisiones de GEI, pero ¿es realmente el
-                        mayor responsable? Para verlo con perspectiva, esta calculadora analiza todo el ciclo de vida de
-                        las infraestructuras, comparando las emisiones del avión y la Alta Velocidad en rutas de larga
-                        distancia.
-
+                        <strong>What is the actual impact of transport on climate change?</strong><br/>
+                        Air transport faces the challenge of reducing its greenhouse gas (GHG) emissions, but is it
+                        really the major contributor? To put things into perspective, this calculator analyzes the entire
+                        lifecycle of transport infrastructures, comparing the emissions of air transport and high-speed rail.
                     </p>
                     <p>
-                        <strong>Explora, compara y saca tus propias conclusiones.</strong>
+                        <strong>Explore, compare, and draw your own conclusions.</strong>
                     </p>
                     <p>
-                        (<strong>Nota:</strong> El análisis excluye la carretera, pese a que su operación supone un alto
-                        porcentaje (30,1 %) de las emisiones en España, ya que su infraestructura tiene otros usos).
+                        (<strong>Note:</strong> The analysis excludes road transport, despite its operation accounting
+                        for a high percentage (30.1%) of emissions in Spain, as its infrastructure has other uses).
                     </p>
                     <p>
-                        Consulta <Link to="/hypothesis" className="presentation-custom-link">aquí</Link> la <strong>metodología
-                        y
-                        fuentes</strong> utilizadas.
+                        Check the <strong>methodology and sources</strong> used <Link to="/hypothesis"
+                                                                                      className="presentation-custom-link">here</Link>.
                     </p>
                 </section>
                 <section className="text-center mt-5">
-                    <h2 className="presentation-subtitle mb-4">¿Desea analizar una simulación o un ejemplo real?</h2>
-
+                    <h2 className="presentation-subtitle mb-4">Would you like to analyze a simulation or a real
+                        case?</h2>
                     <div className="d-flex gap-5 justify-content-center">
                         <button onClick={handleGenericCase} className="btn btn-presentation">
-                            SIMULACIÓN
+                            SIMULATION
                         </button>
                         <button onClick={handleRealExample} className="btn btn-presentation">
-                            CASO REAL
+                            REAL CASE
                         </button>
                     </div>
                 </section>

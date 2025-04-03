@@ -5,8 +5,8 @@ import "../styles/hypothesisStyle.css"
 const Hypothesis = () => {
 
     const breadcrumbItems = [
-        {label: "INICIO", link: "/", className: "home"},
-        {label: "HIPÓTESIS Y FUENTES", active: true, className: "current"},
+        {label: "HOME", link: "/", className: "home"},
+        {label: "HYPOTHESES AND SOURCES", active: true, className: "current"},
     ];
 
 
@@ -15,58 +15,56 @@ const Hypothesis = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container hypothesisNetworkCont">
-                <h1 className="title-hypothesis">Hipótesis y fuentes</h1>
+                <h1 className="title-hypothesis">Hypotheses and sources</h1>
                 <section className="mt-5 mb-2 hypothesisExplanation">
                     <p>
-                        La consideración de las emisiones de GEI en el ciclo de vida completo de las infraestructuras de
-                        transporte es algo necesario y cada vez más habitual, cuyo cálculo va mejorando y precisándose
-                        con la experiencia.
+                        Considering GHG emissions over the entire lifecycle of transport infrastructure is necessary and
+                        increasingly common, with calculations improving and becoming more precise with experience.
                     </p>
                     <p>
-                        En este ejercicio se pretende aportar una herramienta para la reflexión, CarbonTrack360, y se ha
-                        procurado mantener criterios de claridad y homogeneidad que permitieran la comparación.
+                        This exercise aims to provide a tool for reflection, CarbonTrack360, and has sought to maintain
+                        clarity and consistency criteria to allow for comparison.
                     </p>
                     <p>
-                        Para las fases de construcción y mantenimiento de las infraestructuras, se ha partido de las
-                        <i>Recomendaciones para la estimación de las emisiones de GEI en la evaluación ambiental de
-                            planes
-                            y proyectos de transporte</i>, de la Dirección General de Calidad y Evaluación Ambiental y
-                        Medio
-                        Natural del Ministerio para la Transición Ecológica y el Reto Demográfico, como metodología
-                        común.
+                        For the construction and maintenance phases of transport infrastructure, the &#34;Recommendations for the
+                        estimation of GHG emissions in the environmental assessment of transport plans and projects&#34;,
+                        from the General Directorate for Environmental Quality and Assessment and Natural Environment of
+                        the Ministry for the Ecological Transition and the Demographic Challenge of Spain, have been used as a
+                        common methodology.
                     </p>
                     <p>
-                        En el caso de la construcción de infraestructura aeroportuaria, se han tomado de las
-                        Recomendaciones dos ratios principales de emisiones:
+                        In the case of airport infrastructure construction, two main emission ratios have been taken
+                        from the <i>Recommendations</i>:
                     </p>
                     <ul>
-                        <li><strong>1.125 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> de terminal,</li>
-                        <li><strong>160 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> de pista.</li>
+                        <li><strong>1.125 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> of terminal,</li>
+                        <li><strong>160 kg CO<sub>2</sub>e/m<sup>2</sup> </strong> of runway.</li>
                     </ul>
                     <p>
-                        En el caso de la construcción de la Alta Velocidad, este informe refiere a tres rangos de
-                        emisiones:
+                        For the construction of High-Speed Rail, this report refers to three emission ranges:
                     </p>
                     <ul>
-                        <li><strong>4.000 t CO<sub>2</sub>e/km</strong> de línea en terreno llano,</li>
-                        <li><strong>8.000 t CO<sub>2</sub>e/km</strong> de línea en terreno medio, y</li>
-                        <li><strong>24.000 t CO<sub>2</sub>e/km</strong> de línea en terreno accidentado.</li>
+                        <li><strong>4.000 t CO<sub>2</sub>e/km</strong> of line on flat terrain,</li>
+                        <li><strong>8.000 t CO<sub>2</sub>e/km</strong> of line on medium terrain, and</li>
+                        <li><strong>24.000 t CO<sub>2</sub>e/km</strong> of line on rough terrain.</li>
                     </ul>
                     <p>
-                        Para determinar el grado de accidentalidad del terreno en los casos reales, se ha aplicado un
-                        criterio de proporcionalidad con los costes de construcción medios de cada tramo.
+                        To determine the degree of terrain roughness in real cases, a proportionality criterion with the
+                        average construction costs of each section has been applied.
                     </p>
                     <p>
-                        Para las emisiones relacionadas con la operación:
+                        For emissions related to operation:
                     </p>
                     <ul>
-                        <li>en el modo aéreo, se ha calculado la media de emisiones por pasajero-km para vuelos
-                            peninsulares, a partir de la herramienta <strong>ICAO Carbon Emissions Calculator
-                                (ICEC)</strong>.
+                        <li>
+                            In the air mode, the average emissions per passenger-km for peninsular flights have been
+                            calculated using the <strong>ICAO Carbon Emissions Calculator
+                            (ICEC)</strong>.
                         </li>
-                        <li>en la alta velocidad ferroviaria, hasta 2019 se han tomado de las Recomendaciones, y
-                            desde entonces, y para el simulador, se han considerado nulas debido al contrato de
-                            energía con garantía de origen renovable de ADIF.
+                        <li>
+                            In high-speed rail, emissions up to 2019 have been taken from the Recommendations, and since
+                            then, and for the simulator, they have been considered null due to ADIF's renewable energy
+                            guarantee contract.
                         </li>
                     </ul>
                 </section>

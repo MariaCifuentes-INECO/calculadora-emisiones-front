@@ -11,10 +11,10 @@ const ResultsCompleteNetwork = () => {
     const {completeNetwork} = useContext(CalculatorContext);
 
     const breadcrumbItems = [
-        {label: "INICIO", link: "/", className: "home"},
-        {label: "CASO REAL", link: "/realCase", className: "intermediate"},
+        {label: "HOME", link: "/", className: "home"},
+        {label: "REAL CASE", link: "/realCase", className: "intermediate"},
         {
-            label: "EMISIONES DE TRANSPORTE EN ESPAÑA: AÉREO PENINSULAR VS. ALTA VELOCIDAD",
+            label: "TRANSPORT EMISSIONS IN SPAIN: MAINLAND DOMESTIC AIR VS. HIGH-SPEED RAIL",
             active: true,
             className: "current"
         },
@@ -26,30 +26,31 @@ const ResultsCompleteNetwork = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container completeNetworkCont">
-                <h1 className="title-completeNetwork">Emisiones de Transporte en España: Aéreo peninsular vs. Alta
-                    Velocidad</h1>
+                <h1 className="title-completeNetwork">Transport Emissions in Spain: Mainland Domestic Air vs. High-Speed
+                    Rail</h1>
                 <section className="mt-5 mb-5 completeNetworkExplanation">
                     <p>
-                        Hemos analizado las emisiones de GEI de nuestras infraestructuras de transporte en los últimos
-                        30 años. El ejercicio no permite sacar conclusiones a nivel de comparación detallada entre
-                        modos, o a nivel del acierto o desacierto de las políticas y de las decisiones tomadas, pero sí
-                        poner en contexto órdenes de magnitud entre modos, y romper ideas preconcebidas.
-
+                        GHG emissions of Spanish transport infrastructure have been analysed over the last 30 years. The
+                        exercise does not allow for detailed comparisons between modes or for evaluating the success or
+                        failure of policies and decisions made, but it does provide context for the magnitude of
+                        emissions between modes and challenges preconceived ideas.
                     </p>
                     <p>
-                        Aquí te presentamos los resultados:
+                        Here are the results:
                     </p>
                     <ul>
                         <li>
-                            <strong>Modo Aéreo:</strong> Las operaciones de vuelos peninsulares, junto con la
-                            construcción y ampliación de aeropuertos imputable a estos, han
-                            generado <strong>45</strong> millones de t de CO<sub>2</sub>e
+                            <strong>Air Mode: </strong>
+                            Operations of mainland domestic flights, along with the construction and expansion of
+                            airports attributable to these, have generated <strong>45</strong> million tons of
+                            CO<sub>2</sub>e
                         </li>
                         <li>
-                            <strong>Alta Velocidad:</strong> La red de alta velocidad ferroviaria (4.000 km) ha emitido
-                            casi <strong>50</strong> millones de t de CO<sub>2</sub>e, incluyendo su construcción y
-                            mantenimiento y, hasta 2019,
-                            también las emisiones por operación de servicios AV Larga Distancia.
+                            <strong>High-Speed Rail: </strong>
+                            The high-speed rail network (4.000 km) has emitted nearly <strong>50</strong> million tons
+                            of CO<sub>2</sub>e, including its construction and maintenance and, until 2019, also the
+                            emissions from
+                            the operation of long-distance high-speed services.
                         </li>
                     </ul>
                 </section>
@@ -58,11 +59,10 @@ const ResultsCompleteNetwork = () => {
                 </section>
                 <section className="mt-5 mb-5 completeNetworkExplanation">
                     <p>
-                        En resumen, las emisiones acumuladas del <strong>transporte aéreo peninsular han sido un 10%
-                        menores que las de la alta velocidad</strong>, habiendo transportado 480 millones de pasajeros
-                        en el periodo, frente
-                        a 360 millones de la alta velocidad. En los últimos años, la demanda de vuelos peninsulares ha
-                        disminuido, mientras que la alta velocidad sigue ganando popularidad.
+                        In summary, <strong>the cumulative emissions from domestic air transport have been 10% lower
+                        than those of high-speed rail</strong>, having transported 480 million passengers during the
+                        period, compared to 360 million by high-speed rail. In recent years, the demand for mainland
+                        domestic flights has decreased, while high-speed rail continues to gain popularity.
                     </p>
                 </section>
                 <section className="mt-5">
@@ -70,14 +70,15 @@ const ResultsCompleteNetwork = () => {
                 </section>
                 <section className="mt-5 mb-3 completeNetworkExplanation">
                     <p>
-                        La construcción de la red de Alta Velocidad ha supuesto un importante esfuerzo en inversiones y
-                        en emisiones. Sin embargo, el éxito en demanda supone que las emisiones acumuladas por cada
-                        viajero de alta velocidad se hayan reducido drásticamente en los últimos años, hasta llegar en <strong>2024</strong>, a <strong>139 kg CO<sub>2</sub>e</strong> por viajero acumulado.
+                        The air mode has already achieved significant reductions in its GHG emissions due to
+                        improvements in aircraft and engines, resulting in emissions of <strong>94 kg CO<sub>2</sub>e</strong> per
+                        cumulative passenger.
                     </p>
                     <p>
-                        El modo aéreo, ya ha conseguido importantes reducciones en sus emisiones de GEI derivadas de las
-                        mejoras de aeronaves y motores, lo que supone alcanzar unas emisiones de 94 kg CO<sub>2</sub>e por pasajero
-                        acumulado.
+                        The construction of the High-Speed Rail network has required significant investment and
+                        emissions. However, the success in demand means that the cumulative emissions per high-speed
+                        rail passenger have drastically reduced in recent years, reaching <strong>139 kg CO<sub>2</sub>e</strong> per
+                        passenger by 2024.
                     </p>
                 </section>
             </div>

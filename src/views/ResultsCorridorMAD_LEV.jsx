@@ -11,10 +11,10 @@ const ResultsCorridorMAD_LEV = () => {
     const {corridors} = useContext(CalculatorContext);
 
     const breadcrumbItems = [
-        {label: "INICIO", link: "/", className: "home"},
-        {label: "CASO REAL", link: "/realCase", className: "intermediate"},
+        {label: "HOME", link: "/", className: "home"},
+        {label: "REAL CASE", link: "/realCase", className: "intermediate"},
         {
-            label: "Resultados Madrid-Levante",
+            label: "MADRID - LEVANTE CORRIDOR",
             active: true,
             className: "current"
         },
@@ -26,60 +26,29 @@ const ResultsCorridorMAD_LEV = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container corridorMADLEVCont">
-                <h1 className="title-corridorMADLEV">Resultados Madrid-Levante</h1>
+                <h1 className="title-corridorMADLEV">Madrid – Levante Corridor</h1>
                 <section className="mt-5 mb-5 corridorMADLEVExplanation">
                     <p>
-                        Hemos analizado las emisiones de GEI de nuestras infraestructuras de transporte en los últimos
-                        30 años. El ejercicio no permite sacar conclusiones a nivel de comparación detallada entre
-                        modos, o a nivel del acierto o desacierto de las políticas y de las decisiones tomadas, pero sí
-                        poner en contexto órdenes de magnitud entre modos, y romper ideas preconcebidas.
-
+                        This corridor is the most recent of the three analysed, as the high-speed connection between
+                        Madrid and Valencia was put into service in 2010, Madrid and Alicante in 2013, and Madrid and
+                        Murcia in 2022.
                     </p>
                     <p>
-                        Aquí te presentamos los resultados:
+                        With estimated construction emissions of 6.9 million tons of CO2e, the total emissions for the
+                        rail mode amount to <strong>7.1 million tons of CO<sub>2</sub>e</strong> over the analyzed period.
                     </p>
-                    <ul>
-                        <li>
-                            <strong>Modo Aéreo:</strong> Las operaciones de vuelos peninsulares, junto con la
-                            construcción y ampliación de aeropuertos imputable a estos, han generado
-                            casi <strong>37</strong> millones de t de CO<sub>2</sub>e
-                        </li>
-                        <li>
-                            <strong>Alta Velocidad:</strong> La red de alta velocidad ferroviaria (4.000 km) ha emitido
-                            casi <strong>50</strong> millones de t de CO<sub>2</sub>e, incluyendo su construcción y
-                            mantenimiento y, hasta 2019,
-                            también las emisiones por operación de servicios AV Larga Distancia.
-                        </li>
-                    </ul>
+                    <p>
+                        Air demand has drastically reduced since the high-speed connection was put into service, accumulating only <strong>0.8 million tons of CO<sub>2</sub>e</strong> over the period.
+                    </p>
+                    <p>
+                        Currently, the cumulative emissions per air passenger (<strong>85 kg CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>112 kg CO<sub>2</sub>e/pax</strong>).
+                    </p>
                 </section>
                 <section>
                     <GraficoAnalisisReal backendData={corridors.filter(c => c.nombre === "Madrid-Levante")}/>
                 </section>
-                <section className="mt-5 mb-5 corridorMADLEVExplanation">
-                    <p>
-                        En resumen, las emisiones acumuladas del transporte aéreo peninsular han sido un <strong>26%
-                        menores que las de la alta velocidad</strong>, habiendo transportado 500 millones de pasajeros
-                        en el periodo, frente
-                        a 360 millones de la alta velocidad. En los últimos años, la demanda de vuelos peninsulares ha
-                        disminuido, mientras que la alta velocidad sigue ganando popularidad.
-                    </p>
-                </section>
                 <section className="mt-5">
                     <GraficoEmisionAcumPax data={corridors.filter(c => c.nombre === "Madrid-Levante")}/>
-                </section>
-                <section className="mt-5 mb-3 corridorMADLEVExplanation">
-                    <p>
-                        La construcción de la red de Alta Velocidad ha requerido grandes inversiones y ha generado
-                        emisiones significativas. Sin embargo, gracias al aumento de la demanda, las emisiones por
-                        viajero han disminuido notablemente. En <strong>2024</strong>, se estima que cada viajero de
-                        alta velocidad
-                        genera <strong>139 kg de CO<sub>2</sub>e</strong>, mientras que el modo aéreo se mantiene
-                        en <strong>73 kg de CO<sub>2</sub>e</strong> por viajero.
-                    </p>
-                    <p>
-                        Este cálculo sencillo asigna al modo aéreo las mismas emisiones operativas durante el periodo,
-                        basadas en la calculadora <strong>OACI 2024</strong>, aunque estas emisiones han mejorado con el tiempo.
-                    </p>
                 </section>
             </div>
         </div>

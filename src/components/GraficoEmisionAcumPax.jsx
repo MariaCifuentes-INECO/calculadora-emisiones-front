@@ -20,7 +20,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
 
     const datasets = [
         {
-            label: 'Aéreo peninsular',
+            label: 'Mainland Air Transport',
             data: filteredData.map(item => item.emisionesPaxAereo === 0 ? null : item.emisionesPaxAereo),
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
@@ -28,7 +28,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             pointRadius: 5,
         },
         {
-            label: 'Red AV',
+            label: 'High-Speed Rail Network',
             data: filteredData.map(item => item.emisionesPaxAVE === 0 ? null : item.emisionesPaxAVE),
             borderColor: colors.ave,
             backgroundColor: colors.ave,
@@ -48,7 +48,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             },
             title: {
                 display: true,
-                text: 'Emisiones acumuladas por pasajero o viajero acumulado',
+                text: 'Cumulative emissions per cumulative passenger',
                 font: { family: 'Poppins' },
             },
         },
@@ -60,7 +60,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             y: {
                 title: {
                     display: true,
-                    text: 'Kg CO\u2082 acumulados por pasajero o viajero acumulado',
+                    text: 'Kg CO\u2082 per passenger',
                     font: { family: 'Poppins' },
                 },
                 ticks: {
