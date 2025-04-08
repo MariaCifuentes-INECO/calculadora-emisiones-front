@@ -2,8 +2,19 @@ import {Link} from "react-router-dom"
 import logoIneco from "../assets/logoIneco.svg"
 import logoHeader from "../assets/logo_header.svg"
 import "../styles/headerStyle.css"
+import {useTranslation} from "react-i18next";
 
 export default function Header() {
+
+    const { i18n } = useTranslation();
+    const currentLanguage = i18n.language;
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    const { t } = useTranslation('header');
+
     return (
         <header className="bg-white">
             <div className="container-fluid">
@@ -37,20 +48,35 @@ export default function Header() {
                         <ul className="nav">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link fw-medium custom-navbar-color">
-                                    HOME
+                                    {t('home')}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/genericCase" className="nav-link fw-medium custom-navbar-color">
-                                    SIMULATOR
+                                    {t('simulator')}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/realCase" className="nav-link fw-medium custom-navbar-color">
-                                    REAL CASES
+                                    {t('realCases')}
                                 </Link>
                             </li>
                         </ul>
+                        <div className="language-switcher">
+                            <button
+                                onClick={() => changeLanguage('en')}
+                                className={`language-btn ${currentLanguage === 'en' ? 'active' : ''}`}
+                            >
+                                EN
+                            </button>
+                            <span className="mx-1">|</span>
+                            <button
+                                onClick={() => changeLanguage('es')}
+                                className={`language-btn ${currentLanguage === 'es' ? 'active' : ''}`}
+                            >
+                                ES
+                            </button>
+                        </div>
                     </div>
                 </div>
             </nav>

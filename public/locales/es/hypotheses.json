@@ -1,0 +1,31 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "current": "HIPÓTESIS Y FUENTES"
+  },
+  "title": "Hipótesis y fuentes",
+  "paragraphs": {
+    "p1": "La consideración de las emisiones de GEI en el ciclo de vida completo de las infraestructuras de transporte es algo necesario y cada vez más habitual, cuyo cálculo va mejorando y precisándose con la experiencia.",
+    "p2": "En este ejercicio se pretende aportar una herramienta para la reflexión, CarbonTrack360, y se ha procurado mantener criterios de claridad y homogeneidad que permitieran la comparación.",
+    "p3": "Para las fases de construcción y mantenimiento de las infraestructuras de transporte, se ha partido de las \"Recomendaciones para la estimación de emisiones de GEI en la evaluación ambiental de planes y proyectos de transporte\", de la Dirección General de Calidad y Evaluación Ambiental y Medio Natural del Ministerio para la Transición Ecológica y el Reto Demográfico, como metodología común.",
+    "p4": "En el caso de la construcción de infraestructura aeroportuaria, se han tomado de las <italic>Recomendaciones</italic> dos ratios principales de emisiones:",
+    "p5": "En el caso de la construcción de la Alta Velocidad, este informe refiere a tres rangos de emisiones:",
+    "p6": "Para determinar el grado de accidentalidad del terreno en los casos reales, se ha aplicado un criterio de proporcionalidad con los costes de construcción medios de cada tramo.",
+    "p7": "Para las emisiones relacionadas con la operación:"
+  },
+  "lists": {
+    "airport": [
+      "<strong>1,125 kg CO<sub>2</sub>e/m<sup>2</sup></strong> de terminal,",
+      "<strong>160 kg CO<sub>2</sub>e/m<sup>2</sup></strong> de pista."
+    ],
+    "rail": [
+      "<strong>4.000 t CO<sub>2</sub>e/km</strong> de línea en terreno llano,",
+      "<strong>8.000 t CO<sub>2</sub>e/km</strong> de línea en terreno medio, y",
+      "<strong>24.000 t CO<sub>2</sub>e/km</strong> de línea en terreno accidentado."
+    ],
+    "operation": [
+      "En el modo aéreo, se ha calculado la media de emisiones por pasajero-km para vuelos peninsulares, a partir de la herramienta <strong>ICAO Carbon Emissions Calculator (ICEC)</strong>.",
+      "En la alta velocidad ferroviaria, hasta 2019 se han tomado de las Recomendaciones, y desde entonces, y para el simulador, se han considerado nulas debido al contrato de energía con garantía de origen renovable de ADIF."
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "current": "HYPOTHESES AND SOURCES"
+  },
+  "title": "Hypotheses and sources",
+  "paragraphs": {
+    "p1": "Considering GHG emissions over the entire lifecycle of transport infrastructure is necessary and increasingly common, with calculations improving and becoming more precise with experience.",
+    "p2": "This exercise aims to provide a tool for reflection, CarbonTrack360, and has sought to maintain clarity and consistency criteria to allow for comparison.",
+    "p3": "For the construction and maintenance phases of transport infrastructure, the \"Recommendations for the estimation of GHG emissions in the environmental assessment of transport plans and projects\", from the General Directorate for Environmental Quality and Assessment and Natural Environment of the Ministry for the Ecological Transition and the Demographic Challenge of Spain, have been used as a common methodology.",
+    "p4": "In the case of airport infrastructure construction, two main emission ratios have been taken from the <italic>Recommendations</italic>:",
+    "p5": "For the construction of High-Speed Rail, this report refers to three emission ranges:",
+    "p6": "To determine the degree of terrain roughness in real cases, a proportionality criterion with the average construction costs of each section has been applied.",
+    "p7": "For emissions related to operation:"
+  },
+  "lists": {
+    "airport": [
+      "<strong>1.125 kg CO<sub>2</sub>e/m<sup>2</sup></strong> of terminal,",
+      "<strong>160 kg CO<sub>2</sub>e/m<sup>2</sup></strong> of runway."
+    ],
+    "rail": [
+      "<strong>4.000 t CO<sub>2</sub>e/km</strong> of line on flat terrain,",
+      "<strong>8.000 t CO<sub>2</sub>e/km</strong> of line on medium terrain, and",
+      "<strong>24.000 t CO<sub>2</sub>e/km</strong> of line on rough terrain."
+    ],
+    "operation": [
+      "In the air mode, the average emissions per passenger-km for peninsular flights have been calculated using the <strong>ICAO Carbon Emissions Calculator (ICEC)</strong>.",
+      "In high-speed rail, emissions up to 2019 have been taken from the Recommendations, and since then, and for the simulator, they have been considered null due to ADIF's renewable energy guarantee contract."
+    ]
+  }
+}

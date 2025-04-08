@@ -2,6 +2,7 @@ import GlobalRouter from "./routes/GlobalRouter.jsx";
 import {CalculatorContext} from "./context/CalculatorContext";
 import {useCompleteNetwork} from "./hooks/useCompleteNetwork.jsx";
 import {useCorridors} from "./hooks/useCorridors.jsx";
+import './i18n';
 
 
 function App() {
