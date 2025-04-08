@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "realCase": "CASOS REALES",
+    "current": "CORREDOR MADRID - LEVANTE"
+  },
+  "title": "Corredor Madrid - Levante",
+  "paragraphs": {
+    "p1": "Este corredor es el más reciente de los tres analizados, dado que la conexión en alta velocidad Madrid – Valencia se puso en servicio en 2010, en 2013 la de Madrid – Alicante, y en 2022 la de Madrid – Murcia.",
+    "p2": "Con unas emisiones de construcción estimadas en 6,9 millones de t CO<sub>2</sub>e, y un total de emisiones del modo ferroviario de <strong>7,1 millones de t CO<sub>2</sub>e</strong> en el periodo analizado.",
+    "p3": "La demanda aérea se ha reducido drásticamente desde la puesta en servicio de la conexión en alta velocidad, habiendo acumulado únicamente en el periodo <strong>0,8 millones de t CO<sub>2</sub>e</strong>.",
+    "p4": "Por el momento, las emisiones acumuladas por pasajero aéreo (<strong>85 kg de CO<sub>2</sub>e/pax</strong>) siguen siendo inferiores a las de los viajeros ferroviarios (<strong>112 kg de CO<sub>2</sub>e/pax</strong>)."
+  },
+  "links": {
+    "hypotheses": "Hipótesis y fuentes"
+  }
+}

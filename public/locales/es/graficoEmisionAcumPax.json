@@ -1,0 +1,11 @@
+{
+  "noData": "No hay datos disponibles para mostrar el gráfico",
+  "title": "Emisiones acumuladas por pasajero o viajero acumulado",
+  "datasets": {
+    "airTransport": "Aéreo Peninsular",
+    "railTransport": "Red AV"
+  },
+  "axes": {
+    "passengers": "Kg CO₂e por pasajero"
+  }
+}

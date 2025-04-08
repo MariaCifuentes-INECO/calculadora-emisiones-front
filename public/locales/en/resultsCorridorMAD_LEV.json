@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "realCase": "REAL CASES",
+    "current": "MADRID - LEVANTE CORRIDOR"
+  },
+  "title": "Madrid – Levante Corridor",
+  "paragraphs": {
+    "p1": "This corridor is the most recent of the three analysed, as the high-speed connection between Madrid and Valencia was put into service in 2010, Madrid and Alicante in 2013, and Madrid and Murcia in 2022.",
+    "p2": "With estimated construction emissions of 6.9 million tons of CO<sub>2</sub>e, the total emissions for the rail mode amount to <strong>7.1 million tons of CO<sub>2</sub>e</strong> over the analyzed period.",
+    "p3": "Air demand has drastically reduced since the high-speed connection was put into service, accumulating only <strong>0.8 million tons of CO<sub>2</sub>e</strong> over the period.",
+    "p4": "Currently, the cumulative emissions per air passenger (<strong>85 kg CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>112 kg CO<sub>2</sub>e/pax</strong>)."
+  },
+  "links": {
+    "hypotheses": "Hypotheses and sources"
+  }
+}

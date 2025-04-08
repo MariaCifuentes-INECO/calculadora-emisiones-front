@@ -1,8 +1,12 @@
 import {Line} from "react-chartjs-2";
+import {useTranslation} from "react-i18next";
 
 const GraficoEmisionAcumPax = ({ data }) => {
+
+    const { t } = useTranslation('graficoEmisionAcumPax');
+
     if (!data) {
-        return <div>No hay datos válidos para mostrar.</div>;
+        return <div>{t('noData')}</div>;
     }
 
     const colors = {
@@ -20,7 +24,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
 
     const datasets = [
         {
-            label: 'Mainland Air Transport',
+            label: t('datasets.airTransport'),
             data: filteredData.map(item => item.emisionesPaxAereo === 0 ? null : item.emisionesPaxAereo),
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
@@ -28,7 +32,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             pointRadius: 5,
         },
         {
-            label: 'High-Speed Rail Network',
+            label: t('datasets.railTransport'),
             data: filteredData.map(item => item.emisionesPaxAVE === 0 ? null : item.emisionesPaxAVE),
             borderColor: colors.ave,
             backgroundColor: colors.ave,
@@ -48,7 +52,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             },
             title: {
                 display: true,
-                text: 'Cumulative emissions per cumulative passenger',
+                text: t('title'),
                 font: { family: 'Poppins' },
             },
         },
@@ -60,7 +64,7 @@ const GraficoEmisionAcumPax = ({ data }) => {
             y: {
                 title: {
                     display: true,
-                    text: 'Kg CO\u2082 per passenger',
+                    text: t('axes.passengers'),
                     font: { family: 'Poppins' },
                 },
                 ticks: {

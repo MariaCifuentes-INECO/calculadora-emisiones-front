@@ -1,62 +1,71 @@
-import {useContext} from "react";
-import {CalculatorContext} from "../context/CalculatorContext.js";
+import { useContext } from "react";
+import { useTranslation, Trans } from "react-i18next";
+import { CalculatorContext } from "../context/CalculatorContext.js";
 import GraficoAnalisisReal from "../components/GraficoAnalisisReal.jsx";
-import "../styles/resultsCorridorMAD_LEVStyle.css"
+import "../styles/resultsCorridorMAD_LEVStyle.css";
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 const ResultsCorridorMAD_LEV = () => {
-
-    const {corridors} = useContext(CalculatorContext);
+    const { corridors } = useContext(CalculatorContext);
+    const { t } = useTranslation('resultsCorridorMAD_LEV');
 
     const breadcrumbItems = [
-        {label: "HOME", link: "/", className: "home"},
-        {label: "REAL CASE", link: "/realCase", className: "intermediate"},
-        {
-            label: "MADRID - LEVANTE CORRIDOR",
-            active: true,
-            className: "current"
-        },
+        { label: t('breadcrumb.home'), link: "/", className: "home" },
+        { label: t('breadcrumb.realCase'), link: "/realCase", className: "intermediate" },
+        { label: t('breadcrumb.current'), active: true, className: "current" },
     ];
-
 
     return (
         <div className="container corridorMADLEVWrapper">
-            {/* Miga de pan */}
-            <Breadcrumb items={breadcrumbItems}/>
+            <Breadcrumb items={breadcrumbItems} />
             <div className="container corridorMADLEVCont">
-                <h1 className="title-corridorMADLEV">Madrid – Levante Corridor</h1>
+                <h1 className="title-corridorMADLEV">{t('title')}</h1>
+
                 <section className="mt-5 mb-5 corridorMADLEVExplanation">
+                    <p>{t('paragraphs.p1')}</p>
                     <p>
-                        This corridor is the most recent of the three analysed, as the high-speed connection between
-                        Madrid and Valencia was put into service in 2010, Madrid and Alicante in 2013, and Madrid and
-                        Murcia in 2022.
+                        <Trans
+                            i18nKey="resultsCorridorMAD_LEV:paragraphs.p2"
+                            components={{
+                                strong: <strong />,
+                                sub: <sub />
+                            }}
+                        />
                     </p>
                     <p>
-                        With estimated construction emissions of 6.9 million tons of CO2e, the total emissions for the
-                        rail mode amount to <strong>7.1 million tons of CO<sub>2</sub>e</strong> over the analyzed
-                        period.
+                        <Trans
+                            i18nKey="resultsCorridorMAD_LEV:paragraphs.p3"
+                            components={{
+                                strong: <strong />,
+                                sub: <sub />
+                            }}
+                        />
                     </p>
                     <p>
-                        Air demand has drastically reduced since the high-speed connection was put into service,
-                        accumulating only <strong>0.8 million tons of CO<sub>2</sub>e</strong> over the period.
-                    </p>
-                    <p>
-                        Currently, the cumulative emissions per air passenger (<strong>85 kg
-                        CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>112 kg
-                        CO<sub>2</sub>e/pax</strong>).
+                        <Trans
+                            i18nKey="resultsCorridorMAD_LEV:paragraphs.p4"
+                            components={{
+                                strong: <strong />,
+                                sub: <sub />
+                            }}
+                        />
                     </p>
                 </section>
+
                 <section>
-                    <GraficoAnalisisReal backendData={corridors.filter(c => c.nombre === "Madrid-Levante")}/>
+                    <GraficoAnalisisReal backendData={corridors.filter(c => c.nombre === "Madrid-Levante")} />
                 </section>
+
                 <section className="mt-5">
-                    <GraficoEmisionAcumPax data={corridors.filter(c => c.nombre === "Madrid-Levante")}/>
+                    <GraficoEmisionAcumPax data={corridors.filter(c => c.nombre === "Madrid-Levante")} />
                 </section>
+
                 <section className="corridorMADLEVExplanation mt-5">
-                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
+                    <Link to="/hypotheses" className="presentation-custom-link">
+                        {t('links.hypotheses')}
+                    </Link>
                 </section>
             </div>
         </div>

@@ -1,0 +1,11 @@
+{
+  "noData": "No data available to display the chart",
+  "title": "Cumulative emissions per cumulative passenger",
+  "datasets": {
+    "airTransport": "Mainland Air Transport",
+    "railTransport": "High-Speed Rail Network"
+  },
+  "axes": {
+    "passengers": "Kg CO₂e per passenger"
+  }
+}

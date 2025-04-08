@@ -14,6 +14,7 @@ import {
 } from "chart.js"
 import PropTypes from "prop-types"
 import "../styles/graficoAnalisisRealStyle.css"
+import {useTranslation} from "react-i18next";
 
 // Registra los controladores
 ChartJS.register(
@@ -30,8 +31,11 @@ ChartJS.register(
 );
 
 const GraficoAnalisisReal = ({ backendData }) => {
+
+    const { t } = useTranslation('graficoAnalisisReal');
+
     if (!backendData || backendData.length === 0) {
-        return <div>No hay datos disponibles para mostrar el gráfico.</div>
+        return <div>{t('noData')}</div>
     }
 
     const labels = backendData.map((item) => item.anio.toString())
@@ -39,7 +43,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
     const barDatasets = [
         {
             type: "bar",
-            label: "Mainland Air Construction",
+            label: t('datasets.airConstruction'),
             data: backendData.map((item) => item.emisionesConstruccionAereo),
             backgroundColor: "#184487",
             borderColor: "#FFFFFF",
@@ -51,7 +55,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Mainland Air Operation",
+            label: t('datasets.airOperation'),
             data: backendData.map((item) => item.emisionesOperacionAereo),
             backgroundColor: "#3463AC",
             yAxisID: "y1",
@@ -63,7 +67,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "Mainland Air Maintenance",
+            label: t('datasets.airMaintenance'),
             data: backendData.map((item) => item.emisionesMantenimientoAereo),
             backgroundColor: "#2F92D0",
             yAxisID: "y1",
@@ -72,7 +76,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "High-Speed Rail Network Construction",
+            label: t('datasets.railConstruction'),
             data: backendData.map((item) => item.emisionesConstruccionAVE),
             backgroundColor: "#720515",
             yAxisID: "y1",
@@ -84,7 +88,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "High-Speed Rail Network Operation",
+            label: t('datasets.railOperation'),
             data: backendData.map((item) => item.emisionesOperacionAVE),
             backgroundColor: "#CB1823",
             yAxisID: "y1",
@@ -96,7 +100,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "bar",
-            label: "High-Speed Rail Network Maintenance",
+            label: t('datasets.railMaintenance'),
             data: backendData.map((item) => item.emisionesMantenimientoAVE),
             backgroundColor: "#E9465C",
             yAxisID: "y1",
@@ -108,7 +112,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
     const lineDatasets = [
         {
             type: "line",
-            label: "High-Speed Rail Demand",
+            label: t('datasets.railDemand'),
             data: backendData.map((item) =>
                 item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAVLD
             ),
@@ -124,7 +128,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
         },
         {
             type: "line",
-            label: "Mainland Air Demand",
+            label: t('datasets.airDemand'),
             data: backendData.map((item) =>
                 item.demandaAVLD === 0 && item.demandaAerea === 0 ? NaN : item.demandaAerea
             ),
@@ -171,7 +175,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
             legend: { display: false },
             title: {
                 display: true,
-                text: "Cumulative emissions and number of anual passengers in each mode",
+                text: t('title'),
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
@@ -184,7 +188,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "left",
                 title: {
                     display: true,
-                    text: "Millions of CO₂e tons",
+                    text: t('axes.emissions'),
                     font: {
                         family: 'Poppins',
                     },
@@ -203,7 +207,7 @@ const GraficoAnalisisReal = ({ backendData }) => {
                 position: "right",
                 title: {
                     display: true,
-                    text: "Thousands of passengers",
+                    text: t('axes.passengers'),
                     font: {
                         family: 'Poppins',
                     },

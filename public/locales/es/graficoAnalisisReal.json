@@ -1,0 +1,18 @@
+{
+  "noData": "No hay datos disponibles para mostrar el gráfico",
+  "title": "Emisiones acumuladas y viajes anuales en cada modo",
+  "datasets": {
+    "airConstruction": "Aéreo Peninsular Construcción",
+    "airOperation": "Aéreo Peninsular Operación",
+    "airMaintenance": "Aéreo Peninsular Mantenimiento",
+    "railConstruction": "Red AV Construcción",
+    "railOperation": "Red AV Operación",
+    "railMaintenance": "Red AV Mantenimiento",
+    "railDemand": "Demanda AV LD",
+    "airDemand": "Demanda Aérea Peninsular"
+  },
+  "axes": {
+    "emissions": "Millones de t CO₂e acumulados",
+    "passengers": "Miles de viajeros anuales"
+  }
+}
