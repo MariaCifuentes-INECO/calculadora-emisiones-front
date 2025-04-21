@@ -15,13 +15,13 @@
   },
   "lists": {
     "airport": [
-      "<strong>1.125 kg CO<sub>2</sub>e/m<sup>2</sup></strong> of terminal,",
+      "<strong>1,125 kg CO<sub>2</sub>e/m<sup>2</sup></strong> of terminal,",
       "<strong>160 kg CO<sub>2</sub>e/m<sup>2</sup></strong> of runway."
     ],
     "rail": [
-      "<strong>4.000 t CO<sub>2</sub>e/km</strong> of line on flat terrain,",
-      "<strong>8.000 t CO<sub>2</sub>e/km</strong> of line on medium terrain, and",
-      "<strong>24.000 t CO<sub>2</sub>e/km</strong> of line on rough terrain."
+      "<strong>4,000 t CO<sub>2</sub>e/km</strong> of line on flat terrain,",
+      "<strong>8,000 t CO<sub>2</sub>e/km</strong> of line on medium terrain, and",
+      "<strong>24,000 t CO<sub>2</sub>e/km</strong> of line on rough terrain."
     ],
     "operation": [
       "In the air mode, the average emissions per passenger-km for peninsular flights have been calculated using the <strong>ICAO Carbon Emissions Calculator (ICEC)</strong>.",

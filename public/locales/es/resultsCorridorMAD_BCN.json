@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "realCase": "CASOS REALES",
+    "current": "CORREDOR MADRID - BARCELONA"
+  },
+  "title": "Corredor Madrid - Barcelona",
+  "paragraphs": {
+    "p1": "En este corredor, la conexión en alta velocidad Madrid – Zaragoza se inauguró en 2003, y no fue hasta 2008 cuando se llegó a Barcelona.",
+    "p2": "Las emisiones por la construcción de la línea de alta velocidad (estimadas en cerca de 8 millones de t CO<sub>2</sub>e) junto con las de operación (considerando desde 2003 hasta 2019) y las de mantenimiento de la infraestructura, suman <strong>8,7 millones de t CO<sub>2</sub>e</strong> en el periodo.",
+    "p3": "Por su parte, el modo aéreo ha emitido <strong>5 millones de t CO<sub>2</sub>e</strong>, el 97 % de ellas en la fase de operación, en el periodo 2003-2024.",
+    "p4": "En este caso, las emisiones acumuladas por pasajero aéreo (<strong>80 kg de CO<sub>2</sub>e/pax</strong>) siguen siendo inferiores a las de los viajeros ferroviarios (<strong>88 kg de CO<sub>2</sub>e/pax</strong>)."
+  },
+  "links": {
+    "hypotheses": "Hipótesis y fuentes"
+  }
+}

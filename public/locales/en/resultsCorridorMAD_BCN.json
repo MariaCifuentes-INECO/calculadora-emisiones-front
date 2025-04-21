@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "realCase": "REAL CASES",
+    "current": "MADRID - BARCELONA CORRIDOR"
+  },
+  "title": "Madrid – Barcelona Corridor",
+  "paragraphs": {
+    "p1": "In this corridor, the high-speed connection between Madrid and Zaragoza was opened in 2003, and it was not until 2008 that it reached Barcelona.",
+    "p2": "The emissions from the construction of the high-speed line (estimated at around 8 million tons of CO<sub>2</sub>e), combined with operational emissions (considering the period from 2003 to 2019) and infrastructure maintenance, total <strong>8.7 million tons of CO<sub>2</sub>e</strong> over the period.",
+    "p3": "On the other hand, the air mode has emitted <strong>5 million tons of CO<sub>2</sub>e</strong>, 97% of which occurred during the operational phase, in the period from 2003 to 2024.",
+    "p4": "In this case, the cumulative emissions per air passenger (<strong>80 kg CO<sub>2</sub>e/pax</strong>) remain lower than those of rail passengers (<strong>88 kg CO<sub>2</sub>e/pax</strong>)."
+  },
+  "links": {
+    "hypotheses": "Hypotheses and sources"
+  }
+}
