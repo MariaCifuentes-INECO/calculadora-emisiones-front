@@ -5,20 +5,18 @@ import "../styles/resultsCorridorMAD_SEVStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
 import {Link} from "react-router-dom";
+import {Trans, useTranslation} from "react-i18next";
 
 
 const ResultsCorridorMAD_SEV = () => {
 
     const {corridors} = useContext(CalculatorContext);
+    const { t } = useTranslation('resultsCorridorMAD_SEV');
 
     const breadcrumbItems = [
-        {label: "HOME", link: "/", className: "home"},
-        {label: "REAL CASE", link: "/realCase", className: "intermediate"},
-        {
-            label: "MADRID - ANDALUSIA CORRIDOR",
-            active: true,
-            className: "current"
-        },
+        { label: t('breadcrumb.home'), link: "/", className: "home" },
+        { label: t('breadcrumb.realCase'), link: "/realCase", className: "intermediate" },
+        { label: t('breadcrumb.current'), active: true, className: "current" },
     ];
 
 
@@ -27,26 +25,35 @@ const ResultsCorridorMAD_SEV = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container corridorMADSEVCont">
-                <h1 className="title-corridorMADSEV">Madrid – Andalusia Corridor</h1>
+                <h1 className="title-corridorMADSEV">{t('title')}</h1>
                 <section className="mt-5 mb-5 corridorMADSEVExplanation">
+                    <p>{t('paragraphs.p1')}</p>
                     <p>
-                        This corridor allows for a longer analysis period, as Madrid - Seville was the first
-                        connection in Spanish HSR network, in 1992. The connection to Málaga was completed in 2007.
+                        <Trans
+                            i18nKey="resultsCorridorMAD_SEV:paragraphs.p2"
+                            components={{
+                                strong: <strong/>,
+                                sub: <sub/>
+                            }}
+                        />
                     </p>
                     <p>
-                        The construction of the high-speed infrastructure is estimated to have generated 5.2 million
-                        tons of CO<sub>2</sub>e. In total, HSR has accumulated <strong>6.1 million tons of
-                        CO<sub>2</sub>e</strong>, which includes 11% operational emissions (up to 2019).
+                        <Trans
+                            i18nKey="resultsCorridorMAD_SEV:paragraphs.p3"
+                            components={{
+                                strong: <strong/>,
+                                sub: <sub/>
+                            }}
+                        />
                     </p>
                     <p>
-                        The air mode accumulates <strong>3.4 million tons of CO<sub>2</sub>e</strong> over the
-                        period.
-                    </p>
-                    <p>
-                        The accumulated volume of railway demand, increased by the growth of recent years, makes the
-                        accumulated <strong>emissions per railway passenger (48 kg CO<sub>2</sub>e)</strong> lower than
-                        those of each <strong>air passenger
-                        (90 kg CO<sub>2</sub>e).</strong>
+                        <Trans
+                            i18nKey="resultsCorridorMAD_SEV:paragraphs.p4"
+                            components={{
+                                strong: <strong/>,
+                                sub: <sub/>
+                            }}
+                        />
                     </p>
                 </section>
                 <section>
@@ -58,7 +65,7 @@ const ResultsCorridorMAD_SEV = () => {
                 </section>
 
                 <section className="corridorMADSEVExplanation mt-5">
-                    <Link to="/hypothesis" className="presentation-custom-link">Hypotheses and sources</Link>
+                    <Link to="/hypotheses" className="presentation-custom-link">{t('links.hypotheses')}</Link>
                 </section>
             </div>
         </div>

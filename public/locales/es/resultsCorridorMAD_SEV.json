@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "realCase": "CASOS REALES",
+    "current": "CORREDOR MADRID - ANDALUCÍA"
+  },
+  "title": "Corredor Madrid - Andalucía",
+  "paragraphs": {
+    "p1": "Este corredor es el que permite un periodo más largo de análisis, dado que Madrid - Sevilla fue la primera conexión en alta velocidad. En 2007 se completó la conexión con Málaga.",
+    "p2": "La construcción de la infraestructura de alta velocidad se estima que generó 5,2 millones de t CO<sub>2</sub>e, y en total se alcanzan los <strong>6,1 millones de t CO<sub>2</sub>e</strong>, que incluyen un 11% de emisiones de operación (hasta 2019).",
+    "p3": "El modo aéreo acumula en el periodo <strong>3,4 millones de t CO<sub>2</sub>e</strong>.",
+    "p4": "El volumen de demanda ferroviaria acumulado, reforzado por el crecimiento de los últimos años, hace que las <strong>emisiones acumuladas por viajero ferroviario (48 kg CO<sub>2</sub>e)</strong> sean inferiores a las de cada <strong>pasajero aéreo transportado (90 kg CO<sub>2</sub>e)</strong>."
+  },
+  "links": {
+    "hypotheses": "Hipótesis y fuentes"
+  }
+}
