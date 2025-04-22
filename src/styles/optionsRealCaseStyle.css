@@ -65,6 +65,14 @@
     }
 
     .optionsText {
-        font-size: 16px; /* Tamaño más pequeño en móviles */
+        font-size: 14px; /* Tamaño más pequeño en móviles */
+    }
+
+    .flex {
+        gap: 1rem; /* espacio entre imagen y texto */
+    }
+
+    .justify-text {
+        text-align: left;
     }
 }
