@@ -1,0 +1,24 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "realCase": "CASOS REALES",
+    "current": "EMISIONES DE TRANSPORTE EN ESPAÑA: AÉREO PENINSULAR VS. ALTA VELOCIDAD"
+  },
+  "title": "Emisiones de Transporte en España: Aéreo peninsular vs. Alta Velocidad",
+  "paragraphs": {
+    "p1": "Se han analizado las emisiones de GEI de nuestras infraestructuras de transporte en los últimos 30 años. El ejercicio no permite sacar conclusiones a nivel de comparación detallada entre modos, o a nivel del acierto o desacierto de las políticas y de las decisiones tomadas, pero sí poner en contexto órdenes de magnitud entre modos, y romper ideas preconcebidas.",
+    "p2": "Aquí se presentan los resultados:",
+    "p3": "En resumen, <strong>las emisiones acumuladas del transporte aéreo peninsular han sido un 10% menores que las de la alta velocidad</strong>, habiendo transportado 480 millones de pasajeros en el periodo, frente a 360 millones de la alta velocidad. En los últimos años, la demanda de vuelos peninsulares ha disminuido, mientras que la alta velocidad sigue ganando popularidad.",
+    "p4": "El modo aéreo, ya ha conseguido importantes reducciones en sus emisiones de GEI derivadas de las mejoras de aeronaves y motores, lo que supone alcanzar unas emisiones de <strong>94 kg CO<sub>2</sub>e</strong> por pasajero acumulado. ",
+    "p5": "La construcción de la red de Alta Velocidad ha supuesto un importante esfuerzo en inversiones y en emisiones. Sin embargo, el éxito en demanda supone que las emisiones acumuladas por cada viajero de alta velocidad se hayan reducido drásticamente en los últimos años, hasta llegar en 2024, a <strong>139 kg CO<sub>2</sub>e</strong> por viajero acumulado."
+  },
+  "links": {
+    "hypotheses": "Hipótesis y fuentes"
+  },
+  "lists": {
+    "results": [
+      "<strong>Modo Aéreo: </strong> Las operaciones de vuelos peninsulares, junto con la construcción y ampliación de aeropuertos imputable a estos, han generado <strong>45</strong> millones de t de CO<sub>2</sub>e.",
+      "<strong>Alta Velocidad: </strong> La red de alta velocidad ferroviaria (4.000 km) ha emitido casi <strong>50</strong> millones de t de CO<sub>2</sub>e, incluyendo su construcción y mantenimiento y, hasta 2019, también las emisiones por operación de servicios AV Larga Distancia."
+    ]
+  }
+}

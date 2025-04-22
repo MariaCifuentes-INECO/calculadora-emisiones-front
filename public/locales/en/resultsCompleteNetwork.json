@@ -1,0 +1,24 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "realCase": "REAL CASES",
+    "current": "TRANSPORT EMISSIONS IN SPAIN: MAINLAND DOMESTIC AIR VS. HIGH-SPEED RAIL"
+  },
+  "title": "Transport Emissions in Spain: Mainland Domestic Air vs. High-Speed Rail",
+  "paragraphs": {
+    "p1": "GHG emissions of Spanish transport infrastructure have been analysed over the last 30 years. The exercise does not allow for detailed comparisons between modes or for evaluating the success or failure of policies and decisions made, but it does provide context for the magnitude of emissions between modes and challenges preconceived ideas.",
+    "p2": "Here are the results:",
+    "p3": "In summary, <strong>the cumulative emissions from domestic air transport have been 10% lower than those of high-speed rail</strong>, having transported 480 million passengers during the period, compared to 360 million by high-speed rail. In recent years, the demand for mainland domestic flights has decreased, while high-speed rail continues to gain popularity.",
+    "p4": "The air mode has already achieved significant reductions in its GHG emissions due to improvements in aircraft and engines, resulting in emissions of <strong>94 kg CO<sub>2</sub>e</strong> per cumulative passenger.",
+    "p5": "The construction of the High-Speed Rail network has required significant investment and emissions. However, the success in demand means that the cumulative emissions per high-speed rail passenger have drastically reduced in recent years, reaching <strong>139 kg CO<sub>2</sub>e</strong> per passenger by 2024."
+  },
+  "links": {
+    "hypotheses": "Hypotheses and sources"
+  },
+  "lists": {
+    "results": [
+      "<strong>Air Mode: </strong> Operations of mainland domestic flights, along with the construction and expansion of airports attributable to these, have generated <strong>45</strong> million tons of CO<sub>2</sub>e.",
+      "<strong>High-Speed Rail: </strong> The high-speed rail network (4,000 km) has emitted nearly <strong>50</strong> million tons of CO<sub>2</sub>e, including its construction and maintenance and, until 2019, also the emissions from the operation of long-distance high-speed services."
+    ]
+  }
+}
