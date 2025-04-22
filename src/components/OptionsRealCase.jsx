@@ -24,7 +24,7 @@ export default function OptionsRealCase({ title, linkTo }) {
                         <img src={vias} alt="Icono red completa" className="vias-casosReales" />
                         <span
                             ref={textRef}
-                            className={`optionsText ${isSingleLine ? "center-text" : ""}`}
+                            className={`optionsText ${isSingleLine ? "center-text" : "justify-text"}`}
                         >
                             {title}
                         </span>
