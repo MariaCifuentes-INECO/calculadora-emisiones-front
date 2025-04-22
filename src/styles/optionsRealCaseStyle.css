@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 .optionsCont {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
     padding: 24px 20px;
@@ -10,7 +9,7 @@
 .flex {
     display: flex;
     align-items: center; /* Alinea la imagen y el texto en la parte superior */
-    width: 100%;
+    gap: 1.2rem; /* espacio entre imagen y texto */
 }
 
 .vias-casosReales{
@@ -20,7 +19,6 @@
 }
 
 .optionsText {
-    margin-left: 0.9rem; /* Usar rem en lugar de px */
     font-size: clamp(18px, 1.25vw, 18px); /* Tamaño de fuente responsive */
     font-weight: 600;
     font-family: "Poppins", sans-serif;
@@ -28,6 +26,8 @@
     word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
     white-space: normal; /* Permite que el texto fluya en varias líneas */
     flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
+    display: block;           /* o flex si necesitas más control */
+    text-align: left;         /* Esto mantiene el texto alineado normal */
 }
 
 .custom-link {
@@ -48,6 +48,11 @@
     height: 100%;
     display: flex;
 }
+
+.center-text {
+    text-align: center;
+}
+
 
 /* Media queries para ajustar según el tamaño de pantalla */
 @media (max-width: 768px) {

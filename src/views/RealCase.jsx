@@ -1,13 +1,23 @@
 import "../styles/realCaseStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import OptionsRealCase from "../components/OptionsRealCase.jsx";
+import {Trans, useTranslation} from "react-i18next";
 
 
 const RealCase = () => {
 
+    const { t } = useTranslation('realCase');
+
     const breadcrumbItems = [
-        {label: "HOME", link: "/", className: "home"},
-        {label: "REAL CASE", active: true, className: "current"},
+        { label: t('breadcrumb.home'), link: "/", className: "home" },
+        { label: t('breadcrumb.realCase'), active: true, className: "current" },
+    ];
+
+    const corridorOptions = [
+        { key: 0, linkTo: '/completeNetwork' },
+        { key: 1, linkTo: '/corridorMADSEV' },
+        { key: 2, linkTo: '/corridorMADBCN' },
+        { key: 3, linkTo: '/corridorMADLEV' }
     ];
 
     return (
@@ -15,44 +25,40 @@ const RealCase = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container realCaseCont">
-                <h1 className="title-realCase">Real Cases</h1>
+                <h1 className="title-realCase">{t('title')}</h1>
                 <section className="mt-5 mb-5 realCaseExplanation">
                     <p>
-                        <strong>Transformation of Transportation in Spain: Impact and Emissions</strong> <br/>
-                        In recent decades, Spain has revolutionized its transportation infrastructure with modern highways, high-speed trains, and expanded airports. This has improved mobility and accessibility, offering multiple options.
+                        <Trans
+                            i18nKey="realCase:paragraphs.p1"
+                            components={{
+                                strong: <strong/>,
+                                sub: <sub/>
+                            }}
+                        />
                     </p>
-                    <p>
-                        But did you know that this development has also increased greenhouse gas (GHG) emissions?
-                        CarbonTrack360 allows you to analyse these emissions, considering the entire life cycle of the infrastructures, from construction to operation.
-                    </p>
-                    <p>
-                        Two analysis options are offered:
-                    </p>
-                    <p>
-                        <strong>Complete Spanish Network:</strong> Compare the emissions of peninsular air connections and the high-speed rail network.
-                    </p>
-                    <p>
-                        <strong>Specific Corridors:</strong> Analyze emissions in the main transportation corridors, including the key connections of each.
-                    </p>
+                    <p>{t('paragraphs.p2')}</p>
+                    <p>{t('paragraphs.p3')}</p>
+
+                    <ul>
+                        {t('lists.option', {returnObjects: true}).map((item, index) => (
+                            <li key={`option-${index}`} dangerouslySetInnerHTML={{__html: item}}/>
+                        ))}
+                    </ul>
                 </section>
 
-                <h2 className="mb-4 subtitleRealCase">Which real case would you like to analyse?</h2>
+                <h2 className="mb-4 subtitleRealCase">{t('subtitle')}</h2>
                 <section className="container">
                     <div className="row g-3 row-eq-height"> {/* g-4 añade espacio entre las columnas */}
                         {/* Primera fila: 4 elementos */}
-                        <div
-                            className="col-md-3 mb-3 d-flex"> {/* col-md-3: 4 columnas por fila en pantallas medianas y grandes */}
-                            <OptionsRealCase title="Complete Spanish Network" linkTo="/completeNetwork"/>
-                        </div>
-                        <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Madrid – Andalusia Corridor" linkTo="/corridorMADSEV" className="small-text"/>
-                        </div>
-                        <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Madrid – Barcelona Corridor" linkTo="/corridorMADBCN" className="small-text"/>
-                        </div>
-                        <div className="col-md-3 mb-3 d-flex">
-                            <OptionsRealCase title="Madrid – Levante Corridor" linkTo="/corridorMADLEV"/>
-                        </div>
+                        {corridorOptions.map(({ key, linkTo }) => (
+                            <div key={key} className="col-md-3 mb-3 d-flex">
+                                <OptionsRealCase
+                                    title={t(`lists.corridor.${key}`)}
+                                    linkTo={linkTo}
+                                    className={key !== 0 ? 'small-text' : ''}
+                                />
+                            </div>
+                        ))}
 
                         {/*/!* Segunda fila: 2 elementos *!/*/}
                         {/*<div*/}

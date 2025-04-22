@@ -1,0 +1,25 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "realCase": "CASOS REALES"
+  },
+  "title": "Casos reales",
+  "paragraphs": {
+    "p1": "<strong>Transformación del Transporte en España: Impacto y Emisiones</strong> <br/>En las últimas décadas, España ha revolucionado sus infraestructuras de transporte con modernas autopistas, trenes de alta velocidad y aeropuertos ampliados. Esto ha mejorado la movilidad y accesibilidad, ofreciendo múltiples opciones de transporte.",
+    "p2": "Pero, ¿sabías que este desarrollo también ha aumentado las emisiones de gases de efecto invernadero (GEI)? CarbonTrack360 te permite analizar estas emisiones, considerando todo el ciclo de vida de las infraestructuras, desde su construcción hasta su operación.",
+    "p3": "Se ofrecen dos opciones de análisis:"
+  },
+  "subtitle": "¿Qué caso real quiere analizar?",
+  "lists": {
+    "option": [
+      "<strong>Red Completa:</strong> Compara las emisiones de las conexiones aéreas peninsulares y la red de alta velocidad.",
+      "<strong>Corredores Específicos:</strong> Analiza las emisiones en los principales corredores de transporte, incluyendo las principales relaciones de cada uno."
+    ],
+    "corridor": [
+      "Red Completa",
+      "Corredor Madrid - Andalucía",
+      "Corredor Madrid - Barcelona",
+      "Corredor Madrid - Levante"
+    ]
+  }
+}

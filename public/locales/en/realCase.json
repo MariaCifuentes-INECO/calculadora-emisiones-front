@@ -1,0 +1,25 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "realCase": "REAL CASES"
+  },
+  "title": "Real Cases",
+  "paragraphs": {
+    "p1": "<strong>Transformation of Transportation in Spain: Impact and Emissions</strong> <br/>In recent decades, Spain has revolutionized its transportation infrastructure with modern highways, high-speed trains, and expanded airports. This has improved mobility and accessibility, offering multiple options.",
+    "p2": "But did you know that this development has also increased greenhouse gas (GHG) emissions? CarbonTrack360 allows you to analyse these emissions, considering the entire life cycle of the infrastructures, from construction to operation.",
+    "p3": "Two analysis options are offered:"
+  },
+  "subtitle": "Which real case would you like to analyse?",
+  "lists": {
+    "option": [
+      "<strong>Complete Spanish Network:</strong> Compare the emissions of peninsular air connections and the high-speed rail network.",
+      "<strong>Specific Corridors:</strong> Analyze emissions in the main transportation corridors, including the key connections of each."
+    ],
+    "corridor": [
+      "Complete Spanish Network",
+      "Madrid – Andalusia Corridor",
+      "Madrid – Barcelona Corridor",
+      "Madrid – Levante Corridor"
+    ]
+  }
+}
