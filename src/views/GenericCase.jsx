@@ -2,9 +2,11 @@ import {useState} from "react";
 import "../styles/genericCaseStyle.css";
 import {useNavigate} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb.jsx";
+import {Trans, useTranslation} from "react-i18next";
 
 const GenericCase = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation('genericCase');
 
     // Estado para el tipo de aeropuerto A y B
     const [aeropuertoA, setAeropuertoA] = useState("Mediano");
@@ -131,8 +133,8 @@ const GenericCase = () => {
     };
 
     const breadcrumbItems = [
-        {label: "HOME", link: "/", className: "home"},
-        {label: "SIMULATOR", active: true, className: "current"},
+        { label: t('breadcrumb.home'), link: "/", className: "home" },
+        { label: t('breadcrumb.simulator'), active: true, className: "current" },
     ];
 
     const [showFullText, setShowFullText] = useState(true);
@@ -146,35 +148,58 @@ const GenericCase = () => {
             {/* Miga de pan */}
             <Breadcrumb items={breadcrumbItems}/>
             <div className="container genericCaseCont">
-                <h1 className="title-genericCase">Simulator</h1>
+                <h1 className="title-genericCase">{t('title')}</h1>
                 <section className="mt-5 mb-5 genericCaseExplanation">
                     <div>
                         {!showFullText ? (
                             <>
                                 <p>
-                                    <strong>How to Choose the Best Transportation Option?</strong> <br/>
-                                    To connect two points with high travel demand, various transportation infrastructures and services can be develo...
+                                    <Trans
+                                        i18nKey="genericCase:paragraphs.p1"
+                                        components={{
+                                            strong: <strong/>,
+                                        }}
+                                    />
                                     <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
-                                        (Show More)
+                                        {t('buttons.b1')}
                                     </button>
                                 </p>
                             </>
                         ) : (
                             <>
                                 <p>
-                                    <strong>How to Choose the Best Transportation Option?</strong> <br/>
-                                    To connect two points with high travel demand, various transportation infrastructures and services can be developed. The key lies in economic efficiency, social profitability, and greenhouse gas emissions throughout their lifecycles.
+                                    <Trans
+                                        i18nKey="genericCase:paragraphs.p2"
+                                        components={{
+                                            strong: <strong/>,
+                                        }}
+                                    />
                                 </p>
                                 <p>
-                                    <strong>Air Transport:</strong> Most emissions come from operation, while construction has a lesser impact. To facilitate simulation and adapt it to user needs, a type of airport will be selected for point A and point B.
+                                    <Trans
+                                        i18nKey="genericCase:paragraphs.p3"
+                                        components={{
+                                            strong: <strong/>,
+                                        }}
+                                    />
                                 </p>
                                 <p>
-                                    <strong>High-Speed Rail:</strong> Construction generates high emissions, especially in rough terrains. However, electric traction powered with renewable energy allows for emission-free operation.
+                                    <Trans
+                                        i18nKey="genericCase:paragraphs.p4"
+                                        components={{
+                                            strong: <strong/>,
+                                        }}
+                                    />
                                 </p>
                                 <p>
-                                    The proposed values in some fields are based on averages from real cases, but you can customize them according to your needs.
+                                    <Trans
+                                        i18nKey="genericCase:paragraphs.p5"
+                                        components={{
+                                            strong: <strong/>,
+                                        }}
+                                    />
                                     <button className="btn btn-link p-0 ms-2 toggle-btn" onClick={toggleText}>
-                                        (Show Less)
+                                        {t('buttons.b2')}
                                     </button>
                                 </p>
                             </>
@@ -184,10 +209,10 @@ const GenericCase = () => {
                 <section>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <h4 className="subtitle-genericCase">Case Setup</h4>
+                            <h4 className="subtitle-genericCase">{t('caseSetup.title')}</h4>
                             <div className="row gx-3"> {/* gx-3 agrega espacio horizontal entre columnas */}
                                 <div className="col-lg-3 col-md-6">
-                                    <label htmlFor="dato1">Distance Between Origin and Destination:</label>
+                                    <label htmlFor="dato1">{t('caseSetup.o1')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -201,12 +226,12 @@ const GenericCase = () => {
                                         <span className="input-group-text">km</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Numeric Value
+                                        {t('optionsTexts.number')}
                                     </small>
                                 </div>
 
                                 <div className="col-lg-3 col-md-6">
-                                    <label htmlFor="dato2">Initial Year Demand :</label>
+                                    <label htmlFor="dato2">{t('caseSetup.o2')}</label>
                                     <input
                                         type="number"
                                         className="form-control"
@@ -217,12 +242,12 @@ const GenericCase = () => {
                                         required
                                     />
                                     <small className="form-text input-explanation">
-                                        Enter Numeric Value
+                                        {t('optionsTexts.number')}
                                     </small>
                                 </div>
 
                                 <div className="col-lg-3 col-md-6">
-                                    <label htmlFor="dato3">Expected Annual Growth :</label>
+                                    <label htmlFor="dato3">{t('caseSetup.o3')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -238,12 +263,12 @@ const GenericCase = () => {
                                         <span className="input-group-text">%</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Percentage: 0-100
+                                        {t('optionsTexts.percentage')}
                                     </small>
                                 </div>
 
                                 <div className="col-lg-3 col-md-6">
-                                    <label htmlFor="dato4">Air Mode Share :</label>
+                                    <label htmlFor="dato4">{t('caseSetup.o4')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -259,17 +284,17 @@ const GenericCase = () => {
                                         <span className="input-group-text">%</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Percentage: 0-100
+                                        {t('optionsTexts.percentage')}
                                     </small>
                                 </div>
                             </div>
 
                         </div>
                         <div className="form-group">
-                            <h4 className="subtitle-genericCase">Airport Infrastructure</h4>
+                            <h4 className="subtitle-genericCase">{t('airport.title')}</h4>
                             <div className="row">
                                 <div className="col">
-                                    <label htmlFor="aero1">Air Route Distance:</label>
+                                    <label htmlFor="aero1">{t('airport.o1')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -282,24 +307,24 @@ const GenericCase = () => {
                                         <span className="input-group-text">km</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Numeric Value
+                                        {t('optionsTexts.number')}
                                     </small>
                                 </div>
                                 <div className="col">
-                                    <label htmlFor="aero2">Airport A:</label>
+                                    <label htmlFor="aero2">{t('airport.o2')}</label>
                                     <select
-                                        className="form-control"
+                                        className="form-select"
                                         id="aero2"
                                         value={aeropuertoA}
                                         onChange={(e) => handleAeropuertoChange(e.target.value, setAeropuertoA, setImputacionAeropuertoA)}
                                     >
-                                        <option value="Pequeño">Small</option>
-                                        <option value="Mediano">Medium</option>
-                                        <option value="Grande">Large</option>
+                                        <option value="Pequeño">{t('sizes.small')}</option>
+                                        <option value="Mediano">{t('sizes.medium')}</option>
+                                        <option value="Grande">{t('sizes.large')}</option>
                                     </select>
                                 </div>
                                 <div className="col">
-                                    <label htmlFor="aero3">Allocation Airport A:</label>
+                                    <label htmlFor="aero3">{t('airport.o3')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -315,24 +340,24 @@ const GenericCase = () => {
                                         <span className="input-group-text">%</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Percentage: 0-100
+                                        {t('optionsTexts.percentage')}
                                     </small>
                                 </div>
                                 <div className="col">
-                                    <label htmlFor="aero4">Airport B:</label>
+                                    <label htmlFor="aero4">{t('airport.o4')}</label>
                                     <select
-                                        className="form-control"
+                                        className="form-select"
                                         id="aero4"
                                         value={aeropuertoB}
                                         onChange={(e) => handleAeropuertoChange(e.target.value, setAeropuertoB, setImputacionAeropuertoB)}
                                     >
-                                        <option value="Pequeño">Small</option>
-                                        <option value="Mediano">Medium</option>
-                                        <option value="Grande">Large</option>
+                                        <option value="Pequeño">{t('sizes.small')}</option>
+                                        <option value="Mediano">{t('sizes.medium')}</option>
+                                        <option value="Grande">{t('sizes.large')}</option>
                                     </select>
                                 </div>
                                 <div className="col">
-                                    <label htmlFor="aero5">Allocation Airport B:</label>
+                                    <label htmlFor="aero5">{t('airport.o5')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -348,16 +373,16 @@ const GenericCase = () => {
                                         <span className="input-group-text">%</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Percentage: 0-100
+                                        {t('optionsTexts.percentage')}
                                     </small>
                                 </div>
                             </div>
                         </div>
                         <div className="form-group">
-                            <h4 className="subtitle-genericCase">Railway Infrastructure</h4>
+                            <h4 className="subtitle-genericCase">{t('railway.title')}</h4>
                             <div className="row">
                                 <div className="col-3">
-                                    <label htmlFor="ferro1">Route Length:</label>
+                                    <label htmlFor="ferro1">{t('railway.o1')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -370,24 +395,24 @@ const GenericCase = () => {
                                         <span className="input-group-text">km</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Numeric Value
+                                        {t('optionsTexts.number')}
                                     </small>
                                 </div>
                                 <div className="col-3">
-                                    <label htmlFor="ferro2">Terrain Type:</label>
+                                    <label htmlFor="ferro2">{t('railway.o2')}</label>
                                     <select
-                                        className="form-control"
+                                        className="form-select"
                                         id="ferro2"
                                         value={tipoTerreno}
                                         onChange={(e) => setTipoTerreno(e.target.value)}
                                     >
-                                        <option value="Llano">Flat</option>
-                                        <option value="Medio">Medium</option>
-                                        <option value="Accidentado">Rough</option>
+                                        <option value="Llano">{t('terrains.flat')}</option>
+                                        <option value="Medio">{t('terrains.medium')}</option>
+                                        <option value="Accidentado">{t('terrains.rough')}</option>
                                     </select>
                                 </div>
                                 <div className="col-3">
-                                    <label htmlFor="ferro3">Imputation:</label>
+                                    <label htmlFor="ferro3">{t('railway.o3')}</label>
                                     <div className="input-group">
                                         <input
                                             type="number"
@@ -403,13 +428,13 @@ const GenericCase = () => {
                                         <span className="input-group-text">%</span>
                                     </div>
                                     <small className="form-text input-explanation">
-                                        Enter Percentage: 0-100
+                                        {t('optionsTexts.percentage')}
                                     </small>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-5 btn-center">
-                            <button type="submit" className="btn btn-genericCase">CALCULATE</button>
+                            <button type="submit" className="btn btn-genericCase">{t('buttons.b3')}</button>
                         </div>
                     </form>
                 </section>

@@ -1,0 +1,54 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "simulator": "SIMULADOR"
+  },
+  "title": "Simulador",
+  "paragraphs": {
+    "p1": "<strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar infraestructuras y servicios de dis...",
+    "p2": "<strong>¿Cómo elegir la mejor opción de transporte?</strong> <br/>Para conectar dos puntos con alta demanda de viajes, se pueden desarrollar infraestructuras y servicios de distintos modos de transporte. La clave está en la eficiencia económica, la rentabilidad social y las emisiones de gases de efecto invernadero a lo largo de su ciclo de vida.",
+    "p3": "<strong>Aéreo:</strong> La mayor parte de las emisiones proviene de la operación, mientras que la construcción tiene un impacto menor. Para facilitar la simulación, permitiendo adaptarla a las necesidades del usuario, se seleccionará un tipo de aeropuerto para el punto A y para el punto B.",
+    "p4": "<strong>Alta Velocidad:</strong> La construcción genera emisiones elevadas, especialmente en terrenos accidentados. Sin embargo, la tracción eléctrica con energía renovable permite una operación sin emisiones.",
+    "p5": "Los valores que se proponen en algunos campos se basan en promedios de casos reales, pero puedes personalizarlos según tus necesidades."
+  },
+  "buttons": {
+    "b1": "(Ver más)",
+    "b2": "(Ver menos)",
+    "b3": "CALCULAR"
+  },
+  "caseSetup": {
+    "title": "Planteamiento del caso",
+    "o1": "Distancia entre origen y destino:",
+    "o2": "Demanda año inicial:",
+    "o3": "Crecimiento anual esperado:",
+    "o4": "Cuota modo aéreo:"
+  },
+  "airport": {
+    "title": "Infraestructura aeropuertos",
+    "o1": "Distancia trayecto aéreo:",
+    "o2": "Aeropuerto A:",
+    "o3": "Imputación aeropuerto A:",
+    "o4": "Aeropuerto B:",
+    "o5": "Imputación aeropuerto B:"
+  },
+  "railway": {
+    "title": "Infraestructura ferroviaria",
+    "o1": "Longitud del trayecto:",
+    "o2": "Tipo de terreno:",
+    "o3": "Imputación:"
+  },
+  "optionsTexts": {
+    "number": "Introduzca valor numérico",
+    "percentage": "Introduzca porcentaje: 0-100"
+  },
+  "sizes": {
+    "small": "Pequeño",
+    "medium": "Mediano",
+    "large": "Grande"
+  },
+  "terrains": {
+    "flat": "Llano",
+    "medium": "Medio",
+    "rough": "Accidentado"
+  }
+}
