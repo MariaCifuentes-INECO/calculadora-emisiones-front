@@ -18,24 +18,24 @@
   },
   "caseSetup": {
     "title": "Planteamiento del caso",
-    "o1": "Distancia entre origen y destino:",
-    "o2": "Demanda año inicial:",
-    "o3": "Crecimiento anual esperado:",
-    "o4": "Cuota modo aéreo:"
+    "o1": "Distancia entre origen y destino",
+    "o2": "Demanda año inicio",
+    "o3": "Crecimiento anual esperado",
+    "o4": "Cuota modo aéreo"
   },
   "airport": {
     "title": "Infraestructura aeropuertos",
-    "o1": "Distancia trayecto aéreo:",
-    "o2": "Aeropuerto A:",
-    "o3": "Imputación aeropuerto A:",
-    "o4": "Aeropuerto B:",
-    "o5": "Imputación aeropuerto B:"
+    "o1": "Distancia trayecto aéreo",
+    "o2": "Aeropuerto A",
+    "o3": "Imputación aeropuerto A",
+    "o4": "Aeropuerto B",
+    "o5": "Imputación aeropuerto B"
   },
   "railway": {
     "title": "Infraestructura ferroviaria",
-    "o1": "Longitud del trayecto:",
-    "o2": "Tipo de terreno:",
-    "o3": "Imputación:"
+    "o1": "Longitud del trayecto",
+    "o2": "Tipo de terreno",
+    "o3": "Imputación"
   },
   "optionsTexts": {
     "number": "Introduzca valor numérico",

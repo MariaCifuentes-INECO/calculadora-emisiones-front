@@ -18,24 +18,24 @@
   },
   "caseSetup": {
     "title": "Case Setup",
-    "o1": "Distance Between Origin and Destination:",
-    "o2": "Initial Year Demand:",
-    "o3": "Expected Annual Growth:",
-    "o4": "Air Mode Share:"
+    "o1": "Distance Between Origin and Destination",
+    "o2": "Initial Year Demand",
+    "o3": "Expected Annual Growth",
+    "o4": "Air Mode Share"
   },
   "airport": {
     "title": "Airport Infrastructure",
-    "o1": "Air Route Distance:",
-    "o2": "Airport A:",
-    "o3": "Allocation Airport A:",
-    "o4": "Airport B:",
-    "o5": "Allocation Airport B:"
+    "o1": "Air Route Distance",
+    "o2": "Airport A",
+    "o3": "Allocation Airport A",
+    "o4": "Airport B",
+    "o5": "Allocation Airport B"
   },
   "railway": {
     "title": "Railway Infrastructure",
-    "o1": "Route Length:",
-    "o2": "Terrain Type:",
-    "o3": "Imputation:"
+    "o1": "Route Length",
+    "o2": "Terrain Type",
+    "o3": "Imputation"
   },
   "optionsTexts": {
     "number": "Enter Numeric Value",
