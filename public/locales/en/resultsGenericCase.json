@@ -1,0 +1,39 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "simulator": "SIMULATOR",
+    "current": "SIMULATION RESULTS"
+  },
+  "title": "Simulation results",
+  "paragraphs": {
+    "p1": "The result of the analysis for this generic case, which connects two points located <strong>{{distancia}} km</strong> apart, is presented below.",
+    "p2": "There is an efficiency threshold that determines the number of accumulated trips beyond which the GHG emissions from air transport, primarily derived from operation, would exceed those from rail transport, which mostly come from infrastructure construction. Until this threshold is reached, the accumulated emissions from air transport would be lower.",
+    "p3": "<strong>In this case, the efficiency threshold is set at {{umbralEficiencia}} trips.</strong>",
+    "p4": "In the following graph, you can see the accumulated emissions by the system in the proposed scenario, the emissions of each mode in that scenario, and for a hypothetical situation where only air transport is used."
+  },
+  "assumptions": {
+    "title": "The <span>assumptions</span> made are:",
+    "travelers": "<span1>{{demandaInicial}}</span1> <span2>annual travelers in the initial year, with a growth of</span2><span3>{{crecimientoAnual}} %</span3>",
+    "demand": " <span1>{{modoAereo}} %</span1> <span2>of the demand would use air transport</span2>",
+    "airports": "<span1 >One</span1><span2>{{aeropuertoA}}</span2><span3>airport and another</span3><span4>{{aeropuertoB}}</span4><span5>airport</span5>",
+    "terrain": "<span1 >A</span1><span2>{{tipoTerreno}}</span2><span3>terrain between both points</span3>"
+  },
+  "construction": {
+    "title": "The <span>construction</span> of the infrastructures would generate emissions of:",
+    "air": "<span1 >{{emisionesConstAereo}} t</span1><span2>CO<sub>2</sub>e for</span2><span3>air transport</span3>",
+    "rail": "<span1 >{{emisionesConstAve}} t</span1><span2>CO<sub>2</sub>e for</span2><span3>high-speed rail</span3>"
+  },
+  "totalEmissions": {
+    "title": "The <span>total emissions</span> over the analysis period (50 years of operation) would be:",
+    "air": "<span1 >{{cicloVidaAereoAcumulado}} t</span1><span2>CO<sub>2</sub>e for</span2><span3>air transport</span3>",
+    "rail": "<span1 >{{cicloVidaAVEAcumulado}} t</span1><span2>CO<sub>2</sub>e for</span2><span3>high-speed rail</span3>"
+  },
+  "transported": {
+    "title": "And each mode would have <span>transported</span>:",
+    "air": "<span1 >{{demandaAvionAcumulado}}</span1><span2>passengers by air transport</span2>",
+    "rail": "<span1 >{{demandaTrenAcumulado}}</span1><span2>passengers by high-speed rail</span2>"
+  },
+  "links": {
+    "hypotheses": "Hypotheses and sources"
+  }
+}

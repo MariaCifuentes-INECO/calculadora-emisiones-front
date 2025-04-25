@@ -1,0 +1,39 @@
+{
+  "breadcrumb": {
+    "home": "INICIO",
+    "simulator": "SIMULADOR",
+    "current": "RESULTADOS SIMULACIÓN"
+  },
+  "title": "Resultado simulación",
+  "paragraphs": {
+    "p1": "Se presenta a continuación el resultado del análisis realizado para este caso genérico, en el que se conectan dos puntos situados a <strong>{{distancia}} km</strong> de distancia.",
+    "p2": "Existe un umbral de eficiencia que determina el número de viajes acumulados a partir del cual las emisiones de GEI del modo aéreo, principalmente derivadas de la operación, superarían a las del modo ferroviario, que provienen en su mayoría de la construcción de la infraestructura. Hasta alcanzar este umbral, las emisiones acumuladas del modo aéreo serían inferiores.",
+    "p3": "<strong>En este caso, el umbral de eficiencia se sitúa en {{umbralEficiencia}} viajes.</strong>",
+    "p4": "En el siguiente gráfico, se puede apreciar las emisiones acumuladas por el sistema en el escenario planteado, las emisiones de cada modo en ese escenario y para una situación hipotética en que sólo se utilizara el transporte aéreo."
+  },
+  "assumptions": {
+    "title": "Las <span>hipótesis</span> que se han tomado son:",
+    "travelers": "<span1>{{demandaInicial}}</span1> <span2>de viajeros anuales con un crecimiento del</span2><span3>{{crecimientoAnual}} %</span3>",
+    "demand": " <span1>{{modoAereo}} %</span1> <span2>de la demanda emplearía el modo aéreo</span2>",
+    "airports": "<span1 >Un aeropuerto</span1><span2>{{aeropuertoA}}</span2><span3>y otro aeropuerto</span3><span4>{{aeropuertoB}}</span4>",
+    "terrain": "<span1 >Un terreno</span1><span2>{{tipoTerreno}}</span2><span3>entre ambos puntos</span3>"
+  },
+  "construction": {
+    "title": "La <span>construcción</span> de las infraestructuras generaría unas emisiones de:",
+    "air": "<span1 >{{emisionesConstAereo}} t</span1><span2>CO<sub>2</sub>e para el</span2><span3>modo aéreo</span3>",
+    "rail": "<span1 >{{emisionesConstAve}} t</span1><span2>CO<sub>2</sub>e para la</span2><span3>alta velocidad</span3>"
+  },
+  "totalEmissions": {
+    "title": "Las <span>emisiones totales</span> en el periodo de análisis (50 años de explotación) serían:",
+    "air": "<span1 >{{cicloVidaAereoAcumulado}} t</span1><span2>CO<sub>2</sub>e para el</span2><span3>modo aéreo</span3>",
+    "rail": "<span1 >{{cicloVidaAVEAcumulado}} t</span1><span2>CO<sub>2</sub>e para la</span2><span3>alta velocidad</span3>"
+  },
+  "transported": {
+    "title": "Y cada modo habría <span>transportado</span>:",
+    "air": "<span1 >{{demandaAvionAcumulado}}</span1><span2>viajeros el modo aéreo</span2>",
+    "rail": "<span1 >{{demandaTrenAcumulado}}</span1><span2>viajeros la alta velocidad</span2>"
+  },
+  "links": {
+    "hypotheses": "Hipótesis y fuentes"
+  }
+}
