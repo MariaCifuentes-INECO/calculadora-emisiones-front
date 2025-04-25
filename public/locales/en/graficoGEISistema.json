@@ -1,0 +1,13 @@
+{
+  "noData": "No data available to display the chart",
+  "title": "Accumulated Life Cycle Emissions",
+  "datasets": {
+    "cicloVidaAVEAcumulado": "High-Speed Rail Life Cycle Accumulated",
+    "cicloVidaAereoAcumulado": "Air Transport Life Cycle Accumulated",
+    "sumaFerroviarioAereoAcumulado": "Complete System Life Cycle Accumulated",
+    "cicloVidaTodoAereoAcumulado": "All Air Transport Assumption"
+  },
+  "axes": {
+    "emissions": "Millions of Accumulated CO₂e tons"
+  }
+}

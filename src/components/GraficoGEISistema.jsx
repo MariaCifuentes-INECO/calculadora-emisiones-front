@@ -9,6 +9,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import {useTranslation} from "react-i18next";
 
 // Registrar los componentes de Chart.js
 ChartJS.register(
@@ -22,6 +23,8 @@ ChartJS.register(
 );
 
 const GraficoGEISistema = ({ data }) => {
+
+    const { t } = useTranslation('graficoGEISistema');
     // Desestructuración de data
     const {
         cicloVidaAVEAcumulado,
@@ -32,7 +35,7 @@ const GraficoGEISistema = ({ data }) => {
 
     // Validación de datos
     if (!data || !cicloVidaAVEAcumulado || !cicloVidaAereoAcumulado || !sumaFerroviarioAereoAcumulado || !cicloVidaTodoAereoAcumulado) {
-        return <div>No hay datos válidos para mostrar.</div>;
+        return <div>{t('noData')}</div>;
     }
 
     // Colores
@@ -46,7 +49,7 @@ const GraficoGEISistema = ({ data }) => {
     // Datasets
     const datasets = [
         {
-            label: 'High-Speed Rail Life Cycle Accumulated',
+            label: t('datasets.cicloVidaAVEAcumulado'),
             data: cicloVidaAVEAcumulado,
             borderColor: colors.ave,
             backgroundColor: colors.ave,
@@ -54,7 +57,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'Air Transport Life Cycle Accumulated',
+            label: t('datasets.cicloVidaAereoAcumulado'),
             data: cicloVidaAereoAcumulado,
             borderColor: colors.aereo,
             backgroundColor: colors.aereo,
@@ -62,7 +65,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 5,
         },
         {
-            label: 'Complete System Life Cycle Accumulated',
+            label: t('datasets.sumaFerroviarioAereoAcumulado'),
             data: sumaFerroviarioAereoAcumulado,
             borderColor: colors.suma,
             backgroundColor: colors.suma,
@@ -70,7 +73,7 @@ const GraficoGEISistema = ({ data }) => {
             pointRadius: 4,
         },
         {
-            label: 'All Air Transport Assumption',
+            label: t('datasets.cicloVidaTodoAereoAcumulado'),
             data: cicloVidaTodoAereoAcumulado,
             borderColor: colors.soloAvion,
             backgroundColor: colors.soloAvion,
@@ -99,7 +102,7 @@ const GraficoGEISistema = ({ data }) => {
             },
             title: {
                 display: true, // Primero se activa el título
-                text: 'Accumulated Life Cycle Emissions',
+                text: t('title'),
                 font: { // Aquí es donde debe ir la fuente
                     family: 'Poppins', // Fuente para el título
                 },
@@ -123,7 +126,7 @@ const GraficoGEISistema = ({ data }) => {
                         family: 'Poppins',
                     },
                     display: true, // Muestra el título del eje Y
-                    text: 'Millions of Accumulated t CO\u2082e', // Título del eje Y
+                    text: t('axes.emissions'),
                 },
                 ticks: {
                     callback: function(value) {

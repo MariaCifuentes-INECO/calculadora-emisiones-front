@@ -1,0 +1,13 @@
+{
+  "noData": "No hay datos disponibles para mostrar el gráfico",
+  "title": "Emisiones acumuladas en el ciclo de vida",
+  "datasets": {
+    "cicloVidaAVEAcumulado": "Acumulado ciclo de vida AV",
+    "cicloVidaAereoAcumulado": "Acumulado ciclo de vida transporte aéro",
+    "sumaFerroviarioAereoAcumulado": "Acumulado ciclo de vida sistema completo",
+    "cicloVidaTodoAereoAcumulado": "Hipótesis todo aéreo"
+  },
+  "axes": {
+    "emissions": "Millones de t CO₂e acumulados"
+  }
+}
