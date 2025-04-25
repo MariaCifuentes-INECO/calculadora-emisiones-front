@@ -1,19 +1,14 @@
 {
   "title": "CALCULADORA DE EMISIONES EN EL CICLO DE VIDA DE LA INFRAESTRUCTURA",
-  "sections": {
-    "impact_question": "¿Cuál es el impacto real del transporte en el cambio climático?",
-    "impact_description": "El transporte aéreo enfrenta el desafío de reducir sus emisiones de gases de efecto invernadero (GEI), pero ¿es realmente el principal contribuyente? Para poner las cosas en perspectiva, esta calculadora analiza todo el ciclo de vida de las infraestructuras de transporte, comparando las emisiones del transporte aéreo y la Alta Velocidad en rutas de larga distancia.",
-    "explore": "Explora, compara y saca tus propias conclusiones.",
-    "note_title": "Nota: ",
-    "note": "El análisis excluye la carretera, pese a que su operación supone un alto porcentaje (30,1 %) de las emisiones en España, ya que su infraestructura tiene otros usos",
-    "methodology_1": "Consulta la ",
-    "methodology_bold": "metodología y fuentes ",
-    "methodology_2": "utilizadas ",
-    "here": "aquí",
-    "choose_analysis": "¿Quieres analizar una simulación o un caso real?",
-    "buttons": {
-      "simulation": "SIMULACIÓN",
-      "real_case": "CASO REAL"
-    }
+  "paragraphs": {
+    "p1": "<strong>¿Cuál es el impacto real del transporte en el cambio climático?</strong><br/>El transporte aéreo enfrenta el desafío de reducir sus emisiones de gases de efecto invernadero (GEI), pero ¿es realmente el principal contribuyente? Para poner las cosas en perspectiva, esta calculadora analiza todo el ciclo de vida de las infraestructuras de transporte, comparando las emisiones del transporte aéreo y la Alta Velocidad en rutas de larga distancia.",
+    "p2": "<strong>Explora, compara y saca tus propias conclusiones.</strong>",
+    "p3": "(<strong>Nota: </strong>El análisis excluye la carretera, pese a que su operación supone un alto porcentaje (30,1 %) de las emisiones en España, ya que su infraestructura tiene otros usos).",
+    "p4": "Consulta <span>aquí</span> la <strong>metodología y fuentes</strong> utilizadas."
+  },
+  "subtitle": "¿Quieres analizar una simulación o un caso real?",
+  "buttons": {
+    "simulation": "SIMULACIÓN",
+    "real_case": "CASO REAL"
   }
 }

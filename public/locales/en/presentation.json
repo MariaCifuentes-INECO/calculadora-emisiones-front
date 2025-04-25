@@ -1,19 +1,14 @@
 {
   "title": "LIFECYCLE EMISSIONS CALCULATOR FOR TRANSPORT INFRASTRUCTURES",
-  "sections": {
-    "impact_question": "What is the actual impact of transport on climate change?",
-    "impact_description": "Air transport faces the challenge of reducing its greenhouse gas (GHG) emissions, but is it really the major contributor? To put things into perspective, this calculator analyzes the entire lifecycle of transport infrastructures, comparing the emissions of air transport and high-speed rail.",
-    "explore": "Explore, compare, and draw your own conclusions.",
-    "note_title": "Note: ",
-    "note": "The analysis excludes road transport, despite its operation accounting for a high percentage (30.1%) of emissions in Spain, as its infrastructure has other uses",
-    "methodology_1": "Check the ",
-    "methodology_bold": "methodology and sources ",
-    "methodology_2": "used ",
-    "here": "here",
-    "choose_analysis": "Would you like to analyze a simulation or a real case?",
-    "buttons": {
-      "simulation": "SIMULATION",
-      "real_case": "REAL CASE"
-    }
+  "paragraphs": {
+    "p1": "<strong>What is the actual impact of transport on climate change?</strong><br/>Air transport faces the challenge of reducing its greenhouse gas (GHG) emissions, but is it really the major contributor? To put things into perspective, this calculator analyzes the entire lifecycle of transport infrastructures, comparing the emissions of air transport and high-speed rail.",
+    "p2": "<strong>Explore, compare, and draw your own conclusions.</strong>",
+    "p3": "(<strong>Note: </strong>The analysis excludes road transport, despite its operation accounting for a high percentage (30.1%) of emissions in Spain, as its infrastructure has other uses).",
+    "p4": "Check the <strong>methodology and sources</strong> used <span>here</span>."
+  },
+  "subtitle": "Would you like to analyze a simulation or a real case?",
+  "buttons": {
+    "simulation": "SIMULATION",
+    "real_case": "REAL CASE"
   }
 }

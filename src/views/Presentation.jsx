@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import {Trans, useTranslation} from 'react-i18next';
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo_presentacion.svg";
 import "../styles/presentationStyle.css";
@@ -22,34 +22,49 @@ const Presentation = () => {
             <div className="container presentation-exp">
                 <section>
                     <p>
-                        <strong>{t('sections.impact_question')}</strong><br/>
-                        {t('sections.impact_description')}
+                        <Trans
+                            i18nKey="presentation:paragraphs.p1"
+                            components={{
+                                strong: <strong/>,
+                            }}
+                        />
                     </p>
                     <p>
-                        <strong>{t('sections.explore')}</strong>
+                        <Trans
+                            i18nKey="presentation:paragraphs.p2"
+                            components={{
+                                strong: <strong/>,
+                            }}
+                        />
                     </p>
                     <p>
-                        (<strong>{t('sections.note_title')}</strong>{t('sections.note')}).
+                        <Trans
+                            i18nKey="presentation:paragraphs.p3"
+                            components={{
+                                strong: <strong/>,
+                            }}
+                        />
                     </p>
                     <p>
-                        {t('sections.methodology_1')}
-                        <strong>{t('sections.methodology_bold')}</strong>
-                        {t('sections.methodology_2')}
-                            <Link to="/hypotheses" className="presentation-custom-link">
-                        {t('sections.here')}
-                    </Link>.
+                        <Trans
+                            i18nKey="presentation:paragraphs.p4"
+                            components={{
+                                strong: <strong />,
+                                span: <Link to="/hypotheses" className="presentation-custom-link" />
+                            }}
+                        />
                     </p>
                 </section>
                 <section className="text-center mt-5">
                     <h2 className="presentation-subtitle mb-4">
-                        {t('sections.choose_analysis')}
+                        {t('subtitle')}
                     </h2>
                     <div className="d-flex gap-5 justify-content-center">
                         <button onClick={handleGenericCase} className="btn btn-presentation">
-                            {t('sections.buttons.simulation')}
+                            {t('buttons.simulation')}
                         </button>
                         <button onClick={handleRealExample} className="btn btn-presentation">
-                            {t('sections.buttons.real_case')}
+                            {t('buttons.real_case')}
                         </button>
                     </div>
                 </section>
