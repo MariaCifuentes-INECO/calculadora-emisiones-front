@@ -25,7 +25,7 @@
     ],
     "operation": [
       "En el modo aéreo, se ha calculado la media de emisiones por pasajero-km para vuelos peninsulares, a partir de la herramienta <strong>ICAO Carbon Emissions Calculator (ICEC)</strong>.",
-      "En la alta velocidad ferroviaria, hasta 2019 se han tomado de las Recomendaciones, y desde entonces, y para el simulador, se han considerado nulas debido al contrato de energía con garantía de origen renovable de ADIF."
+      "En la alta velocidad ferroviaria, hasta 2019 se han tomado de las <i>Recomendaciones</i>, y desde entonces, y para el simulador, se han considerado nulas debido al contrato de energía con garantía de origen renovable de ADIF."
     ]
   }
 }

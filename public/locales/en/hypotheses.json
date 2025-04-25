@@ -25,7 +25,7 @@
     ],
     "operation": [
       "In the air mode, the average emissions per passenger-km for peninsular flights have been calculated using the <strong>ICAO Carbon Emissions Calculator (ICEC)</strong>.",
-      "In high-speed rail, emissions up to 2019 have been taken from the Recommendations, and since then, and for the simulator, they have been considered null due to ADIF's renewable energy guarantee contract."
+      "In high-speed rail, emissions up to 2019 have been taken from the <i>Recommendations</i>, and since then, and for the simulator, they have been considered null due to ADIF's renewable energy guarantee contract."
     ]
   }
 }
