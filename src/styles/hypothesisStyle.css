@@ -1,4 +1,4 @@
-.hypothesisWrapper{
+.hypothesisWrapper {
     padding: 12px 0 !important;
 }
 
@@ -11,13 +11,13 @@
     align-items: center;
 }
 
-.title-hypothesis{
+.title-hypothesis {
     font-size: 36px;
     font-weight: 600;
-    color: #3463AC;
+    color: #3463ac;
 }
 
-.hypothesisExplanation{
+.hypothesisExplanation {
     font-size: 18px;
     font-weight: 400;
     color: #303555;
@@ -26,4 +26,238 @@
 
 .hypothesisExplanation ul li {
     margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .hypothesisNetworkCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-hypothesis {
+        font-size: 28px;
+    }
+
+    .hypothesisExplanation {
+        font-size: 16px; /* ← IGUAL QUE PRESENTATION */
+    }
+}
+
+/* iPad y tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hypothesisWrapper {
+        padding: 16px 0 !important;
+    }
+
+    .hypothesisNetworkCont {
+        padding: 50px 40px !important;
+    }
+
+    .title-hypothesis {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .hypothesisExplanation {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .hypothesisExplanation p {
+        margin-bottom: 1.5rem;
+    }
+
+    .hypothesisExplanation ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .hypothesisExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+}
+
+/* Tablets pequeños (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .hypothesisNetworkCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-hypothesis {
+        font-size: 28px;
+    }
+
+    .hypothesisExplanation {
+        font-size: 16px;
+    }
+}
+
+/* Móviles grandes (576px - 767px) - IGUAL QUE PRESENTATION */
+@media (max-width: 767px) {
+    .hypothesisWrapper {
+        padding: 20px 0 !important;
+    }
+
+    .hypothesisNetworkCont {
+        padding: 35px 30px !important; /* ← IGUAL QUE PRESENTATION */
+        margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
+        width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
+        box-shadow: none;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .title-hypothesis {
+        font-size: 28px; /* ← IGUAL QUE PRESENTATION TITLE */
+        margin-bottom: 1.6rem;
+    }
+
+    .hypothesisExplanation {
+        font-size: 16px; /* ← IGUAL QUE PRESENTATION */
+        line-height: 1.7; /* ← IGUAL QUE PRESENTATION */
+        text-align: justify; /* ← IGUAL QUE PRESENTATION */
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap que viene por defecto */
+    .hypothesisExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .hypothesisExplanation p {
+        margin-bottom: 1.5rem; /* ← IGUAL QUE PRESENTATION */
+    }
+
+    .hypothesisExplanation ul {
+        margin-bottom: 1.5rem; /* ← IGUAL QUE PRESENTATION */
+        padding-left: 20px;
+    }
+
+    .hypothesisExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles pequeños (hasta 575px) - IGUAL QUE PRESENTATION */
+@media (max-width: 575px) {
+    .hypothesisWrapper {
+        padding: 15px 0 !important;
+    }
+
+    .hypothesisNetworkCont {
+        padding: 30px 25px 35px 25px !important; /* ← IGUAL QUE PRESENTATION */
+        margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
+        width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .title-hypothesis {
+        font-size: 26px; /* ← IGUAL QUE PRESENTATION TITLE */
+        margin-bottom: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .hypothesisExplanation {
+        font-size: 15px; /* ← IGUAL QUE PRESENTATION */
+        line-height: 1.6; /* ← IGUAL QUE PRESENTATION */
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .hypothesisExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .hypothesisExplanation p {
+        margin-bottom: 1.3rem; /* ← IGUAL QUE PRESENTATION */
+    }
+
+    .hypothesisExplanation ul {
+        margin-bottom: 1.3rem; /* ← IGUAL QUE PRESENTATION */
+        padding-left: 18px;
+    }
+
+    .hypothesisExplanation ul li {
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) - IGUAL QUE PRESENTATION */
+@media (max-width: 375px) {
+    .hypothesisWrapper {
+        padding: 12px 0 !important;
+    }
+
+    .hypothesisNetworkCont {
+        padding: 25px 20px 30px 20px !important; /* ← IGUAL QUE PRESENTATION */
+        margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
+        width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
+    }
+
+    .title-hypothesis {
+        font-size: 26px; /* ← IGUAL QUE PRESENTATION TITLE */
+        margin-bottom: 1.2rem;
+    }
+
+    .hypothesisExplanation {
+        font-size: 15px; /* ← IGUAL QUE PRESENTATION (implícito) */
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .hypothesisExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .hypothesisExplanation ul {
+        padding-left: 15px;
+    }
+}
+
+/* Landscape móvil - IGUAL QUE PRESENTATION */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hypothesisWrapper {
+        padding: 10px 0 !important;
+    }
+
+    .hypothesisNetworkCont {
+        padding: 20px 25px 25px 25px !important; /* ← IGUAL QUE PRESENTATION */
+        margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
+        width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .title-hypothesis {
+        font-size: 18px; /* ← IGUAL QUE PRESENTATION TITLE */
+        margin-bottom: 1rem;
+    }
+
+    .hypothesisExplanation {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .hypothesisExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .hypothesisExplanation p {
+        margin-bottom: 0.8rem;
+    }
+
+    .hypothesisExplanation ul {
+        margin-bottom: 0.8rem;
+    }
+
+    .hypothesisExplanation ul li {
+        margin-bottom: 4px;
+    }
 }
