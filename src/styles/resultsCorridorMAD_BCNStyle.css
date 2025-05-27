@@ -1,4 +1,4 @@
-.corridorMADBCNWrapper{
+.corridorMADBCNWrapper {
     padding: 12px 0 !important;
 }
 
@@ -11,15 +11,230 @@
     align-items: center;
 }
 
-.title-corridorMADBCN{
+.title-corridorMADBCN {
     font-size: 36px;
     font-weight: 600;
-    color: #3463AC;
+    color: #3463ac;
 }
 
-.corridorMADBCNExplanation{
+.corridorMADBCNExplanation {
     font-size: 18px;
     font-weight: 400;
     color: #303555;
     text-align: justify;
+}
+
+.corridorMADBCNExplanation ul li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* iPad y tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .corridorMADBCNWrapper {
+        padding: 16px 0 !important;
+    }
+
+    .corridorMADBCNCont {
+        padding: 50px 40px !important;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .corridorMADBCNExplanation p {
+        margin-bottom: 1.5rem;
+    }
+
+    .corridorMADBCNExplanation ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .corridorMADBCNExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+}
+
+/* Tablets pequeños (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .corridorMADBCNCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 28px;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 16px;
+    }
+}
+
+/* Móviles grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .corridorMADBCNWrapper {
+        padding: 20px 0 !important;
+    }
+
+    .corridorMADBCNCont {
+        padding: 30px 25px !important;
+        margin: 0 15px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 24px;
+        margin-bottom: 1.6rem;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap que viene por defecto */
+    .corridorMADBCNExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .corridorMADBCNExplanation p {
+        margin-bottom: 1.2rem;
+    }
+
+    .corridorMADBCNExplanation ul {
+        margin-bottom: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .corridorMADBCNExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .corridorMADBCNWrapper {
+        padding: 15px 0 !important;
+    }
+
+    .corridorMADBCNCont {
+        padding: 25px 20px !important;
+        margin: 0 10px;
+        box-shadow: none;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 22px;
+        margin-bottom: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .corridorMADBCNExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .corridorMADBCNExplanation p {
+        margin-bottom: 1rem;
+    }
+
+    .corridorMADBCNExplanation ul {
+        margin-bottom: 1rem;
+        padding-left: 18px;
+    }
+
+    .corridorMADBCNExplanation ul li {
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) */
+@media (max-width: 375px) {
+    .corridorMADBCNWrapper {
+        padding: 12px 0 !important;
+    }
+
+    .corridorMADBCNCont {
+        padding: 20px 15px !important;
+        margin: 0 5px;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .corridorMADBCNExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .corridorMADBCNExplanation ul {
+        padding-left: 15px;
+    }
+}
+
+/* Landscape móvil */
+@media (max-height: 500px) and (orientation: landscape) {
+    .corridorMADBCNWrapper {
+        padding: 10px 0 !important;
+    }
+
+    .corridorMADBCNCont {
+        padding: 20px 25px !important;
+        margin: 0 15px;
+    }
+
+    .title-corridorMADBCN {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .corridorMADBCNExplanation {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .corridorMADBCNExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .corridorMADBCNExplanation p {
+        margin-bottom: 0.8rem;
+    }
+
+    .corridorMADBCNExplanation ul {
+        margin-bottom: 0.8rem;
+    }
+
+    .corridorMADBCNExplanation ul li {
+        margin-bottom: 4px;
+    }
 }

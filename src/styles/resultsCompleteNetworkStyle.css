@@ -1,4 +1,4 @@
-.completeNetworkWrapper{
+.completeNetworkWrapper {
     padding: 12px 0 !important;
 }
 
@@ -11,20 +11,235 @@
     align-items: center;
 }
 
-.title-completeNetwork{
+.title-completeNetwork {
     font-size: 36px;
     font-weight: 600;
-    color: #3463AC;
+    color: #3463ac;
 }
 
-.completeNetworkExplanation{
+.completeNetworkExplanation {
     font-size: 18px;
     font-weight: 400;
     color: #303555;
     text-align: justify;
 }
 
-.hypothesis-link{
-    color: #3463AC;
+.completeNetworkExplanation ul li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
+
+.hypothesis-link {
+    color: #3463ac;
     font-weight: 400;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* iPad y tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .completeNetworkWrapper {
+        padding: 16px 0 !important;
+    }
+
+    .completeNetworkCont {
+        padding: 50px 40px !important;
+    }
+
+    .title-completeNetwork {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .completeNetworkExplanation p {
+        margin-bottom: 1.5rem;
+    }
+
+    .completeNetworkExplanation ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .completeNetworkExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+}
+
+/* Tablets pequeños (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .completeNetworkCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-completeNetwork {
+        font-size: 28px;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 16px;
+    }
+}
+
+/* Móviles grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .completeNetworkWrapper {
+        padding: 20px 0 !important;
+    }
+
+    .completeNetworkCont {
+        padding: 30px 25px !important;
+        margin: 0 15px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .title-completeNetwork {
+        font-size: 24px;
+        margin-bottom: 1.6rem;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap que viene por defecto */
+    .completeNetworkExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .completeNetworkExplanation p {
+        margin-bottom: 1.2rem;
+    }
+
+    .completeNetworkExplanation ul {
+        margin-bottom: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .completeNetworkExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .completeNetworkWrapper {
+        padding: 15px 0 !important;
+    }
+
+    .completeNetworkCont {
+        padding: 25px 20px !important;
+        margin: 0 10px;
+        box-shadow: none;
+    }
+
+    .title-completeNetwork {
+        font-size: 22px;
+        margin-bottom: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .completeNetworkExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .completeNetworkExplanation p {
+        margin-bottom: 1rem;
+    }
+
+    .completeNetworkExplanation ul {
+        margin-bottom: 1rem;
+        padding-left: 18px;
+    }
+
+    .completeNetworkExplanation ul li {
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) */
+@media (max-width: 375px) {
+    .completeNetworkWrapper {
+        padding: 12px 0 !important;
+    }
+
+    .completeNetworkCont {
+        padding: 20px 15px !important;
+        margin: 0 5px;
+    }
+
+    .title-completeNetwork {
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .completeNetworkExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .completeNetworkExplanation ul {
+        padding-left: 15px;
+    }
+}
+
+/* Landscape móvil */
+@media (max-height: 500px) and (orientation: landscape) {
+    .completeNetworkWrapper {
+        padding: 10px 0 !important;
+    }
+
+    .completeNetworkCont {
+        padding: 20px 25px !important;
+        margin: 0 15px;
+    }
+
+    .title-completeNetwork {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .completeNetworkExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .completeNetworkExplanation p {
+        margin-bottom: 0.8rem;
+    }
+
+    .completeNetworkExplanation ul {
+        margin-bottom: 0.8rem;
+    }
+
+    .completeNetworkExplanation ul li {
+        margin-bottom: 4px;
+    }
 }
