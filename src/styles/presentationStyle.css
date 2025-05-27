@@ -4,58 +4,316 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-image: url("../assets/fondo.svg"); /* Ruta de la imagen */
+    background-image: url("../assets/fondo.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
-
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .presentation-header {
-    background: rgba(28, 38, 54, 0.8); /* Azul oscuro semi-transparente */
+    background: rgba(28, 38, 54, 0.8);
     padding-top: 40px;
     text-align: center;
     color: white;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.presentation-title{
+.logo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.presentation-title {
     font-size: 30px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #ffffff;
+    line-height: 1.2;
 }
 
-.presentation-exp{
-    background-color: #FFFFFF;
+.presentation-exp {
+    background-color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     color: #303555;
     padding: 32px 32px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    max-width: 1200px;
 }
 
-.presentation-subtitle{
+.presentation-paragraph {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.presentation-subtitle {
     font-size: 24px;
     font-weight: 600;
+    line-height: 1.3;
 }
 
-.btn-presentation{
+.presentation-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-presentation {
     background-color: #303555 !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     padding: 12px 24px !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     width: 202px !important;
     border-radius: 12px !important;
+    border: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.btn-presentation:hover {
+    background-color: #404870 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(48, 53, 85, 0.3);
 }
 
 .presentation-custom-link {
-    color: #3463AC;
-    text-decoration: underline !important;
-    font-weight: 400 !important;
-}
-
-.presentation-custom-link {
-    color: #3463AC !important;
+    color: #3463ac !important;
     text-decoration: underline;
     font-weight: 400 !important;
+}
+
+.presentation-custom-link:hover {
+    color: #2851a0 !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .presentation-header {
+        padding-top: 30px;
+    }
+
+    .presentation-title {
+        font-size: 26px;
+    }
+
+    .presentation-exp {
+        font-size: 16px;
+        padding: 24px 24px !important;
+    }
+
+    .presentation-subtitle {
+        font-size: 22px;
+    }
+
+    .btn-presentation {
+        width: 180px !important;
+        font-size: 15px !important;
+    }
+}
+
+/* Móviles grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .presentationCont {
+        background-image: none;
+        background-color: #ffffff;
+        min-height: 100vh;
+    }
+
+    .presentation-header {
+        background: #1c2636;
+        width: 100%;
+        margin: 0;
+        padding: 25px 25px; /* Más padding */
+        border-radius: 0;
+    }
+
+    .logo-img {
+        max-width: 280px;
+    }
+
+    .presentation-title {
+        font-size: 22px;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        padding: 0 10px; /* Padding lateral para el título */
+    }
+
+    .presentation-exp {
+        font-size: 16px;
+        width: 100%;
+        margin: 0;
+        padding: 35px 30px !important; /* Mucho más padding */
+        box-sizing: border-box;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .presentation-paragraph {
+        margin-bottom: 1.5rem; /* Más espacio entre párrafos */
+        text-align: justify;
+        line-height: 1.7; /* Mejor interlineado */
+    }
+
+    .presentation-subtitle {
+        font-size: 20px;
+        margin-bottom: 2rem !important; /* Más margen abajo */
+        padding: 0 10px; /* Padding lateral */
+    }
+
+    .presentation-buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 0 30px 10px 30px; /* Reducir padding bottom de 30px a 10px */
+    }
+
+    .btn-presentation {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 16px 24px !important; /* Botones más altos */
+    }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .presentationCont {
+        background-image: none;
+        background-color: #ffffff;
+    }
+
+    .presentation-header {
+        background: #1c2636;
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px; /* Más padding */
+        border-radius: 0;
+    }
+
+    .logo-img {
+        max-width: 240px;
+    }
+
+    .presentation-title {
+        font-size: 20px;
+        padding: 0 15px; /* Más padding lateral */
+    }
+
+    .presentation-exp {
+        font-size: 15px;
+        width: 100%;
+        margin: 0;
+        padding: 30px 25px 35px 25px !important; /* Mucho más padding */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .presentation-paragraph {
+        margin-bottom: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .presentation-subtitle {
+        font-size: 18px;
+        padding: 0 10px;
+        margin-bottom: 1.8rem !important; /* Más margen */
+    }
+
+    .presentation-buttons-container {
+        padding: 0 25px 10px 25px; /* Reducir padding bottom de 25px a 10px */
+        gap: 16px;
+    }
+
+    .btn-presentation {
+        width: 100% !important;
+        max-width: 250px !important;
+        font-size: 14px !important;
+        padding: 14px 20px !important; /* Botones más altos */
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) */
+@media (max-width: 375px) {
+    .presentation-header {
+        background: #1c2636;
+        padding: 18px 18px; /* Más padding */
+    }
+
+    .presentation-title {
+        padding: 0 12px; /* Más padding lateral */
+    }
+
+    .presentation-exp {
+        padding: 25px 20px 30px 20px !important; /* Más padding */
+    }
+
+    .logo-img {
+        max-width: 200px;
+    }
+
+    .presentation-title {
+        font-size: 18px;
+    }
+
+    .presentation-subtitle {
+        font-size: 16px;
+        padding: 0 8px; /* Más padding */
+    }
+
+    .btn-presentation {
+        max-width: 220px !important;
+    }
+
+    .presentation-buttons-container {
+        padding: 0 20px 10px 20px; /* Reducir padding bottom de 20px a 10px */
+    }
+}
+
+/* Landscape móvil */
+@media (max-height: 500px) and (orientation: landscape) {
+    .presentationCont {
+        background-image: none;
+        background-color: #ffffff;
+    }
+
+    .presentation-header {
+        background: #1c2636;
+        padding: 15px 25px; /* Más padding lateral */
+        border-radius: 0;
+    }
+
+    .logo-img {
+        max-width: 200px;
+    }
+
+    .presentation-title {
+        font-size: 18px;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        padding: 0 10px;
+    }
+
+    .presentation-exp {
+        padding: 20px 25px 25px 25px !important; /* Más padding */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .presentation-buttons-container {
+        flex-direction: row;
+        gap: 15px;
+        padding: 0 25px 10px 25px; /* Reducir padding bottom de 20px a 10px */
+    }
+
+    .btn-presentation {
+        width: 160px !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+    }
 }
