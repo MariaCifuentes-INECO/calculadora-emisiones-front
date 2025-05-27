@@ -26,14 +26,14 @@
     gap: 80px;
     align-items: center !important;
     text-align: center;
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove any padding */
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    margin: 0; /* Remove any margin */
+    margin: 0;
     padding: 15px 0;
 }
 
@@ -44,9 +44,38 @@
     color: #184487 !important;
     padding: 0 !important;
     text-decoration: none;
-    display: inline-flex; /* Changed to inline-flex */
+    display: inline-flex;
     align-items: center;
-    line-height: normal; /* Reset line height */
+    line-height: normal;
+    position: relative;
+}
+
+/* ===== EFECTO HOVER CON TU GRADIENTE EXACTO ===== */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 0.3rem;
+    background: linear-gradient(
+            90deg,
+            #184487 0%,
+            #1A4385 25.6%,
+            #224180 40.9%,
+            #313D78 53.4%,
+            #45386D 64.5%,
+            #5F325F 74.6%,
+            #7F2A4D 84%,
+            #A42138 92.7%,
+            #CB1823 100%
+    );
+    transition: 0.3s;
+    border-radius: 0.2rem;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .language-switcher {
@@ -55,7 +84,6 @@
     text-align: center;
 }
 
-/* Style for language buttons to ensure they're centered */
 .language-btn {
     background: none;
     border: none;
@@ -65,30 +93,28 @@
     font-weight: 500;
     padding: 0;
     cursor: pointer;
-    display: inline-flex; /* Changed to inline-flex */
+    display: inline-flex;
     align-items: center;
 }
 
-/* Add this to ensure consistent vertical spacing */
 .custom-navbar-color {
-    line-height: 1; /* Consistent line height */
-    vertical-align: middle; /* Ensure text is vertically centered */
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .language-btn.active {
-    font-weight: 700; /* Make text bold */
-    color: #184487; /* Slightly darker shade */
-    position: relative; /* For the underline */
+    font-weight: 700;
+    color: #184487;
+    position: relative;
 }
 
-/* Add underline to active language */
 .language-btn.active::after {
     content: "";
     position: absolute;
-    bottom: -4px; /* Position below the text */
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #184487; /* Same color as text */
-    border-radius: 1px; /* Slightly rounded corners */
+    background-color: #184487;
+    border-radius: 1px;
 }

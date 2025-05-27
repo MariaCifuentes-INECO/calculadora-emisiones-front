@@ -23,7 +23,7 @@ export default function Header() {
                         <div className="col-md-4">
                             <Link to="/" className="d-inline-block">
                                 <img
-                                    src={logoIneco}
+                                    src={logoIneco || "/placeholder.svg"}
                                     alt="INECO Logo"
                                     className="img-fluid"
                                     style={{height: "41.69px", width: "191.36px"}}
@@ -33,7 +33,7 @@ export default function Header() {
                         <div className="col-md-8 mt-md-0 text-md-end">
                             <div className="d-flex align-items-center justify-content-md-end">
                                 <img
-                                    src={logoHeader}
+                                    src={logoHeader || "/placeholder.svg"}
                                     alt="Icono calculadora"
                                     style={{height: "63px", width: "268px"}}
                                 />
@@ -42,7 +42,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <nav className="custom-header-color w-100">
+            <nav className="custom-header-color w-100 header-gradient-effect">
                 <div className="container-fluid">
                     <div className="container nav-container">
                         <ul className="nav">
@@ -80,7 +80,6 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-
         </header>
     )
 }
