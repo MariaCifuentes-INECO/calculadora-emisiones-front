@@ -188,12 +188,16 @@ li {
     }
 
     .realCaseCont {
-        padding: 35px 30px !important; /* ← IGUAL QUE HYPOTHESES */
+        padding: 15px 30px 35px 30px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
         width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
         box-shadow: none;
         border-radius: 0;
         box-sizing: border-box;
+    }
+
+    .realCaseCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-realCase {
@@ -263,11 +267,19 @@ li {
     }
 
     .realCaseCont {
-        padding: 30px 25px 35px 25px !important; /* ← IGUAL QUE HYPOTHESES */
+        padding: 15px 25px 35px 25px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
         width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
         box-shadow: none;
         border-radius: 0;
+
+        .realCaseCont .mt-5:first-of-type {
+            margin-top: 0 !important;
+        }
+    }
+
+    .realCaseCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-realCase {
@@ -330,9 +342,17 @@ li {
     }
 
     .realCaseCont {
-        padding: 25px 20px 30px 20px !important; /* ← IGUAL QUE HYPOTHESES */
+        padding: 10px 20px 30px 20px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
         width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+
+        .realCaseCont .mt-5:first-of-type {
+            margin-top: 0 !important;
+        }
+    }
+
+    .realCaseCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-realCase {

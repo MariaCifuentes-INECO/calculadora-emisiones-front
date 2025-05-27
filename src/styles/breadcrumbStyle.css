@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
 .breadcrumb-item.home a,
 .breadcrumb-item.intermediate a {
     color: #303555;
@@ -34,17 +32,152 @@
 
 /* Estilo de hover para los enlaces del breadcrumb */
 .breadcrumb-item a:hover,
-.breadcrumb-item.current:hover{
+.breadcrumb-item.current:hover {
     text-decoration: underline !important; /* Subrayado al hacer hover */
     text-decoration-color: #303555 !important; /* Color del subrayado*/
     text-decoration-thickness: 1.5px !important; /* Grosor del subrayado*/
     transition: border 0.2s ease; /* Transición suave para el hover */
 }
 
-
 .breadcrumb {
-    margin-bottom: 0 !important; /* Ajusta este valor según sea necesario */
+    margin-bottom: 0 !important;
     list-style: none !important;
     display: flex;
     padding: 0;
+    flex-wrap: wrap; /* ← PERMITE WRAP EN MÓVIL */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .breadcrumb-item.home a,
+    .breadcrumb-item.intermediate a,
+    .breadcrumb-item.current {
+        font-size: 13px;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 13px !important;
+        margin: 0 3px !important;
+    }
+}
+
+/* Móviles grandes (576px - 767px) - IGUAL ALINEACIÓN QUE HYPOTHESES */
+@media (max-width: 767px) {
+    .breadcrumb {
+        padding: 0 30px !important; /* ← FORZAR CON !important */
+        margin: 0 0 0px 0 !important; /* ← FORZAR MÁRGENES */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .breadcrumb-item.home a,
+    .breadcrumb-item.intermediate a,
+    .breadcrumb-item.current {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 12px !important;
+        margin: 0 3px !important;
+    }
+
+    /* QUITAR TRUNCADO - DEJAR QUE FLUYA NATURALMENTE */
+    .breadcrumb-item {
+        /* max-width: REMOVIDO */
+        /* overflow: REMOVIDO */
+        /* text-overflow: REMOVIDO */
+        /* white-space: REMOVIDO */
+    }
+}
+
+/* Móviles pequeños (hasta 575px) - IGUAL ALINEACIÓN QUE HYPOTHESES */
+@media (max-width: 575px) {
+    .breadcrumb {
+        padding: 0 25px !important; /* ← FORZAR CON !important */
+        margin: 0 0 0px 0 !important; /* ← FORZAR MÁRGENES */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .breadcrumb-item.home a,
+    .breadcrumb-item.intermediate a,
+    .breadcrumb-item.current {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 11px !important;
+        margin: 0 2px !important;
+    }
+
+    /* SIN TRUNCADO - PERMITIR WRAP NATURAL */
+    .breadcrumb-item {
+        /* Removido todo el truncado */
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) - IGUAL ALINEACIÓN QUE HYPOTHESES */
+@media (max-width: 375px) {
+    .breadcrumb {
+        padding: 0 20px !important; /* ← FORZAR CON !important */
+        margin: 0 0 0px 0 !important; /* ← FORZAR MÁRGENES */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .breadcrumb-item.home a,
+    .breadcrumb-item.intermediate a,
+    .breadcrumb-item.current {
+        font-size: 10px;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 10px !important;
+        margin: 0 2px !important;
+    }
+
+    /* SIN TRUNCADO */
+    .breadcrumb-item {
+        /* Removido todo el truncado */
+    }
+}
+
+/* Landscape móvil - IGUAL ALINEACIÓN QUE HYPOTHESES */
+@media (max-height: 500px) and (orientation: landscape) {
+    .breadcrumb {
+        padding: 0 25px; /* ← MISMO PADDING QUE HYPOTHESES CONTAINER */
+        margin-bottom: 5px !important; /* ← REDUCIR ESPACIO CON TÍTULO */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .breadcrumb-item.home a,
+    .breadcrumb-item.intermediate a,
+    .breadcrumb-item.current {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 10px !important;
+        margin: 0 2px !important;
+    }
+}
+
+/* FORZAR ALINEACIÓN EN MÓVIL */
+@media (max-width: 767px) {
+    nav[aria-label="breadcrumb"] {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    nav[aria-label="breadcrumb"] .breadcrumb {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
