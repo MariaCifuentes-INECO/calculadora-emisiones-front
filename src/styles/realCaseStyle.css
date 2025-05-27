@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-.realCaseWrapper{
+.realCaseWrapper {
     padding: 12px 0 !important;
 }
 
@@ -13,33 +11,37 @@
     align-items: center;
 }
 
-.title-realCase{
+.title-realCase {
     font-size: 36px;
     font-weight: 600;
-    color: #3463AC;
+    color: #3463ac;
 }
 
-.realCaseExplanation{
+.realCaseExplanation {
     font-size: 18px;
     font-weight: 400;
     color: #303555;
     text-align: justify;
 }
 
-.toggle-btn{
+.realCaseExplanation ul li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
+
+.toggle-btn {
     font-size: 18px !important;
     font-weight: 400;
-    color: #3463AC !important;
+    color: #3463ac !important;
 }
 
 li {
     margin-bottom: 15px; /* Espacio entre elementos de la lista */
 }
 
-.subtitleRealCase{
+.subtitleRealCase {
     font-size: 28px;
     font-weight: 600;
-    color: #3463AC;
+    color: #3463ac;
 }
 
 .small-text {
@@ -48,4 +50,390 @@ li {
     white-space: nowrap; /* Evita saltos de línea */
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .realCaseCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-realCase {
+        font-size: 28px;
+    }
+
+    .subtitleRealCase {
+        font-size: 22px;
+    }
+
+    .realCaseExplanation {
+        font-size: 16px; /* ← IGUAL QUE HYPOTHESES */
+    }
+
+    .toggle-btn {
+        font-size: 16px !important;
+    }
+}
+
+/* iPad y tablets (768px - 1024px) - GRID 2x2 CON ANCHO FIJO */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .realCaseWrapper {
+        padding: 16px 0 !important;
+    }
+
+    .realCaseCont {
+        padding: 50px 40px !important;
+    }
+
+    .title-realCase {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .subtitleRealCase {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+    }
+
+    .realCaseExplanation {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .realCaseExplanation p {
+        margin-bottom: 1.5rem;
+    }
+
+    .realCaseExplanation ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .realCaseExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    .toggle-btn {
+        font-size: 17px !important;
+    }
+
+    /* FORZAR ANCHO EXACTO - GRID 2x2 */
+    .row.g-3 {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .row.g-3 > .col-md-3 {
+        flex: 0 0 calc(50% - 20px) !important; /* ← ANCHO EXACTO: 50% menos padding */
+        max-width: calc(50% - 20px) !important;
+        width: calc(50% - 20px) !important;
+        margin: 0 10px 20px 10px !important; /* ← MARGEN UNIFORME */
+        padding: 0 !important; /* ← SIN PADDING INTERNO */
+        box-sizing: border-box !important;
+    }
+
+    .small-text {
+        font-size: 11px !important;
+        white-space: normal;
+        line-height: 1.3 !important;
+    }
+}
+
+/* Tablets pequeños (768px - 991px) - MANTENER ANCHO EXACTO */
+@media (max-width: 991px) and (min-width: 768px) {
+    .realCaseCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-realCase {
+        font-size: 28px;
+    }
+
+    .subtitleRealCase {
+        font-size: 22px;
+    }
+
+    .realCaseExplanation {
+        font-size: 16px;
+    }
+
+    .toggle-btn {
+        font-size: 16px !important;
+    }
+
+    /* FORZAR ANCHO EXACTO */
+    .row.g-3 {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .row.g-3 > .col-md-3 {
+        flex: 0 0 calc(50% - 16px) !important; /* ← ANCHO EXACTO */
+        max-width: calc(50% - 16px) !important;
+        width: calc(50% - 16px) !important;
+        margin: 0 8px 18px 8px !important; /* ← MARGEN UNIFORME */
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Móviles grandes (576px - 767px) - IGUAL QUE HYPOTHESES */
+@media (max-width: 767px) {
+    .realCaseWrapper {
+        padding: 20px 0 !important;
+    }
+
+    .realCaseCont {
+        padding: 35px 30px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+        box-shadow: none;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .title-realCase {
+        font-size: 28px; /* ← IGUAL QUE HYPOTHESES */
+        margin-bottom: 1.6rem;
+    }
+
+    .subtitleRealCase {
+        font-size: 20px; /* ← PROPORCIONAL AL TÍTULO */
+        margin-bottom: 1.2rem;
+    }
+
+    .realCaseExplanation {
+        font-size: 16px; /* ← IGUAL QUE HYPOTHESES */
+        line-height: 1.7; /* ← IGUAL QUE HYPOTHESES */
+        text-align: justify; /* ← IGUAL QUE HYPOTHESES */
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap que viene por defecto */
+    .realCaseExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .realCaseExplanation p {
+        margin-bottom: 1.5rem; /* ← IGUAL QUE HYPOTHESES */
+    }
+
+    .realCaseExplanation ul {
+        margin-bottom: 1.5rem; /* ← IGUAL QUE HYPOTHESES */
+        padding-left: 20px;
+    }
+
+    .realCaseExplanation ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .toggle-btn {
+        font-size: 15px !important;
+    }
+
+    /* TARJETAS MÁS COMPACTAS EN MÓVIL */
+    .row.g-3 {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .row.g-3 > .col-md-3 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 0 5px !important;
+    }
+
+    .small-text {
+        font-size: 9px !important;
+        white-space: normal;
+    }
+}
+
+/* Móviles pequeños (hasta 575px)*/
+@media (max-width: 575px) {
+    .realCaseWrapper {
+        padding: 15px 0 !important;
+    }
+
+    .realCaseCont {
+        padding: 30px 25px 35px 25px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .title-realCase {
+        font-size: 24px;
+        margin-bottom: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .subtitleRealCase {
+        font-size: 18px; /* ← PROPORCIONAL AL TÍTULO */
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .realCaseExplanation {
+        font-size: 15px; /* ← IGUAL QUE HYPOTHESES */
+        line-height: 1.6; /* ← IGUAL QUE HYPOTHESES */
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .realCaseExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .realCaseExplanation p {
+        margin-bottom: 1.3rem; /* ← IGUAL QUE HYPOTHESES */
+    }
+
+    .realCaseExplanation ul {
+        margin-bottom: 1.3rem; /* ← IGUAL QUE HYPOTHESES */
+        padding-left: 18px;
+    }
+
+    .realCaseExplanation ul li {
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+
+    .toggle-btn {
+        font-size: 14px !important;
+    }
+
+    /* TARJETAS AÚN MÁS COMPACTAS */
+    .row.g-3 > .col-md-3 {
+        margin-bottom: 8px !important;
+        padding: 0 3px !important;
+    }
+
+    .small-text {
+        font-size: 8px !important;
+        white-space: normal;
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) - IGUAL QUE HYPOTHESES */
+@media (max-width: 375px) {
+    .realCaseWrapper {
+        padding: 12px 0 !important;
+    }
+
+    .realCaseCont {
+        padding: 25px 20px 30px 20px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+    }
+
+    .title-realCase {
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+    }
+
+    .subtitleRealCase {
+        font-size: 18px;
+        margin-bottom: 0.8rem;
+    }
+
+    .realCaseExplanation {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .realCaseExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .realCaseExplanation ul {
+        padding-left: 15px;
+    }
+
+    .toggle-btn {
+        font-size: 13px !important;
+    }
+
+    /* TARJETAS SÚPER COMPACTAS */
+    .row.g-3 > .col-md-3 {
+        margin-bottom: 6px !important;
+        padding: 0 2px !important;
+    }
+
+    .small-text {
+        font-size: 7px !important;
+    }
+}
+
+/* Landscape móvil - IGUAL QUE HYPOTHESES */
+@media (max-height: 500px) and (orientation: landscape) {
+    .realCaseWrapper {
+        padding: 10px 0 !important;
+    }
+
+    .realCaseCont {
+        padding: 20px 25px 25px 25px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .title-realCase {
+        font-size: 18px; /* ← IGUAL QUE HYPOTHESES */
+        margin-bottom: 1rem;
+    }
+
+    .subtitleRealCase {
+        font-size: 14px; /* ← PROPORCIONAL AL TÍTULO */
+        margin-bottom: 0.5rem;
+    }
+
+    .realCaseExplanation {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 0;
+    }
+
+    /* Eliminar el margin-top del Bootstrap */
+    .realCaseExplanation.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .realCaseExplanation p {
+        margin-bottom: 0.8rem;
+    }
+
+    .realCaseExplanation ul {
+        margin-bottom: 0.8rem;
+    }
+
+    .realCaseExplanation ul li {
+        margin-bottom: 4px;
+    }
+
+    .toggle-btn {
+        font-size: 12px !important;
+    }
+
+    /* TARJETAS EN LANDSCAPE - 2 COLUMNAS */
+    .row.g-3 > .col-md-3 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 5px !important;
+        padding: 0 2px !important;
+    }
+
+    .small-text {
+        font-size: 6px !important;
+    }
+}

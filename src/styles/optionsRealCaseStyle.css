@@ -3,50 +3,53 @@
     padding: 24px 20px;
     background-color: #FFFFFF;
     display: flex;
-    height: 100%; /* Usa height: 100% en lugar de min-height */
+    height: 100%;
+    min-height: 120px;
 }
 
 .flex {
     display: flex;
-    align-items: center; /* Alinea la imagen y el texto en la parte superior */
-    gap: 1.5rem; /* espacio entre imagen y texto */
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .vias-casosReales{
-    flexShrink: 0;
+    flex-shrink: 0;
     height: auto;
     width: 19%;
 }
 
 .optionsText {
-    font-size: clamp(18px, 1.25vw, 18px); /* Tamaño de fuente responsive */
+    font-size: clamp(18px, 1.25vw, 18px);
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: #303555;
-    word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
-    white-space: normal; /* Permite que el texto fluya en varias líneas */
-    flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
-    display: block;           /* o flex si necesitas más control */
-    text-align: left;         /* Esto mantiene el texto alineado normal */
+    word-wrap: break-word;
+    white-space: normal;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
 
 .custom-link {
-    text-decoration: none; /* Quitar subrayado */
-    color: inherit; /* Mantener el color del texto del componente */
-    cursor: pointer !important; /* Mostrar la mano al pasar */
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer !important;
     display: block;
     height: 100%;
 }
 
 .custom-link:hover {
-    text-decoration: none; /* Asegurar que no aparezca subrayado */
-    color: inherit; /* Mantener el color original */
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Clase para el contenedor de cada opción en Bootstrap */
 .option-card-container {
     height: 100%;
     display: flex;
+    min-height: 120px;
 }
 
 .center-text {
@@ -57,22 +60,219 @@
     text-align: justify;
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 
-/* Media queries para ajustar según el tamaño de pantalla */
-@media (max-width: 768px) {
-    .optionsCont {
-        padding: 1rem 0.75rem;
+/* TABLETS - FORZAR ANCHO UNIFORME */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .option-card-container {
+        min-height: 100px !important;
+        width: 100% !important; /* ← FORZAR ANCHO COMPLETO */
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    .optionsText {
-        font-size: 14px; /* Tamaño más pequeño en móviles */
+    .custom-link {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+    }
+
+    .optionsCont {
+        padding: 18px 16px !important;
+        min-height: 100px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+        width: 100% !important; /* ← FORZAR ANCHO COMPLETO */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
     .flex {
-        gap: 1rem; /* espacio entre imagen y texto */
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+
+    .optionsText {
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        line-height: 1.4 !important;
+        flex: 1 !important; /* ← OCUPAR ESPACIO RESTANTE */
+        min-width: 0 !important; /* ← PERMITIR SHRINK */
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .vias-casosReales {
+        width: 18% !important;
+        flex-shrink: 0 !important; /* ← NO PERMITIR SHRINK DEL ICONO */
     }
 
     .justify-text {
         text-align: left;
+    }
+}
+
+/* Tablets pequeños (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .option-card-container {
+        min-height: 95px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .custom-link {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .optionsCont {
+        padding: 16px 14px !important;
+        min-height: 95px !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .flex {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.9rem !important;
+    }
+
+    .optionsText {
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .vias-casosReales {
+        width: 17% !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Móviles grandes (576px - 767px) - TARJETAS MÁS COMPACTAS */
+@media (max-width: 767px) {
+    .option-card-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 70px !important; /* ← MÁS COMPACTA */
+    }
+
+    .custom-link {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .optionsCont {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 12px 15px !important; /* ← MENOS PADDING */
+        min-height: 70px !important; /* ← MÁS COMPACTA */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* ← SOMBRA MÁS SUTIL */
+    }
+
+    .optionsText {
+        font-size: 14px !important; /* ← TEXTO MÁS PEQUEÑO */
+        font-weight: 500 !important;
+    }
+
+    .flex {
+        gap: 0.8rem !important; /* ← MENOS ESPACIO */
+    }
+
+    .vias-casosReales {
+        width: 16% !important; /* ← ICONO MÁS PEQUEÑO */
+    }
+
+    .justify-text {
+        text-align: left;
+    }
+}
+
+/* Móviles pequeños (hasta 575px) - AÚN MÁS COMPACTAS */
+@media (max-width: 575px) {
+    .option-card-container {
+        min-height: 60px !important; /* ← SÚPER COMPACTA */
+    }
+
+    .optionsCont {
+        padding: 10px 12px !important; /* ← PADDING MÍNIMO */
+        min-height: 60px !important; /* ← SÚPER COMPACTA */
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important; /* ← SOMBRA MÍNIMA */
+    }
+
+    .optionsText {
+        font-size: 13px !important; /* ← TEXTO AÚN MÁS PEQUEÑO */
+        line-height: 1.3 !important;
+    }
+
+    .flex {
+        gap: 0.6rem !important; /* ← ESPACIO MÍNIMO */
+    }
+
+    .vias-casosReales {
+        width: 14% !important; /* ← ICONO MÁS PEQUEÑO */
+    }
+}
+
+/* Móviles muy pequeños (hasta 375px) - ULTRA COMPACTAS */
+@media (max-width: 375px) {
+    .option-card-container {
+        min-height: 55px !important; /* ← ULTRA COMPACTA */
+    }
+
+    .optionsCont {
+        padding: 8px 10px !important; /* ← PADDING ULTRA MÍNIMO */
+        min-height: 55px !important; /* ← ULTRA COMPACTA */
+    }
+
+    .optionsText {
+        font-size: 12px !important; /* ← TEXTO ULTRA PEQUEÑO */
+        line-height: 1.2 !important;
+    }
+
+    .flex {
+        gap: 0.5rem !important; /* ← ESPACIO ULTRA MÍNIMO */
+    }
+
+    .vias-casosReales {
+        width: 12% !important; /* ← ICONO ULTRA PEQUEÑO */
+    }
+}
+
+/* Landscape móvil - COMPACTAS HORIZONTALES */
+@media (max-height: 500px) and (orientation: landscape) {
+    .option-card-container {
+        min-height: 50px !important; /* ← SÚPER COMPACTA PARA LANDSCAPE */
+    }
+
+    .optionsCont {
+        padding: 8px 12px !important;
+        min-height: 50px !important;
+    }
+
+    .optionsText {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+    }
+
+    .flex {
+        gap: 0.4rem !important;
+    }
+
+    .vias-casosReales {
+        width: 10% !important;
     }
 }

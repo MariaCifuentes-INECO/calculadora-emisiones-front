@@ -35,6 +35,21 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .completeNetworkCont {
+        padding: 40px 35px !important;
+    }
+
+    .title-completeNetwork {
+        font-size: 28px;
+    }
+
+    .completeNetworkExplanation {
+        font-size: 16px; /* ← IGUAL QUE HYPOTHESES */
+    }
+}
+
 /* iPad y tablets (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .completeNetworkWrapper {
@@ -84,28 +99,30 @@
     }
 }
 
-/* Móviles grandes (576px - 767px) */
+/* Móviles grandes (576px - 767px) - IGUAL QUE HYPOTHESES */
 @media (max-width: 767px) {
     .completeNetworkWrapper {
         padding: 20px 0 !important;
     }
 
     .completeNetworkCont {
-        padding: 30px 25px !important;
-        margin: 0 15px;
+        padding: 35px 30px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
         box-shadow: none;
         border-radius: 0;
+        box-sizing: border-box;
     }
 
     .title-completeNetwork {
-        font-size: 24px;
+        font-size: 28px; /* ← IGUAL QUE HYPOTHESES */
         margin-bottom: 1.6rem;
     }
 
     .completeNetworkExplanation {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: left;
+        font-size: 16px; /* ← IGUAL QUE HYPOTHESES */
+        line-height: 1.7; /* ← IGUAL QUE HYPOTHESES */
+        text-align: justify; /* ← IGUAL QUE HYPOTHESES */
         margin-top: 0;
     }
 
@@ -115,11 +132,11 @@
     }
 
     .completeNetworkExplanation p {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem; /* ← IGUAL QUE HYPOTHESES */
     }
 
     .completeNetworkExplanation ul {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem; /* ← IGUAL QUE HYPOTHESES */
         padding-left: 20px;
     }
 
@@ -136,20 +153,22 @@
     }
 
     .completeNetworkCont {
-        padding: 25px 20px !important;
-        margin: 0 10px;
+        padding: 30px 25px 35px 25px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
         box-shadow: none;
+        border-radius: 0;
     }
 
     .title-completeNetwork {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 1.4rem;
         line-height: 1.3;
     }
 
     .completeNetworkExplanation {
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.6; /* ← IGUAL QUE HYPOTHESES */
         margin-top: 0;
     }
 
@@ -159,11 +178,11 @@
     }
 
     .completeNetworkExplanation p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.3rem; /* ← IGUAL QUE HYPOTHESES */
     }
 
     .completeNetworkExplanation ul {
-        margin-bottom: 1rem;
+        margin-bottom: 1.3rem; /* ← IGUAL QUE HYPOTHESES */
         padding-left: 18px;
     }
 
@@ -173,15 +192,16 @@
     }
 }
 
-/* Móviles muy pequeños (hasta 375px) */
+/* Móviles muy pequeños (hasta 375px)*/
 @media (max-width: 375px) {
     .completeNetworkWrapper {
         padding: 12px 0 !important;
     }
 
     .completeNetworkCont {
-        padding: 20px 15px !important;
-        margin: 0 5px;
+        padding: 25px 20px 30px 20px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
     }
 
     .title-completeNetwork {
@@ -204,19 +224,22 @@
     }
 }
 
-/* Landscape móvil */
+/* Landscape móvil - IGUAL QUE HYPOTHESES */
 @media (max-height: 500px) and (orientation: landscape) {
     .completeNetworkWrapper {
         padding: 10px 0 !important;
     }
 
     .completeNetworkCont {
-        padding: 20px 25px !important;
-        margin: 0 15px;
+        padding: 20px 25px 25px 25px !important; /* ← IGUAL QUE HYPOTHESES */
+        margin: 0; /* ← SIN MÁRGENES COMO HYPOTHESES */
+        width: 100%; /* ← ANCHO COMPLETO COMO HYPOTHESES */
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .title-completeNetwork {
-        font-size: 20px;
+        font-size: 18px; /* ← IGUAL QUE HYPOTHESES */
         margin-bottom: 1rem;
     }
 
