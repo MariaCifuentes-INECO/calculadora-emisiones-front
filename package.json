@@ -12,12 +12,10 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
-    "d3": "^7.9.0",
     "exceljs": "^4.4.0",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
-    "next": "^15.2.1",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.3.0",
@@ -27,8 +25,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
