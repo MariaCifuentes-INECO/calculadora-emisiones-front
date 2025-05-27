@@ -101,12 +101,16 @@
     }
 
     .hypothesisNetworkCont {
-        padding: 35px 30px !important; /* ← IGUAL QUE PRESENTATION */
+        padding: 15px 30px 35px 30px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
         width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
         box-shadow: none;
         border-radius: 0;
         box-sizing: border-box;
+    }
+
+    .hypothesisNetworkCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-hypothesis {
@@ -148,11 +152,15 @@
     }
 
     .hypothesisNetworkCont {
-        padding: 30px 25px 35px 25px !important; /* ← IGUAL QUE PRESENTATION */
+        padding: 15px 25px 35px 25px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
         width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
         box-shadow: none;
         border-radius: 0;
+    }
+
+    .hypothesisNetworkCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-hypothesis {
@@ -194,9 +202,13 @@
     }
 
     .hypothesisNetworkCont {
-        padding: 25px 20px 30px 20px !important; /* ← IGUAL QUE PRESENTATION */
+        padding: 10px 20px 30px 20px !important; /* ← REDUCIR PADDING-TOP */
         margin: 0; /* ← SIN MÁRGENES COMO PRESENTATION */
         width: 100%; /* ← ANCHO COMPLETO COMO PRESENTATION */
+    }
+
+    .hypothesisNetworkCont .mt-5:first-of-type {
+        margin-top: 0 !important; /* ← ELIMINAR MARGIN-TOP PRIMERA SECCIÓN */
     }
 
     .title-hypothesis {
