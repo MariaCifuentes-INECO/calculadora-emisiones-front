@@ -28,6 +28,7 @@
     color: #303555 !important;
     font-weight: 400 !important;
     font-size: 14px !important;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Estilo de hover para los enlaces del breadcrumb */
@@ -83,14 +84,6 @@
         font-size: 12px !important;
         margin: 0 3px !important;
     }
-
-    /* QUITAR TRUNCADO - DEJAR QUE FLUYA NATURALMENTE */
-    .breadcrumb-item {
-        /* max-width: REMOVIDO */
-        /* overflow: REMOVIDO */
-        /* text-overflow: REMOVIDO */
-        /* white-space: REMOVIDO */
-    }
 }
 
 /* Móviles pequeños (hasta 575px) - IGUAL ALINEACIÓN QUE HYPOTHESES */
@@ -138,11 +131,6 @@
     .breadcrumb-item + .breadcrumb-item::before {
         font-size: 10px !important;
         margin: 0 2px !important;
-    }
-
-    /* SIN TRUNCADO */
-    .breadcrumb-item {
-        /* Removido todo el truncado */
     }
 }
 

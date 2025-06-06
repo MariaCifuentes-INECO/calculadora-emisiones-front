@@ -56,7 +56,7 @@ const ResultsGenericCase = () => {
 
     const breadcrumbItems = [
         {label: t('breadcrumb.home'), link: "/", className: "home"},
-        {label: t('breadcrumb.simulator'), link: "/realCase", className: "intermediate"},
+        {label: t('breadcrumb.simulator'), link: "/genericCase", className: "intermediate"},
         {label: t('breadcrumb.current'), active: true, className: "current"},
     ];
 
