@@ -67,8 +67,8 @@ const GenericCase = () => {
         setDistancia(nuevaDistancia);
 
         // Establecer el valor del trayecto ferroviario y aereo automáticamente
-        setLongitudTrayectoFerroviario(nuevaDistancia * 1.3);
-        setDistanciaTrayectoAereo(nuevaDistancia * 1.2)
+        setLongitudTrayectoFerroviario(Math.round(nuevaDistancia * 1.3));
+        setDistanciaTrayectoAereo(Math.round(nuevaDistancia * 1.2));
     };
 
     // Función para manejar el envío del formulario
@@ -93,7 +93,7 @@ const GenericCase = () => {
 
         try {
             // Enviar los datos al endpoint
-            const response = await fetch('http://localhost:8088/graficoGEISistema', {
+            const response = await fetch(`/api/graficoGEISistema`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -302,6 +302,7 @@ const GenericCase = () => {
                                             id="aero1"
                                             value={distanciaTrayectoAereo}
                                             onChange={(e) => setDistanciaTrayectoAereo(parseFloat(e.target.value))}
+                                            min="0"
                                             required
                                         />
                                         <span className="input-group-text">km</span>
