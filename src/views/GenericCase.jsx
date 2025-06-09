@@ -93,7 +93,9 @@ const GenericCase = () => {
 
         try {
             // Enviar los datos al endpoint
-            const response = await fetch(`/api/graficoGEISistema`, {
+            const response = await
+                //fetch('http://localhost:8088/graficoGEISistema', {
+                fetch(`/api/graficoGEISistema`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

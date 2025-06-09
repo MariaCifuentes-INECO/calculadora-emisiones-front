@@ -36,7 +36,8 @@ export const ExcelUploader = () => {
     useEffect(() => {
         if (extractedData && extractedData.length > 0) {
             setIsLoading(true); // Activar estado de carga
-            fetch('http://localhost:8088/redCompleta', {
+            //fetch('http://localhost:8088/redCompleta', {
+            fetch(`/api/redCompleta`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +91,8 @@ export const ExcelUploader = () => {
     useEffect(() => {
         if (extractedCorridorData && extractedCorridorData.length > 0) {
             setIsLoading(true); // Activar estado de carga
-            fetch('http://localhost:8088/corredor', {
+            //fetch('http://localhost:8088/corredor', {
+            fetch(`/api/corredor`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

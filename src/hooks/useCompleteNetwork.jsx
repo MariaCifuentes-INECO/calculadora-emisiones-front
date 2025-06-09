@@ -9,7 +9,8 @@ export const useCompleteNetwork = () => {
      * del back-end en el primer renderizado.
      */
     useEffect(() => {
-        fetch('http://localhost:8088/redCompleta', {
+        //fetch('http://localhost:8088/redCompleta', {
+        fetch(`/api/redCompleta`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -9,7 +9,8 @@ export const useCorridors = () => {
      * del back-end en el primer renderizado.
      */
     useEffect(() => {
-        fetch('http://localhost:8088/corredor', {
+        //fetch('http://localhost:8088/corredor', {
+        fetch(`/api/corredor`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
