@@ -65,14 +65,14 @@ export default function Header() {
                         <div className="language-switcher">
                             <button
                                 onClick={() => changeLanguage('en')}
-                                className={`language-btn ${currentLanguage === 'en' ? 'active' : ''}`}
+                                className={`language-btn ${i18n.language?.startsWith('en') ? 'active' : ''}`}
                             >
                                 EN
                             </button>
                             <span className="mx-1">|</span>
                             <button
                                 onClick={() => changeLanguage('es')}
-                                className={`language-btn ${currentLanguage === 'es' ? 'active' : ''}`}
+                                className={`language-btn ${i18n.language?.startsWith('es') ? 'active' : ''}`}
                             >
                                 ES
                             </button>
