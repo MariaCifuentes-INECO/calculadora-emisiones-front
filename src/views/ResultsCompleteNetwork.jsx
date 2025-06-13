@@ -6,6 +6,7 @@ import Breadcrumb from "../components/Breadcrumb.jsx";
 import GraficoEmisionAcumPax from "../components/GraficoEmisionAcumPax.jsx";
 import {Link} from "react-router-dom";
 import {Trans, useTranslation} from "react-i18next";
+import FormattedListItem from "../components/FormattedListItem.jsx"
 
 
 const ResultsCompleteNetwork = () => {
@@ -30,7 +31,7 @@ const ResultsCompleteNetwork = () => {
                     <p>{t('paragraphs.p2')}</p>
                     <ul>
                         {t('lists.results', {returnObjects: true}).map((item, index) => (
-                            <li key={`results-${index}`} dangerouslySetInnerHTML={{__html: item}}/>
+                            <FormattedListItem key={`results-${index}`} content={item} />
                         ))}
                     </ul>
                 </section>

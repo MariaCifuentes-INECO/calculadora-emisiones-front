@@ -2,6 +2,7 @@ import "../styles/realCaseStyle.css"
 import Breadcrumb from "../components/Breadcrumb.jsx";
 import OptionsRealCase from "../components/OptionsRealCase.jsx";
 import {Trans, useTranslation} from "react-i18next";
+import FormattedListItem from "../components/FormattedListItem.jsx"
 
 
 const RealCase = () => {
@@ -41,7 +42,7 @@ const RealCase = () => {
 
                     <ul>
                         {t('lists.option', {returnObjects: true}).map((item, index) => (
-                            <li key={`option-${index}`} dangerouslySetInnerHTML={{__html: item}}/>
+                            <FormattedListItem key={`option-${index}`} content={item} />
                         ))}
                     </ul>
                 </section>

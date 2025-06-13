@@ -1,5 +1,6 @@
 import { Trans, useTranslation } from "react-i18next"
 import Breadcrumb from "../components/Breadcrumb.jsx"
+import FormattedListItem from "../components/FormattedListItem.jsx"
 import "../styles/hypothesisStyle.css"
 
 const Hypotheses = () => {
@@ -31,14 +32,14 @@ const Hypotheses = () => {
 
                     <ul>
                         {t("lists.airport", { returnObjects: true }).map((item, index) => (
-                            <li key={`airport-${index}`} dangerouslySetInnerHTML={{ __html: item }} />
+                            <FormattedListItem key={`airport-${index}`} content={item} />
                         ))}
                     </ul>
 
                     <p>{t("paragraphs.p5")}</p>
                     <ul>
                         {t("lists.rail", { returnObjects: true }).map((item, index) => (
-                            <li key={`rail-${index}`} dangerouslySetInnerHTML={{ __html: item }} />
+                            <FormattedListItem key={`rail-${index}`} content={item} />
                         ))}
                     </ul>
 
@@ -46,7 +47,7 @@ const Hypotheses = () => {
                     <p>{t("paragraphs.p7")}</p>
                     <ul>
                         {t("lists.operation", { returnObjects: true }).map((item, index) => (
-                            <li key={`operation-${index}`} dangerouslySetInnerHTML={{ __html: item }} />
+                            <FormattedListItem key={`operation-${index}`} content={item} />
                         ))}
                     </ul>
                 </section>
